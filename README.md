@@ -96,3 +96,7 @@ npm run build
 感谢声哥开源的 [senshinya/blog](https://github.com/senshinya/blog)，这是本站主要的设计与交互参考；同时参考了 [纸鹿摸鱼处](https://blog.zhilu.site/) 的 Clarity 博客实现。
 
 上游代码来源、固定参考版本与许可声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；字体说明见 [public/fonts/README.md](public/fonts/README.md)。文章、图片和字体的授权分别保留各自的说明。
+
+## 软件许可
+
+本站软件代码采用 [MIT License](LICENSE)。文章、图片和字体的授权分别保留各自的说明；第三方代码及依赖许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

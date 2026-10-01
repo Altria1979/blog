@@ -22,7 +22,7 @@ export const blogConfig = {
     buildPlatform: "",
     imageStorage: imageOrigin === defaultImageBaseUrl ? "阿里云 OSS" : imageOrigin ? "外部图床" : "本站托管",
     // 填写本站实际采用的许可；留空时显示「未声明」。
-    softwareLicense: "",
+    softwareLicense: "MIT",
     contentLicense: "",
   },
   interests: ["前端开发", "开源", "摄影", "音乐", "慢慢生活"],
