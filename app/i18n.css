@@ -1,0 +1,74 @@
+/* Altria's React adaptation of Clarity's shared language / appearance pill. */
+.reading-preferences {
+  display: inline-flex; align-items: center; padding: 5px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
+  box-shadow: inset 0 1px 0 #ffffff08, var(--shadow); max-width: 100%;
+}
+.language-toggle {
+  --language-option-width: 38px;
+  position: relative; flex: none; width: 57px; height: 34px;
+  transition: width .32s cubic-bezier(.2, .8, .2, 1);
+}
+.language-toggle.expanded { width: calc(var(--language-option-width) * 3); }
+.language-toggle button {
+  z-index: 1; position: relative; border: 0; background: none;
+  width: var(--language-option-width); height: 100%; padding: 0; border-radius: 999px;
+  font-size: 13px; font-weight: 500; color: var(--secondary);
+}
+.language-toggle .language-trigger {
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  width: 57px; background: var(--surface); color: var(--text);
+  box-shadow: var(--shadow); transition: opacity .12s, transform .2s ease;
+}
+.language-trigger > svg { transform: rotate(90deg); }
+.language-toggle.expanded .language-trigger { opacity: 0; transform: scale(.85); pointer-events: none; }
+.language-options {
+  display: flex; position: absolute; inset: 0 auto 0 0;
+  width: calc(var(--language-option-width) * 3);
+  opacity: 0; visibility: hidden; transform: scale(.85); pointer-events: none;
+  transition: opacity .16s, transform .25s ease, visibility 0s .16s;
+}
+.language-toggle.expanded .language-options {
+  opacity: 1; visibility: visible; transform: none; pointer-events: auto;
+  transition-delay: .06s, .06s, 0s;
+}
+.language-toggle button[aria-pressed="true"] { color: var(--text); font-weight: 700; }
+.language-toggle button[aria-disabled="true"] { opacity: .35; cursor: not-allowed; }
+.language-toggle button:hover:not([aria-disabled="true"]) { color: var(--text); }
+.language-indicator {
+  position: absolute; inset: 0 auto 0 0; width: var(--language-option-width); border-radius: 999px;
+  background: var(--surface); transition: transform .2s ease;
+}
+html:not([lang="zh-CN"]) .technical-list > div { grid-template-columns: 1fr; gap: 1px; margin-bottom: 8px; }
+html:not([lang="zh-CN"]) .technical-list dt { text-align: left; font-size: 12px; }
+html:not([lang="zh-CN"]) .technical-list dd { text-align: left; }
+.reading-preferences .theme-toggle {
+  position: relative; margin: 0 0 0 15px; padding: 0; border: 0;
+  background: none; box-shadow: none; gap: 0;
+}
+.reading-preferences .theme-toggle::before {
+  content: ""; position: absolute; left: -8px; top: 9px;
+  width: 1px; height: 17px; background: var(--line);
+}
+.reading-preferences .theme-toggle button { width: 32px; height: 34px; }
+html[lang="ja"] body { font-family: InterVariable, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+html[lang="ja"] .article-story .reading-title,
+html[lang="ja"] .md-story { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+@media (max-width: 768px) {
+  .reading-menu-dialog .sidebar-bottom { align-self: center; }
+  .reading-preferences .theme-toggle button { width: 32px; height: 34px; }
+}
+@media (pointer: coarse) {
+  .language-toggle { height: 44px; }
+  .reading-preferences .theme-toggle button { min-width: 38px; height: 44px; }
+  .reading-preferences .theme-toggle::before { top: 14px; }
+}
+@media (min-width: 769px) and (max-width: 960px) {
+  .language-toggle { --language-option-width: 34px; }
+  .reading-preferences .theme-toggle button { width: 28px; min-width: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .language-toggle, .language-toggle .language-trigger, .language-options, .language-indicator { transition: none; }
+}
+
+html[lang="ja"] { --reading-title-font: InterVariable, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }

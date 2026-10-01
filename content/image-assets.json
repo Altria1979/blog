@@ -1,0 +1,576 @@
+{
+  "/images/avatar-altria.jpg": {
+    "width": 1193,
+    "height": 1201,
+    "bytes": 281729,
+    "sha256": "32dbc5fd2a5942014c904713243aa49035e6e1f47ed1ef9cb443eec7b8814a0c",
+    "contentType": "image/jpeg"
+  },
+  "/images/avatar.jpg": {
+    "width": 160,
+    "height": 107,
+    "bytes": 10168,
+    "sha256": "cfcdfdfd951e49e8bbcc5876579f60fd4c0d932f3ade1321957e68b9b397a621",
+    "contentType": "image/jpeg"
+  },
+  "/images/desk.jpg": {
+    "width": 1000,
+    "height": 667,
+    "bytes": 66999,
+    "sha256": "5ff55ca638c04a1d4879cb2b83da4d50055aa492630304335000b29ab05de68c",
+    "contentType": "image/jpeg"
+  },
+  "/images/mountains.jpg": {
+    "width": 1000,
+    "height": 667,
+    "bytes": 196067,
+    "sha256": "57f071ce59bb6dd3b93604dfe776531ce43da9cf846d8d7384e1acafcd80ddc9",
+    "contentType": "image/jpeg"
+  },
+  "/images/posts/2023-year-in-review/01.webp": {
+    "width": 1469,
+    "height": 667,
+    "bytes": 21456,
+    "sha256": "2861f980d326177e872ae138c42495f89a44c770cc1e9379d86166a1b6ba70ef",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2023-year-in-review/02.webp": {
+    "width": 3024,
+    "height": 1914,
+    "bytes": 134100,
+    "sha256": "8cebfdd9a0e018003741a63001806b99e16dc738ef02b5667e6168e4f3dad340",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2023-year-in-review/03.webp": {
+    "width": 1280,
+    "height": 960,
+    "bytes": 63352,
+    "sha256": "d1d8f295d7a6fc35cde4f2ba7bd9e6d9817dc1a3a97f1548efadad3a95aaa2bd",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2023-year-in-review/04.webp": {
+    "width": 1280,
+    "height": 960,
+    "bytes": 81598,
+    "sha256": "a31196af32f050e18a2893f8860260999a4ff772a5c0b5650f894d39a3af6aa8",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2023-year-in-review/05.webp": {
+    "width": 1280,
+    "height": 960,
+    "bytes": 301314,
+    "sha256": "382e9376c2e89b552a6e767c9d4ac344ab4888c035ef693c79a5c3c5ef5f7ed3",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2023-year-in-review/cover.png": {
+    "width": 1920,
+    "height": 1200,
+    "bytes": 1654131,
+    "sha256": "f5675750b89f30d5ea86e11ce99ea1608b424762720d9a73d012e5326dd04fd4",
+    "contentType": "image/png"
+  },
+  "/images/posts/2024-year-in-review/01.webp": {
+    "width": 2298,
+    "height": 1119,
+    "bytes": 147402,
+    "sha256": "3bd7e5688774e6be9360898af9a10e9d242941bfd52467f6cb9b05ba50c82c1b",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/02.webp": {
+    "width": 1358,
+    "height": 1811,
+    "bytes": 322446,
+    "sha256": "767377ead2c8d1d7fcacd6ed61ede85d836e85dc1283a547b16f2c3d147b5faf",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/03.webp": {
+    "width": 1654,
+    "height": 2205,
+    "bytes": 101798,
+    "sha256": "51d25d5dd0fe9086824abeeb0d35dbebfd7cb362fee86ff6ad64effa50dde01c",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/04.webp": {
+    "width": 2087,
+    "height": 1565,
+    "bytes": 457434,
+    "sha256": "895745f41f4b9f4b697ee326434d7bedb5511d0c029e4eab8fd5aa77a085da30",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/05.webp": {
+    "width": 1983,
+    "height": 1487,
+    "bytes": 167010,
+    "sha256": "7346481b3ce6006d27b96e2299f4b714622026ceff5fe4aca794d7bd71fa6399",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/06.webp": {
+    "width": 1170,
+    "height": 2532,
+    "bytes": 158168,
+    "sha256": "b4ad4fd25243743ee758606e1ef8721ae06d7d9fa786a6c4b09ce4d320cf5286",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/07.webp": {
+    "width": 1170,
+    "height": 2532,
+    "bytes": 173452,
+    "sha256": "d67eae680d4d971c1ea543b822c5acad1fdf47a3ab959c75af35e7a098279c70",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/08.webp": {
+    "width": 1170,
+    "height": 2532,
+    "bytes": 99662,
+    "sha256": "18afbb927fe7da1e653b84dd0ad9cdc12b77f6bfb2c454db0a40f364eaff8024",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/09.webp": {
+    "width": 1170,
+    "height": 2532,
+    "bytes": 149776,
+    "sha256": "5d463d6628b9b02bd9b59000f60571f42980986a31d62be1534ab78ac69f2b41",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/10.webp": {
+    "width": 1810,
+    "height": 1398,
+    "bytes": 125790,
+    "sha256": "e234914799095e8acb71cdb43a29bb40566e0d6e29e231bb58c217c9510997d3",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/11.webp": {
+    "width": 1418,
+    "height": 1891,
+    "bytes": 178534,
+    "sha256": "5f83e9bd19f44709039e101030dd5a1b1641d3b328e4579490624b849f1e5b7e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/12.webp": {
+    "width": 1397,
+    "height": 1863,
+    "bytes": 296882,
+    "sha256": "c880ef2be0cd788d90106c857e78dde78d2b0bda6c3296f03f8186544bd0f5d3",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/13.webp": {
+    "width": 2090,
+    "height": 1567,
+    "bytes": 361020,
+    "sha256": "59e0ab4c8035fda3594b6829e396eb46a373b7b416fb1ec9eb765a21f1c3b628",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/14.webp": {
+    "width": 1583,
+    "height": 2111,
+    "bytes": 149850,
+    "sha256": "f1cab37e45dafa16725dc11bb27a234de9b4e3530fcf6019e905ea22afae10a0",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/15.webp": {
+    "width": 1582,
+    "height": 2109,
+    "bytes": 154888,
+    "sha256": "6fb24a7c645f24045007a8fa08c15cd19adf0339344acf7ef1d47238dc140449",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/16.webp": {
+    "width": 3078,
+    "height": 1922,
+    "bytes": 305874,
+    "sha256": "cd6723b33e03a2518d220ee97273c7c00f9c12d8237457e0c6fd84c7c7bb57fd",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/17.webp": {
+    "width": 1968,
+    "height": 1382,
+    "bytes": 63236,
+    "sha256": "05aa10dd3d9b02b206aadf876f5899bfb585ae9a650a07b5a66c9a0d6de50da2",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/18.webp": {
+    "width": 2026,
+    "height": 878,
+    "bytes": 36080,
+    "sha256": "43c17a908af07ba9bdc5d04def1e392a95a4968e12537777db298832c24f655e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/19.webp": {
+    "width": 3024,
+    "height": 4032,
+    "bytes": 1164586,
+    "sha256": "2e7ee619efd2b8b276854fd5e5327fc8e890f272b85c3b9265dbfb8850c52d70",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/20.webp": {
+    "width": 3024,
+    "height": 4032,
+    "bytes": 408162,
+    "sha256": "0dcf2ae70d12d3822646e1a3130213e37f82f4f98716a6514ae05d06586e6560",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2024-year-in-review/cover-mahjong-9437fcbf.jpg": {
+    "width": 4096,
+    "height": 2304,
+    "bytes": 1223722,
+    "sha256": "9437fcbf955e12da73633ac130208e12b25af1edddeb1b64be084039c2b27984",
+    "contentType": "image/jpeg"
+  },
+  "/images/posts/2024-year-in-review/cover.webp": {
+    "width": 4202,
+    "height": 2384,
+    "bytes": 361630,
+    "sha256": "5efcb025a2cad5f9a8e35047f02f899adf1f496c9e896a70c316f2dfa1ff2597",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/01.webp": {
+    "width": 3096,
+    "height": 1868,
+    "bytes": 83976,
+    "sha256": "a9366f73d25c3742d3279f07253ff72a4234c28dca31cadabce67b14237b5e85",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/02.webp": {
+    "width": 2400,
+    "height": 1358,
+    "bytes": 86466,
+    "sha256": "8d9c0370e1cb85962a6c3caca0c54e361f54e4cb450b9eda39d46cdd19607947",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/03.webp": {
+    "width": 4032,
+    "height": 3024,
+    "bytes": 440726,
+    "sha256": "df71471bc3d07f21da338f0ce17b406cbd4ecfea81fb77774d0f11d4a1522f36",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/04.webp": {
+    "width": 1744,
+    "height": 1308,
+    "bytes": 124988,
+    "sha256": "f06d3fab5984010abd88409c9ef2312d2adb8cd83e26fd8a604ffa2cd7da6416",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/05.webp": {
+    "width": 1246,
+    "height": 1594,
+    "bytes": 228336,
+    "sha256": "df82f706b2961bd5e44fba7c13b50b5292216cea5be6213874fdf0b03a7db620",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/06.webp": {
+    "width": 1252,
+    "height": 1634,
+    "bytes": 218252,
+    "sha256": "900f5294064d6a4f9cced950fb111d620a3b5f338cdf18fb36733667dd1194c3",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/07.webp": {
+    "width": 2179,
+    "height": 1634,
+    "bytes": 242280,
+    "sha256": "0f82ed0e214ac6b8ea60d105e3eb0b5398879a2cb2f499b7ce6a467c74a6540e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/08.webp": {
+    "width": 2088,
+    "height": 1566,
+    "bytes": 267044,
+    "sha256": "a750d2801f74fa425e6d46d4aedcc324abd4c25bd4aa8b091fe889da73c6d5af",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/09.webp": {
+    "width": 4032,
+    "height": 3024,
+    "bytes": 694360,
+    "sha256": "4f64ad98ccc5136a033555c15c675115fc45127ba51bc18eea218ec5071d756f",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/10.webp": {
+    "width": 2343,
+    "height": 1757,
+    "bytes": 206864,
+    "sha256": "af4127d99d92f6b7549768b7d79cb00606f1b6ff42da072cf2606045c792084f",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/11.webp": {
+    "width": 558,
+    "height": 1082,
+    "bytes": 70048,
+    "sha256": "afe4b6cb6159da1537704d36c749eb57069df93c06ffec75c30839be5e3ded67",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/12.webp": {
+    "width": 1206,
+    "height": 2622,
+    "bytes": 99632,
+    "sha256": "e01fcf75f4643a18928f442d8552621fe554c93795adcc99fca2d5483eb41173",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/13.webp": {
+    "width": 1206,
+    "height": 2622,
+    "bytes": 121054,
+    "sha256": "27a7f8e6d1ee39c8196b0dc121dc6d6c1fcb6363df3ac6229522400657ff7bb8",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/14.webp": {
+    "width": 2622,
+    "height": 1206,
+    "bytes": 140330,
+    "sha256": "4a48be1d128976fcc37cb755b0ce34cf4f7c9f920e5b2e84761f44d9a5d97aa8",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/15.webp": {
+    "width": 2622,
+    "height": 1206,
+    "bytes": 197816,
+    "sha256": "49ce7e3b20d8a6757c154a6a9ad06d6966826f9062042efead98261642dc1641",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/16.webp": {
+    "width": 2622,
+    "height": 1206,
+    "bytes": 239290,
+    "sha256": "8ddcccdbe951fc847734bc20dd87720aea1e45bfcb0108fb598ec99a1565284b",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/17.webp": {
+    "width": 2360,
+    "height": 1640,
+    "bytes": 299998,
+    "sha256": "56e77ca4cb0ff0b75ace1e538d664719c0a08d1721ed7b3744db7ceff0f0e184",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/18.webp": {
+    "width": 2720,
+    "height": 1540,
+    "bytes": 422012,
+    "sha256": "82fc87cca793fd440f4e5d06d3f9816b3ac6d38452e5dff22e346ebf4ac201df",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/19.webp": {
+    "width": 3024,
+    "height": 4032,
+    "bytes": 782606,
+    "sha256": "8cd8ccfefb3c46faa6770b00baf10512e424eec8de04407421fdbbaf15d3c6d2",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/20.webp": {
+    "width": 959,
+    "height": 1280,
+    "bytes": 135624,
+    "sha256": "be1305159418c9f2f0d80a51174244516a53215cb29b60e67afe4ae938d85fd2",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/21.webp": {
+    "width": 4284,
+    "height": 5712,
+    "bytes": 790952,
+    "sha256": "51d4929d219b60ff4b504b273772af5d6dc87767cdf4b022f6b4a3f075f2c56f",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/22.webp": {
+    "width": 1476,
+    "height": 1969,
+    "bytes": 201226,
+    "sha256": "5020c09bbc13897486389dd72862b575c92da0d103527ae7e83745ce93db697e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/23.webp": {
+    "width": 959,
+    "height": 1280,
+    "bytes": 127330,
+    "sha256": "92006e5298f7f0bdf77f80cbd33fb632780b7ee5b80ff534923c91e30f6562ab",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/24.webp": {
+    "width": 1482,
+    "height": 1976,
+    "bytes": 192942,
+    "sha256": "a0588990039159bcc82209979908195149a44087d3fe4b3f120a2c223bb10f81",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/25.webp": {
+    "width": 1170,
+    "height": 1578,
+    "bytes": 91754,
+    "sha256": "735865002574e550f041647b1156b24345b3b02e56aa3e0af7b62f0747e9e250",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/26.webp": {
+    "width": 1707,
+    "height": 1280,
+    "bytes": 137352,
+    "sha256": "c08997dbf6001b38455f8d72a848a1a8e6e73ff7e1eae1dc239c155bc5aae983",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/27.webp": {
+    "width": 3024,
+    "height": 4032,
+    "bytes": 628092,
+    "sha256": "93cc0b5844d507d35a5741ace27c122b7db67b02c5d65d2c1fdaad508ec10f59",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/28.webp": {
+    "width": 1206,
+    "height": 2622,
+    "bytes": 141264,
+    "sha256": "f8904593f93f97cb1df689f70e0ee79c1bcab33370750508b471d70f17ad3f5e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/29.webp": {
+    "width": 1206,
+    "height": 2622,
+    "bytes": 137772,
+    "sha256": "26ce6ad9bbb8d8ce788fdf0c3cd9242bb61d367525143508574857085ba0710d",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/30.webp": {
+    "width": 959,
+    "height": 1280,
+    "bytes": 59608,
+    "sha256": "b053effec41370e5295e6339a934d5cb8d9cbf8a61a420917ab1fb5ffebe3064",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/31.webp": {
+    "width": 1224,
+    "height": 1626,
+    "bytes": 65698,
+    "sha256": "b2058273c415cdc861f0d50d8bd3d5f88b6ae7fba09fda4d4131fc952dd354d0",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/32.webp": {
+    "width": 2568,
+    "height": 1926,
+    "bytes": 517606,
+    "sha256": "26fc0a89bff57e58d06b1656c18523238da6427518494eb403aa0632b3895277",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/33.webp": {
+    "width": 2145,
+    "height": 1609,
+    "bytes": 322038,
+    "sha256": "50aeea24707c3d3a1693f8c6f825518ad77cf19cba0016e6d8210510347988a2",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/34.webp": {
+    "width": 1744,
+    "height": 1308,
+    "bytes": 75380,
+    "sha256": "12105c5f74c413f7b0b94343b3e31d0e5b83425f4de08143493d0d0c4263d617",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/35.webp": {
+    "width": 2566,
+    "height": 1924,
+    "bytes": 137742,
+    "sha256": "d368c9bba1b8c0d4de8918f1d13e80d1e682c9107f27533dfff183d0fffc0f81",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/36.webp": {
+    "width": 3555,
+    "height": 2666,
+    "bytes": 156258,
+    "sha256": "89ebd7a6fd90d4f8f994d3b12a50e24751b3beab2b04381f0178df30b3411b21",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/37.webp": {
+    "width": 2080,
+    "height": 1134,
+    "bytes": 73652,
+    "sha256": "b73b6327d553deba22ec95f02262151f11c4c243c861b102b37eed119dd6f9c1",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/38.webp": {
+    "width": 2768,
+    "height": 1474,
+    "bytes": 150930,
+    "sha256": "d1e4cc1c446d3a7f22bc1fa4b64862bce9b4d8bfc3e601d8d80e94022cb5701b",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/39.webp": {
+    "width": 3010,
+    "height": 1530,
+    "bytes": 194580,
+    "sha256": "a5941118f26f55146880dd1f91fb988b557db42681230a12056592c9a287d3b2",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/40.webp": {
+    "width": 2278,
+    "height": 1454,
+    "bytes": 118712,
+    "sha256": "b8e60f4e5a445b8c4351c7e25c85c74755e266436e3bf51cca8cfab2331c728d",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/41.webp": {
+    "width": 1659,
+    "height": 2213,
+    "bytes": 189214,
+    "sha256": "cec5de1df48d32d15c273b19b97864aaba171e02e17c5303818d008a5eefea86",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/42.webp": {
+    "width": 1734,
+    "height": 2312,
+    "bytes": 193702,
+    "sha256": "4f3421dca8642e77d6a34c26c0166283d89322ca9a312fc45e0ff56004a81b04",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/43.webp": {
+    "width": 4284,
+    "height": 5712,
+    "bytes": 329808,
+    "sha256": "92da2f057f00dba17568693fb7acfd6c2349ba1a8f1b2287d028b87fc70f11c9",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/44.webp": {
+    "width": 1236,
+    "height": 1572,
+    "bytes": 107252,
+    "sha256": "0961078381cd66ec970e59b56432b4a4994e7636c1edd4d7eb8132959be8a26e",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/45.webp": {
+    "width": 1442,
+    "height": 1144,
+    "bytes": 47182,
+    "sha256": "2af3d6d0f4c02087a0c24a122fe6645eb6f63aa1b51d26d8276c23925395ab7d",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/46.webp": {
+    "width": 2088,
+    "height": 696,
+    "bytes": 46194,
+    "sha256": "e454f00e7d654fe269f86882cf896690cfc8165b241f3ece2709669f59e7097c",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/47.webp": {
+    "width": 1280,
+    "height": 1227,
+    "bytes": 39134,
+    "sha256": "ff63f8f5a36540185ec0c80568aa0a16135194f937ad499196d6268691ad846f",
+    "contentType": "image/webp"
+  },
+  "/images/posts/2025-year-in-review/cover.webp": {
+    "width": 1280,
+    "height": 772,
+    "bytes": 29560,
+    "sha256": "df804e87c6a9436d56b73764b3a37f0fc00d0e3ee1f5527dc05a4d2d722519ff",
+    "contentType": "image/webp"
+  },
+  "/images/posts/nextjs-blog/wallhaven-y8137x.jpg": {
+    "width": 2048,
+    "height": 1443,
+    "bytes": 260011,
+    "sha256": "f38550c2d5527c8771208442ea580bf0c9060be321c2fa1df629fdb7f43e38eb",
+    "contentType": "image/jpeg"
+  },
+  "/images/sea.jpg": {
+    "width": 1000,
+    "height": 667,
+    "bytes": 71955,
+    "sha256": "800653da9aee06a2fd1719ecbdce97cc0c46ae2e6f160558911957992791961f",
+    "contentType": "image/jpeg"
+  }
+}

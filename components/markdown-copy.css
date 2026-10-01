@@ -1,0 +1,48 @@
+.md-copy-editor {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  isolation: isolate;
+  font: inherit;
+  line-height: inherit;
+  font-variant-ligatures: none;
+  text-align: left;
+}
+
+.md-copy .md-copy-editor input {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-variant-ligatures: inherit;
+  caret-color: var(--text);
+}
+
+.md-copy-highlight {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  direction: ltr;
+}
+
+.md-copy-token-line {
+  display: inline-block;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0.25em 0.7em;
+  white-space: pre;
+}
+
+.md-copy-token { color: var(--copy-token-light, var(--text)); }
+[data-theme="dark"] .md-copy-token { color: var(--copy-token-dark, var(--text)); }
+.md-copy .md-copy-editor.is-highlighted input { color: transparent; }
+.md-copy .md-copy-editor.is-highlighted input::selection { color: transparent; background: var(--accent-soft); }
+
+@media (forced-colors: active) {
+  .md-copy-highlight { display: none; }
+  .md-copy .md-copy-editor.is-highlighted input { color: FieldText; }
+  .md-copy .md-copy-editor.is-highlighted input::selection { color: HighlightText; background: Highlight; }
+}

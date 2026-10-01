@@ -1,0 +1,57 @@
+.article-code .article-code-filename {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+}
+.article-code-filename > svg,
+.article-code-file-icon { flex-shrink: 0; }
+.article-code-file-icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+.markdown .article-code pre { tab-size: var(--code-indent, 2); }
+.article-code .article-shiki-token {
+  color: var(--code-token-light, inherit);
+  font-style: var(--code-font-style, normal);
+  font-weight: var(--code-font-weight, normal);
+  text-decoration: var(--code-text-decoration, none);
+}
+:root[data-theme="dark"] .article-code .article-shiki-token {
+  color: var(--code-token-dark, inherit);
+  font-style: var(--code-dark-font-style, normal);
+  font-weight: var(--code-dark-font-weight, normal);
+  text-decoration: var(--code-dark-text-decoration, none);
+}
+.article-code-indent {
+  position: relative;
+  border-left: 1px solid var(--line);
+  margin-left: -1px;
+}
+.article-code-indent:hover { border-left-color: var(--accent); }
+.article-code .is-word-highlighted {
+  border-radius: .2em;
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.article-code .article-code-line.is-error { background: #df343425; }
+.article-code .article-code-line.is-warning { background: #d9911825; }
+.article-code .article-code-line.is-added::before {
+  content: "+ " attr(data-line-number);
+  color: #168e27;
+}
+.article-code .article-code-line.is-removed::before,
+.article-code .article-code-line.is-error::before { color: #cf3636; }
+.article-code .article-code-line.is-removed::before { content: "− " attr(data-line-number); }
+.article-code .article-code-line.is-warning::before { color: #b17309; }
+.article-code.has-focused .article-code-line:not(.is-focused) { opacity: .45; }
+.article-code.has-focused:hover .article-code-line,
+.article-code.has-focused:focus-within .article-code-line { opacity: 1; }
+.article-code .article-code-line.is-focused::before {
+  content: "→ " attr(data-line-number);
+  color: var(--accent);
+}

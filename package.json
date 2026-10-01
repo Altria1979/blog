@@ -1,0 +1,39 @@
+{
+  "name": "altria-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "images:manifest": "node scripts/image-manifest.mjs"
+  },
+  "dependencies": {
+    "@shikijs/transformers": "^4.4.3",
+    "abcjs": "^6.7.1",
+    "katex": "^0.16.47",
+    "mermaid": "^11.17.2",
+    "next": "16.3.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-mdc": "^3.11.1",
+    "remark-parse": "^11.0.0",
+    "shiki": "^4.4.3",
+    "unified": "^11.0.5",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.7",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "博客参考实现规范"
+  short_description: "为当前 Next.js 博客提供参考站视觉、交互、内容迁移与验收规范"
+  default_prompt: "使用 $shinya-next-blog，依据固定参考源码和当前项目检查差距，并按我的请求修正博客。"

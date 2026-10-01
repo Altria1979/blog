@@ -1,0 +1,115 @@
+.markdown-mermaid,
+.markdown-music-score {
+  margin: 1.2em 0;
+  padding: 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 0.7em;
+  background: var(--panel);
+  line-height: 1.4;
+}
+
+.markdown-mermaid-scroll,
+.markdown-score-sheet {
+  overflow-x: auto;
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+}
+
+.markdown-mermaid-scroll svg,
+.markdown-score-sheet svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.markdown-mermaid-scroll p { margin: 0; }
+.markdown-score-sheet { color: var(--text); }
+.markdown-score-sheet svg { fill: currentColor; }
+.markdown-score-sheet svg text { fill: currentColor; }
+.markdown-media-tools { display: flex; justify-content: flex-end; margin-bottom: 0.4em; }
+.markdown-media-tools button {
+  padding: 0.25em 0.65em;
+  border: 1px solid var(--line);
+  border-radius: 0.35em;
+  font: inherit;
+  font-size: 0.8em;
+  color: var(--secondary);
+  cursor: pointer;
+}
+.markdown-media-tools button:hover,
+.markdown-media-tools button:focus-visible { color: var(--accent); border-color: var(--accent); }
+.markdown-media-source,
+.markdown-media-error { margin-top: 0.7em; font-size: 0.8em; color: var(--secondary); }
+.markdown-media-source summary,
+.markdown-media-error summary { cursor: pointer; }
+.markdown-media-source pre,
+.markdown-media-error pre { overflow-x: auto; padding: 0.7em; white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-media-status,
+.markdown-media-invalid { color: var(--secondary); font-size: 0.9em; }
+.markdown-media-invalid { margin: 1em 0; padding: 0.8em; border: 1px solid var(--line); border-radius: 0.5em; }
+
+.markdown-music-score .abcjs-inline-audio {
+  flex-wrap: wrap;
+  gap: 0.25em;
+  max-width: 100%;
+  min-height: 38px;
+  height: auto;
+  margin-top: 0.5em;
+  padding: 0.3em 0.5em;
+  border-radius: 0.4em;
+  background: var(--panel);
+  color: var(--text);
+}
+.markdown-music-score .abcjs-inline-audio .abcjs-btn { color: var(--text); }
+.markdown-music-score .abcjs-inline-audio .abcjs-btn svg,
+.markdown-music-score .abcjs-inline-audio .abcjs-btn g { fill: currentColor; stroke: currentColor; }
+.markdown-music-score .abcjs-inline-audio .abcjs-midi-clock,
+.markdown-music-score .abcjs-inline-audio .abcjs-tempo-wrapper { color: var(--secondary); }
+.markdown-music-score .abcjs-inline-audio .abcjs-midi-progress-background { background-color: var(--line); }
+.markdown-music-score .abcjs-inline-audio .abcjs-midi-progress-indicator { background-color: var(--accent); }
+.markdown-music-score .abcjs-inline-audio input.abcjs-midi-tempo {
+  width: 3.3em;
+  background: var(--panel);
+  color: var(--text);
+  border-color: var(--line);
+}
+.markdown-music-score .abcjs-inline-audio .abcjs-btn:hover,
+.markdown-music-score .abcjs-inline-audio .abcjs-btn.abcjs-pushed { color: var(--accent); }
+
+.markdown-video-figure { margin: 1.5em auto; }
+.markdown-video-figure figcaption { margin-top: 0.4em; font-size: 0.8em; text-align: right; }
+.markdown-video {
+  contain: paint;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.8em;
+  background: var(--panel);
+}
+.markdown-video iframe,
+.markdown-video video { display: block; width: 100%; height: 100%; border: 0; }
+.markdown-video.is-raw video { object-fit: contain; }
+
+.markdown-github-container { max-width: 26em; margin: 1.5em auto; }
+.markdown .markdown-github-card,
+.markdown-github-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.9em;
+  border: 1px solid var(--line);
+  border-radius: 0.65em;
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.markdown-github-card:hover { border-color: var(--accent); }
+.markdown .markdown-github-card img,
+.markdown-github-card img { flex: none; width: 3em; height: 3em; margin: 0; border-radius: 0.5em; }
+.markdown-github-symbol { flex: none; width: 1.5em; text-align: center; font-size: 2em; color: var(--secondary); }
+.markdown-github-info { display: block; min-width: 0; }
+.markdown-github-info strong { background: none; overflow-wrap: anywhere; font-family: ui-monospace, monospace; font-size: 0.95em; }
+.markdown-github-description { display: -webkit-box; overflow: hidden; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-top: 0.2em; font-size: 0.85em; color: var(--secondary); }
+.markdown-github-meta { display: flex; flex-wrap: wrap; gap: 0.8em; margin-top: 0.4em; font-size: 0.8em; color: var(--secondary); }

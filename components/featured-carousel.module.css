@@ -1,0 +1,187 @@
+.section {
+  min-width: 0;
+}
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--heading);
+  height: 3rem;
+  margin-bottom: -0.2rem;
+  mask-image: linear-gradient(#000, transparent);
+}
+.heading h1 {
+  flex-shrink: 0;
+  font-size: 3rem;
+  font-family: var(--reading-title-font);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.viewport {
+  position: relative;
+}
+.rail {
+  position: relative;
+  display: flex;
+  padding-block: 2px;
+  gap: min(1em, 2%);
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+  overflow-anchor: none;
+  overscroll-behavior-x: contain;
+  mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+  cursor: grab;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.rail[data-dragging="true"],
+.rail[data-dragging="true"] .card {
+  cursor: grabbing;
+}
+.rail:focus-visible {
+  outline-offset: 2px;
+  border-radius: 0.5em;
+}
+.card {
+  position: relative;
+  flex: 0 0 max(12rem, 28%);
+  max-width: 80%;
+  aspect-ratio: 1.77;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 0.5em;
+  background: #394b63;
+  color: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.card:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--accent);
+}
+.cover {
+  z-index: -1;
+  transition: filter 240ms;
+}
+.title {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1.5em 0.5em 0.4em;
+  background: linear-gradient(transparent, #0009);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px #0006;
+  transition: opacity 180ms;
+}
+.detail {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  padding: 0.65em 1em;
+  overflow: auto;
+  text-align: center;
+  text-shadow: 0 1px 3px #0005;
+  opacity: 0;
+  transition: opacity 180ms;
+}
+.detail > span {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.detail time {
+  font-size: 0.8rem;
+  color: #ffffffb3;
+}
+.noCover {
+  background: linear-gradient(135deg, #46526b, #26384f);
+}
+.noCover .detail {
+  opacity: 1;
+}
+.noCover .title {
+  opacity: 0;
+}
+.card:focus-visible .cover {
+  filter: brightness(0.8) saturate(3) contrast(0.8) blur(2em);
+}
+.card:focus-visible .title {
+  opacity: 0;
+}
+.card:focus-visible .detail {
+  opacity: 1;
+}
+.control {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  min-height: 3.5rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: var(--surface);
+  box-shadow: 0 0.2em 0.5em #0002;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 180ms, color 180ms;
+}
+.previous {
+  left: 1rem;
+}
+.next {
+  right: 1rem;
+}
+.control:hover {
+  color: var(--accent);
+}
+.section:focus-within .control {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .section:hover .control {
+    opacity: 1;
+  }
+  .card:hover .cover {
+    filter: brightness(0.8) saturate(3) contrast(0.8) blur(2em);
+  }
+  .card:hover .title {
+    opacity: 0;
+  }
+  .card:hover .detail {
+    opacity: 1;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .control {
+    opacity: 1;
+    width: 2.75rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover,
+  .title,
+  .detail,
+  .control {
+    transition: none;
+  }
+}
