@@ -1,6 +1,6 @@
 ---
 title: 用 Next.js，搭一个自己的小世界
-description: 从 Markdown 写作到三语阅读，记录这个 Next.js 博客的内容结构、页面实现，以及用阿里云 OSS 托管图片的实现。
+description: 从 Markdown 写作到三语阅读，记录这个 Next.js 博客的内容结构、页面实现与阅读体验。
 date: 2026-09-30
 category: 技术
 tags: Next.js, React, 博客
@@ -11,7 +11,7 @@ featured: true
 
 互联网有很多可以发布内容的地方，但一个属于自己的博客，仍然有它特别的意义。技术笔记可以慢慢修订，年终总结可以按年份翻阅，页面也可以长成自己喜欢的样子。
 
-Altria 目前保留这篇建站记录和三篇年终总结。下面从这个仓库的实际实现出发，说明文章怎样变成页面、哪些能力已经具备，以及图片如何通过阿里云 OSS 独立存储。**先让内容有一个稳定的家，再逐步改善写作和阅读。**
+Altria 目前保留这篇建站记录和三篇年终总结。下面从这个仓库的实际实现出发，说明文章怎样变成页面，以及哪些阅读能力已经具备。**先让内容有一个稳定的家，再逐步改善写作和阅读。**
 
 ## 设计参考与致谢
 
@@ -48,7 +48,7 @@ blog.config.ts            站名、作者、域名等配置
 ```markdown
 ---
 title: 用 Next.js，搭一个自己的小世界
-description: 记录博客的内容结构、阅读体验与图片托管。
+description: 记录博客的内容结构、页面实现与阅读体验。
 date: 2026-09-30
 category: 技术
 tags: Next.js, React, 博客
@@ -113,74 +113,3 @@ export default async function Page({ params }: Props) {
 语言界面和文章翻译是两件事。这篇文章有实际维护的英文、日文文件，通过 `translationKey: nextjs-blog` 关联。中文地址保持原样，译文地址是 `/en/posts/nextjs-blog` 和 `/ja/posts/nextjs-blog`；没有译文的文章不生成假页面，也不会临时调用翻译服务。
 
 标题、描述、canonical、Open Graph 和结构化数据由文章与站点配置生成；语言替代链接只列出真实译文。`/sitemap.xml` 帮助发现页面，`/rss.xml` 以及对应语言的 Feed 提供标题、摘要和原文链接，当前并非全文订阅。上线前必须配置正式的 `NEXT_PUBLIC_SITE_URL`，否则复制链接和搜索引擎元数据可能仍指向本机。相关机制可以查看 [Next.js 元数据文档](https://nextjs.org/docs/app/getting-started/metadata-and-og-images)。
-
-## 六、把掘金上的记录带回来
-
-三篇年终总结迁移时，保留了原文内容、发布日期和出处，并把图片整理到各文章的目录下。现在分别使用 `2023-year-in-review`、`2024-year-in-review`、`2025-year-in-review` 作为稳定文件名。迁移后再补充内容，也不需要重置最初的发表日期。
-
-平台导出的 HTML 仍需检查：图片排列、内嵌样式和特殊标签应转为支持的 Markdown 或 MDC 组件。连续图片由当前渲染器自动分组并排，不需要为每篇文章手工布局；重点是文字不丢、图文顺序不乱、出处可追溯。迁移完成还应逐段查看正文，不能只确认首页出现了卡片。
-
-迁入的图片使本地资源明显增加。把大图一直放进 `public` 和 Git，会让克隆、构建和备份变重；重复换图也可能让仓库历史继续积累体积。这是将图片存储拆分到 OSS 的直接原因。
-
-## 七、用阿里云 OSS 保存图片
-
-本站使用阿里云 OSS 的默认 HTTPS 地址保存和提供图片。存储空间位于香港地域 `cn-hongkong`，采用 Standard 存储类型和 LRS 冗余方式。首次迁移的 81 张图片共 18,931,196 字节，已经逐一核对 SHA-256 和 `Content-Type`。文章、代码和轻量的图片清单留在仓库，图片文件由 OSS 提供。
-
-文章仍记录 `/images/posts/nextjs-blog/wallhaven-y8137x.jpg` 这样的逻辑路径，对应 OSS 对象键 `images/posts/nextjs-blog/wallhaven-y8137x.jpg`。渲染时由图片地址函数拼接存储来源，因此换地址不需要逐篇替换正文。项目默认使用下面的 OSS 来源，也可以通过 `NEXT_PUBLIC_IMAGE_BASE_URL` 覆盖；这里使用存储空间的默认域名，无需另行绑定自定义域名。
-
-```dotenv
-NEXT_PUBLIC_SITE_URL=https://blog.example.com
-NEXT_PUBLIC_IMAGE_BASE_URL=https://altria-blog-images-5225758.oss-cn-hongkong.aliyuncs.com
-```
-
-`NEXT_PUBLIC_SITE_URL` 需要替换成博客正式地址。图片来源只填写 HTTPS 协议和主机名，不附带 `/images`、对象路径、查询参数或凭据。最终封面地址就是这个来源加上 Markdown 中的 `/images/posts/nextjs-blog/wallhaven-y8137x.jpg`。
-
-仓库中的 `content/image-assets.json` 保存每张图片的宽高、字节数、SHA-256 和类型。正文渲染从中读取尺寸，因此图片移到远端后仍可预留布局空间。新增图片时，先按逻辑路径临时放入 `public/images`，生成清单，再上传和校验。清单命令只更新元数据，不会上传或删除图片：
-
-```bash
-npm run images:manifest
-```
-
-上传使用已完成 OAuth 登录的本机阿里云 CLI，不需要把长期 AccessKey 写进项目。下面保留了首次批量迁移的命令结构；执行前把 `BUCKET` 替换为自己的存储空间名称，且本地目录中应已有待上传文件：
-
-```bash
-aliyun ossutil cp public/images/ oss://BUCKET/images/ --recursive --region cn-hongkong --cache-control 'public, max-age=86400'
-aliyun ossutil stat oss://BUCKET/images/posts/nextjs-blog/wallhaven-y8137x.jpg --region cn-hongkong
-```
-
-`cp` 保留 `images/` 下的相对路径，`stat` 查看对象大小、类型等元信息。只看大小不足以证明内容一致，还要读取云端文件比对清单中的 SHA-256，并检查页面实际加载。匿名权限仅允许读取 `images/*` 下的对象，不允许匿名列举、上传或删除。
-
-OSS 负责保存和提供文件，**上传不会自动把大图压小，也不会自动生成缩略图**。项目设置了 `images.unoptimized: true`，封面、头像和正文图片都由浏览器直接从 OSS 读取，复制图片地址得到的是 OSS 原始 URL。Next.js 不再动态压缩、缩放或转换图片格式，因此应在上传前准备合理的尺寸和体积。对象的 `Content-Type` 应与图片格式一致；换图时使用新文件名，可以避免已有缓存继续显示旧内容。
-
-公开图片地址可以进入浏览器，CLI 的 OAuth 会话和其他上传凭据不可以。它们留在本机或受控的服务端、CI 环境，且只授予所需权限。不要使用 `NEXT_PUBLIC_` 保存 AccessKey、Secret 或 token，也不要把凭据写进 Markdown。
-
-每次更新图片，都先验证文件内容、页面显示、分享封面和独立备份，再清理临时的本地图片。保留清单，之后构建就不再依赖这些图片文件。普通删除不会清除 Git 历史里的旧文件；是否清理历史需要另外评估协作和回退影响。
-
-## 八、从本地预览走到正式发布
-
-已有仓库使用锁文件安装依赖，再启动本地开发服务：
-
-```bash
-npm ci
-npm run dev -- --port 3140
-```
-
-写完文章先打开 `/posts/nextjs-blog`，检查封面裁切、代码长行、目录跳转和移动端排版；英文、日文版本也要实际打开。环境变量变化后重启开发服务，正式环境重新构建，避免继续读取旧配置。
-
-发布前运行项目已有检查：
-
-```bash
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run start -- --port 3141
-```
-
-最后一条在构建成功后启动生产服务。除检查命令通过，还要实际查看首页、归档、文章、搜索、主题切换、404、RSS 和站点地图。还要检查 OSS 返回的文件、浏览器中的图片请求，以及分享卡片使用的绝对 URL。构建成功不代表已经部署；正式发布后仍需在实际站点复查这些入口。
-
-## 九、给以后留一点空间
-
-现在这套实现已经能容纳技术笔记和年度记录，图片交给 OSS 保存，接下来可以把更多精力放在写作和维护内容上。正文分节搜索可以等文章数量增加后完善；评论、碎语和娱乐收藏先留在计划之外。
-
-对个人博客来说，可维护比功能数量更重要：文件能看懂，路径足够稳定，素材有备份，发布前有一套可重复检查的过程。每次改动解决一个真实问题，这个小世界就能慢慢长大。

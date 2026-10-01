@@ -1,6 +1,6 @@
 ---
 title: Build a Little World of Your Own with Next.js
-description: A practical record of this Next.js blog, from Markdown and multilingual reading to page generation and image hosting with Alibaba Cloud OSS.
+description: A practical record of this Next.js blog, from Markdown and multilingual reading to content structure, page generation, and the reading experience.
 date: 2026-09-30
 category: 技术
 tags: Next.js, React, 博客
@@ -13,7 +13,7 @@ translationKey: nextjs-blog
 
 There are plenty of places to publish online, but a blog of your own still means something special. Technical notes can be revised over time, annual reflections can be browsed by year, and the pages can take a shape you enjoy.
 
-Altria currently keeps this building record and three annual reviews. This article follows the actual repository: how writing becomes a page, which features already work, and how Alibaba Cloud OSS stores images independently. **Give the content a stable home, then improve writing and reading one step at a time.**
+Altria currently keeps this building record and three annual reviews. This article follows the actual repository: how writing becomes a page and which reading features already work. **Give the content a stable home, then improve writing and reading one step at a time.**
 
 ## Design References and Thanks
 
@@ -50,7 +50,7 @@ Each file begins with metadata, followed by the body. This article's basic forma
 ```markdown
 ---
 title: Build a Little World of Your Own with Next.js
-description: A record of content, reading, and image hosting.
+description: A record of content structure, page generation, and the reading experience.
 date: 2026-09-30
 category: 技术
 tags: Next.js, React, 博客
@@ -117,74 +117,3 @@ Search currently checks titles, descriptions, categories, and tags. It ignores c
 Interface language and article translation are separate concerns. This post has maintained English and Japanese files, connected by `translationKey: nextjs-blog`. The Chinese URL stays unchanged; translations use `/en/posts/nextjs-blog` and `/ja/posts/nextjs-blog`. Articles without translations do not receive pretend translated pages or call a translation service at runtime.
 
 Titles, descriptions, canonical URLs, Open Graph data, and structured data come from article metadata and site settings. Language alternatives contain only actual translations. `/sitemap.xml` helps discover pages; `/rss.xml` and localized feeds contain titles, summaries, and article links, rather than complete bodies. Set the real `NEXT_PUBLIC_SITE_URL` before publishing, or copied links and search metadata may still point to a local address. The [Next.js metadata guide](https://nextjs.org/docs/app/getting-started/metadata-and-og-images) explains the underlying APIs.
-
-## 6. Bring the Juejin Records Home
-
-The three annual reviews were migrated with their text, original publication dates, and source links. Images were organized by article. Their stable filenames are `2023-year-in-review`, `2024-year-in-review`, and `2025-year-in-review`. Later additions do not require resetting the original publication date.
-
-HTML exported from another platform still needs review: image layouts, embedded styles, and special tags should be converted to supported Markdown or MDC components. The renderer now groups consecutive images into rows automatically, without a custom layout for each article. The priorities are preserving the text, keeping the image sequence intact, and retaining traceable sources. A completed migration needs a paragraph-by-paragraph reading check, beyond confirming that cards appear on the home page.
-
-Those images noticeably increase local assets. Keeping large originals under `public` and in Git makes cloning, building, and backups heavier. Replacing pictures can also continue growing repository history. That is the practical reason for moving image storage to OSS.
-
-## 7. Store Images in Alibaba Cloud OSS
-
-This blog stores and serves images through Alibaba Cloud OSS's default HTTPS address. The bucket uses Standard storage with LRS redundancy in Hong Kong, `cn-hongkong`. The initial migration contains 81 images totaling 18,931,196 bytes, each verified for SHA-256 and `Content-Type`. Writing, code, and a small image manifest stay in the repository, while OSS provides the image files.
-
-Articles retain logical paths such as `/images/posts/nextjs-blog/wallhaven-y8137x.jpg`, corresponding to the OSS object key `images/posts/nextjs-blog/wallhaven-y8137x.jpg`. The image URL helper joins those paths to the storage origin during rendering, so a later address change does not require rewriting every article. The project uses the following OSS origin by default, with `NEXT_PUBLIC_IMAGE_BASE_URL` available as an override. This setup uses the bucket's default domain and does not require a custom domain.
-
-```dotenv
-NEXT_PUBLIC_SITE_URL=https://blog.example.com
-NEXT_PUBLIC_IMAGE_BASE_URL=https://altria-blog-images-5225758.oss-cn-hongkong.aliyuncs.com
-```
-
-Replace `NEXT_PUBLIC_SITE_URL` with the blog's production address. The image origin contains only the HTTPS scheme and hostname, without `/images`, an object path, query parameters, or credentials. The final cover URL combines this origin with `/images/posts/nextjs-blog/wallhaven-y8137x.jpg` from the Markdown.
-
-`content/image-assets.json` retains each image's dimensions, byte count, SHA-256, and type. Body rendering reads dimensions from the manifest, allowing layout space to be reserved after images move off the local filesystem. For a new image, temporarily place it under its logical path in `public/images`, update the manifest, then upload and verify it. The manifest command updates metadata only; it does not upload or delete files:
-
-```bash
-npm run images:manifest
-```
-
-Uploads use the local Alibaba Cloud CLI with an existing OAuth login, without placing long-lived access keys in the project. The following preserves the initial batch migration's command structure. Replace `BUCKET` with your bucket name and make sure the local directory contains files to upload:
-
-```bash
-aliyun ossutil cp public/images/ oss://BUCKET/images/ --recursive --region cn-hongkong --cache-control 'public, max-age=86400'
-aliyun ossutil stat oss://BUCKET/images/posts/nextjs-blog/wallhaven-y8137x.jpg --region cn-hongkong
-```
-
-`cp` preserves relative paths under `images/`, while `stat` shows metadata such as an object's size and type. Size alone does not prove identical content: read the cloud file, compare its SHA-256 with the manifest, and check that the page loads it. Anonymous access is limited to reading objects under `images/*`; listing, uploading, and deleting are not allowed anonymously.
-
-OSS serves stored files; **uploading does not automatically shrink large images or create thumbnails**. With `images.unoptimized: true`, the browser loads covers, avatars, and body images directly from OSS, so copying an image address gives the original OSS URL. Next.js no longer compresses, resizes, or converts these images dynamically; prepare sensible dimensions and file sizes before uploading. Set `Content-Type` to match the format. A new filename for a replacement image avoids old cached content.
-
-A public image address may reach the browser; the CLI's OAuth session and other upload credentials must not. Keep them locally or in controlled server or CI environments, with only the permissions they need. Never put access keys, secrets, or tokens in `NEXT_PUBLIC_` variables or Markdown.
-
-For each image update, verify file content, page rendering, share covers, and an independent backup before removing the temporary local images. Keep the manifest so subsequent builds no longer depend on those image files. Ordinary deletion does not remove old binaries from Git history. Rewriting that history is a separate decision with collaboration and recovery implications.
-
-## 8. Move from Local Preview to Publishing
-
-For this existing repository, install from the lockfile and start the development server:
-
-```bash
-npm ci
-npm run dev -- --port 3140
-```
-
-After editing, open `/posts/nextjs-blog` and check cover cropping, long code lines, section links, and mobile layout. Open the English and Japanese versions too. Restart development after changing environment variables, and rebuild production so old configuration is not retained.
-
-Run the project's existing checks before publishing:
-
-```bash
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run start -- --port 3141
-```
-
-The final command starts the production server after a successful build. Beyond command results, inspect the home page, archives, article pages, search, themes, 404s, RSS, and sitemap. Also verify the files returned by OSS, browser image requests, and absolute share-image URLs. A successful build does not establish that deployment has happened; check these entry points again on the actual published site.
-
-## 9. Leave Room to Grow
-
-The current implementation can already hold technical notes and annual reflections. With images stored in OSS, more attention can go toward writing and maintaining the content. Section-based body search can follow when there are more articles. Comments, short updates, and entertainment collections remain outside the current plan.
-
-For a personal blog, maintainability matters more than feature count: readable files, stable paths, backed-up assets, and a repeatable publishing check. Solve one real problem with each change, and this little world can keep growing.
