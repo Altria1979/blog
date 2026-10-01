@@ -1,0 +1,19 @@
+components/site-layout.tsx
+  s_e9565ebce8a8cd::t_b29c41de1214ba 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "08dfaaab95b0db9ca075bdf536990b815e5b2934",
+  "prompts": {},
+  "sessions": {
+    "s_e9565ebce8a8cd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f6c9-269b-7b12-b550-2784d77c36ac",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
