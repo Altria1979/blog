@@ -6,6 +6,8 @@ Altria 的个人博客，用来记录前端开发、技术实践、年度总结�
 
 博客的布局、阅读体验与交互主要参考声哥的开源项目 [senshinya/blog](https://github.com/senshinya/blog)（[信也のブログ](https://blog.shinya.click/)），结合自己的内容，使用 Next.js 和 React 实现。
 
+访问地址：[altria1979-blog.vercel.app](https://altria1979-blog.vercel.app) · 源码：[Altria1979/blog](https://github.com/Altria1979/blog)
+
 ## 当前功能
 
 - 文章列表、分类与标签筛选、标题与摘要等元信息搜索、按年归档和关于页。
@@ -41,6 +43,8 @@ npm run dev
 ## 部署方式
 
 当前使用 Next.js 默认生产构建，可部署到 Vercel 或自行运行 Node.js 服务。
+
+本站使用 Vercel 项目 `altria1979-blog`，关联本仓库的 `main` 分支；推送后自动构建并部署。生产环境的 `NEXT_PUBLIC_SITE_URL` 设置为 `https://altria1979-blog.vercel.app`。
 
 ### Vercel
 
