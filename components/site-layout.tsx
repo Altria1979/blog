@@ -34,7 +34,7 @@ export function SiteLayout({ children, locale }: { children: React.ReactNode; lo
   const posts = getPosts(undefined, locale);
   const summaries = posts.map(({ slug, title, description, category, tags, locale }) => ({ slug, title, description, category, tags, locale }));
   return (
-    <html lang={languageTag(locale)} suppressHydrationWarning>
+    <html lang={languageTag(locale)} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <LocaleProvider locale={locale}>
