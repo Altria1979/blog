@@ -1,0 +1,35 @@
+README.md
+  s_d1c7356443805f::t_320bcf76f9b298 99-102
+LICENSE
+  s_d1c7356443805f::t_320bcf76f9b298 1-21
+package.json
+  s_d1c7356443805f::t_320bcf76f9b298 4
+blog.config.ts
+  s_d1c7356443805f::t_320bcf76f9b298 25
+package-lock.json
+  s_110694f8f06d39::t_9fa7b01252171c 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "282b1f9f42ae3d89a7c8bba2a0816cd4aa8de084",
+  "prompts": {},
+  "sessions": {
+    "s_110694f8f06d39": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f66d-b473-7662-b36b-9ba5dc11ab44",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    },
+    "s_d1c7356443805f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f694-96fa-7331-b6ec-dce1bdb04d06",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
