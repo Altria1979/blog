@@ -1,0 +1,23 @@
+content/posts/ja/nextjs-blog.md
+  s_e6b0dcb018fbae::t_0dcdcc3b1b8139 3,16,53
+content/posts/en/nextjs-blog.md
+  s_e6b0dcb018fbae::t_0dcdcc3b1b8139 3,16,53
+content/posts/nextjs-blog.md
+  s_e6b0dcb018fbae::t_f355290f69cd42 3,14,51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "23f6a2d4ae333f1998d5c5b5693b1357c578ec8b",
+  "prompts": {},
+  "sessions": {
+    "s_e6b0dcb018fbae": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f6ca-4311-7fd3-a2be-451cf209a90c",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
