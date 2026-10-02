@@ -64,6 +64,22 @@ function validPathname(value: unknown): value is string {
   }
 }
 
+function parseTopCountries(value: unknown) {
+  if (!Array.isArray(value) || value.length > 3) return undefined;
+  const countries = new Set<string>();
+  const result: { countryCode: string; pageViews: number }[] = [];
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) return undefined;
+    const { countryCode, pageViews } = entry as Record<string, unknown>;
+    if (typeof countryCode !== "string" || !/^[A-Z]{2}$/.test(countryCode)
+      || countryCode === "XX" || countryCode === "ZZ" || countries.has(countryCode)
+      || typeof pageViews !== "number" || !Number.isSafeInteger(pageViews) || pageViews <= 0) return undefined;
+    countries.add(countryCode);
+    result.push({ countryCode, pageViews });
+  }
+  return result;
+}
+
 function parseCounter(text: string) {
   try {
     const value: unknown = JSON.parse(text);
@@ -72,7 +88,8 @@ function parseCounter(text: string) {
     if (typeof pageViews !== "number" || typeof visitors !== "number") return null;
     if (!Number.isSafeInteger(pageViews) || pageViews < 0
       || !Number.isSafeInteger(visitors) || visitors < 0) return null;
-    return { pageViews, visitors };
+    const topCountries = parseTopCountries((value as Record<string, unknown>).topCountries);
+    return { pageViews, visitors, ...(topCountries === undefined ? {} : { topCountries }) };
   } catch {
     return null;
   }

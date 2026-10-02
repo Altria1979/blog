@@ -189,6 +189,58 @@ test("malformed, negative, fractional and unsafe counters are unavailable, never
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: Number.MAX_SAFE_INTEGER, visitors: 0 });
 });
 
+test("country rankings accept no data, one country and the top three without another request", async (t) => {
+  const { traffic, requests, respond } = await browserFixture(t);
+  const rankings = [[], [{ countryCode: "CN", pageViews: 12 }], [
+    { countryCode: "CN", pageViews: 12 },
+    { countryCode: "JP", pageViews: 4 },
+    { countryCode: "US", pageViews: 4 },
+  ]];
+  for (const [index, topCountries] of rankings.entries()) {
+    traffic.trackPageView(`/rankings-${index}`, true);
+    await flush();
+    await respond(index, { pageViews: 20, visitors: 5, topCountries });
+    assert.deepEqual(traffic.getTrafficStats(), { pageViews: 20, visitors: 5, topCountries });
+    assert.equal(requests.length, index + 1);
+  }
+});
+
+test("missing or malformed country rankings preserve valid totals and omit the ranking", async (t) => {
+  const { traffic, respond } = await browserFixture(t);
+  const valid = { countryCode: "CN", pageViews: 1 };
+  const rankings = [undefined, null, {}, "bad", [null], [[]], [{}],
+    [valid, valid],
+    ["CN", "JP", "US", "DE"].map((countryCode) => ({ countryCode, pageViews: 1 })),
+    ...["cn", "C", "CHN", "XX", "ZZ", " CN", 1, null].map((countryCode) => [{ countryCode, pageViews: 1 }]),
+    ...[0, -1, 0.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1, "42", null].map((pageViews) => [{ countryCode: "CN", pageViews }]),
+  ];
+  for (const [index, topCountries] of rankings.entries()) {
+    traffic.trackPageView(`/malformed-rankings-${index}`, true);
+    await flush();
+    await respond(index, { pageViews: 20, visitors: 5, ...(topCountries === undefined ? {} : { topCountries }) });
+    assert.deepEqual(traffic.getTrafficStats(), { pageViews: 20, visitors: 5 });
+    assert.equal(Object.hasOwn(traffic.getTrafficStats()!, "topCountries"), false);
+  }
+});
+
+test("country rankings expose only aggregate country codes and page views", async (t) => {
+  const { traffic, respond } = await browserFixture(t);
+  traffic.trackPageView("/country-privacy", true);
+  await flush();
+  await respond(0, {
+    pageViews: 20,
+    visitors: 5,
+    ip: "203.0.113.1",
+    visitorId: "private-visitor-id",
+    topCountries: [{ countryCode: "CN", pageViews: 12, ip: "203.0.113.1", visitorId: "private-visitor-id", visitors: 4 }],
+  });
+  assert.deepEqual(traffic.getTrafficStats(), {
+    pageViews: 20,
+    visitors: 5,
+    topCountries: [{ countryCode: "CN", pageViews: 12 }],
+  });
+});
+
 test("visits wait for previous responses so the next request carries the visitor cookie", async (t) => {
   const { traffic, requests, respond } = await browserFixture(t);
   traffic.trackPageView("/a", true);

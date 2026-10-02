@@ -447,7 +447,48 @@ button {
   min-width: 0;
   padding: 0.2em 0;
 }
-.traffic-stats-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.traffic-panel {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.8rem;
+  background: var(--panel);
+}
+.traffic-stats-panel {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0;
+  background: none;
+}
+.traffic-countries {
+  margin-top: 0.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+.traffic-country-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.8em;
+}
+.traffic-country-heading h3 { margin: 0; font-size: inherit; font-weight: 500; }
+.traffic-country-list { list-style: none; margin: 0.35rem 0 0; padding: 0; }
+.traffic-country-list li {
+  display: grid;
+  grid-template-columns: 1em minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.5em;
+  padding: 0.25em 0;
+  font-size: 0.9em;
+}
+.traffic-country-rank { color: var(--secondary); }
+.traffic-country-name { overflow-wrap: anywhere; }
+.traffic-country-views { font-variant-numeric: tabular-nums; }
+.traffic-country-empty {
+  margin: 0.55rem 0 0.2rem;
+  color: var(--secondary);
+  font-size: 0.85em;
+  text-align: center;
+}
 .stats-panel dd {
   margin: 0;
   font-size: 1em;

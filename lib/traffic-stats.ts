@@ -1,6 +1,7 @@
 export type TrafficStats = {
   pageViews: number;
   visitors: number;
+  topCountries?: Array<{ countryCode: string; pageViews: number }>;
 };
 
 let stats: TrafficStats | null = null;
@@ -30,10 +31,27 @@ function publish(value: TrafficStats | null) {
 
 function parseStats(payload: unknown): TrafficStats | null {
   if (!payload || typeof payload !== "object") return null;
-  const { pageViews, visitors } = payload as Record<string, unknown>;
+  const { pageViews, visitors, topCountries } = payload as Record<string, unknown>;
   if (typeof pageViews !== "number" || !Number.isSafeInteger(pageViews) || pageViews < 0
     || typeof visitors !== "number" || !Number.isSafeInteger(visitors) || visitors < 0) return null;
-  return { pageViews, visitors };
+  const countries = parseTopCountries(topCountries);
+  return countries ? { pageViews, visitors, topCountries: countries } : { pageViews, visitors };
+}
+
+function parseTopCountries(payload: unknown): TrafficStats["topCountries"] {
+  if (!Array.isArray(payload) || payload.length > 3) return undefined;
+  const countries: NonNullable<TrafficStats["topCountries"]> = [];
+  const seen = new Set<string>();
+  for (const entry of payload) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) return undefined;
+    const { countryCode, pageViews } = entry as Record<string, unknown>;
+    if (typeof countryCode !== "string" || !/^[A-Z]{2}$/.test(countryCode)
+      || countryCode === "XX" || countryCode === "ZZ" || seen.has(countryCode)
+      || typeof pageViews !== "number" || !Number.isSafeInteger(pageViews) || pageViews <= 0) return undefined;
+    seen.add(countryCode);
+    countries.push({ countryCode, pageViews });
+  }
+  return countries;
 }
 
 async function sendPageView(pathname: string, request: number): Promise<void> {

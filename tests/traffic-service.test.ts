@@ -412,3 +412,32 @@ test("diagnostics reject arbitrary error names and stay silent for successful or
   assert.equal(warn.mock.callCount(), 1);
   assert.ok(!JSON.stringify(warn.mock.calls.map((call) => call.arguments)).includes("PRIVATE"));
 });
+
+test("the same counting response exposes only the top country aggregates", async () => {
+  for (const topCountries of [[], [{ countryCode: "US", pageViews: 20 }], [
+    { countryCode: "CN", pageViews: 30 }, { countryCode: "JP", pageViews: 20 }, { countryCode: "US", pageViews: 10 },
+  ]]) {
+    let calls = 0;
+    const response = await handle(visit(), async () => {
+      calls++;
+      return counterResponse({ pageViews: 123, visitors: 45,
+        topCountries: topCountries.map((country) => ({ ...country, ip_address: "192.0.2.1", visitor_id: existingId })),
+      });
+    });
+    assert.equal(calls, 1);
+    assert.deepEqual(await response.json(), { pageViews: 123, visitors: 45, topCountries });
+  }
+});
+
+test("unavailable or invalid country rankings cannot hide valid site totals", async () => {
+  const country = { countryCode: "US", pageViews: 10 };
+  for (const topCountries of [undefined, null, {}, "bad", [null], [country, country],
+    [country, { countryCode: "CN", pageViews: 9 }, { countryCode: "JP", pageViews: 8 }, { countryCode: "GB", pageViews: 7 }],
+    ...["", "us", "USA", "XX", "ZZ", "<script>"].map((countryCode) => [{ ...country, countryCode }]),
+    ...[0, -1, 1.5, "10", null, Number.MAX_SAFE_INTEGER + 1].map((pageViews) => [{ ...country, pageViews }]),
+  ]) {
+    const response = await handle(visit(), async () => counterResponse({ pageViews: 123, visitors: 45, topCountries }));
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { pageViews: 123, visitors: 45 });
+  }
+});

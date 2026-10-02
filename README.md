@@ -91,11 +91,13 @@ npm start
 
 访客使用服务器生成的随机 UUID，以 `altria_visitor_id` Cookie 保存一年并随访问续期，设置 `Secure`、`HttpOnly`、`SameSite=Lax`。页面跳转按顺序上报，保证首次身份设置后再处理下一次访问；失败响应也保留身份，以覆盖数据库已提交、响应却丢失的情况。清除 Cookie、换浏览器、Cookie 过期或首次多标签并发可能计为新访客，UV 不等于精确自然人数。
 
-首次接入时，在目标 Supabase 项目按顺序执行 [`blog_traffic` 迁移](supabase/migrations/20261002063828_blog_traffic.sql)和 [`blog_traffic_geography` 迁移](supabase/migrations/20261002065835_blog_traffic_geography.sql)，将服务端环境变量加入 Vercel Production，再部署代码。已有项目先应用新增迁移，再发布代码；新增 RPC 参数带默认值，兼容升级过程中的旧部署。可在隔离数据库执行 [累计值检查](supabase/tests/traffic.sql)和[国家统计检查](supabase/tests/traffic-geography.sql)验证事务、去重及权限；检查会回滚全部测试访问，不应在有并发真实访问的生产库运行。不要把密钥放进浏览器代码或公开表策略。
+首次接入时，在目标 Supabase 项目按顺序执行 [`blog_traffic` 迁移](supabase/migrations/20261002063828_blog_traffic.sql)、[`blog_traffic_geography` 迁移](supabase/migrations/20261002065835_blog_traffic_geography.sql)及 [`blog_traffic_country_top3` 迁移](supabase/migrations/20261002071102_blog_traffic_country_top3.sql)，将服务端环境变量加入 Vercel Production，再部署代码。已有项目先应用新增迁移，再发布代码；新增 RPC 参数带默认值，兼容升级过程中的旧部署。可在隔离数据库执行 [累计值检查](supabase/tests/traffic.sql)、[国家统计检查](supabase/tests/traffic-geography.sql)及 [Top 3 检查](supabase/tests/traffic-country-top3.sql)验证事务、去重及权限；检查会回滚全部测试访问，不应在有并发真实访问的生产库运行。不要把密钥放进浏览器代码或公开表策略。
 
 `public.blog_traffic_page_views` 从国家统计接入后开始逐次记录 `visitor_id`、`ip_address`（IPv4/IPv6）、`country_code`、`visited_at`。IP 和国家仅从 [Vercel 平台请求头](https://vercel.com/docs/headers/request-headers) `x-vercel-forwarded-for`、`x-vercel-ip-country` 获取，校验失败或缺失存 NULL，不使用浏览器正文或其他代理头补值。当前 Cloudflare 必须保持 DNS-only；增加反向代理后要重新检查来源。VPN/代理可能使国家成为出口所在地，国家不代表国籍或真实居住地。IP 不参与 UV 去重，也不会出现在网页响应或应用诊断日志中。明细目前持续保留、未设置自动清理；数据量增长后需要评估存储和保留期限。
 
-在 Supabase 的 SQL Editor 查询国家排行（不修改网站展示）：
+「访问统计」卡片在累计 PV/UV 下方显示国家访问 Top 3，按各国 PV 降序、同分按国家代码升序排列；未知国家不参与排行，不足三国只显示已有记录。国家名称随中、英、日语言切换。国家数据来自同一次计数 RPC，不增加额外请求或 PV；只返回 `countryCode` 和 `pageViews`，没有 IP 或访客 ID。排行缺失或格式异常时显示 `—`，总计仍可正常显示；空排行显示「暂无国家数据」。
+
+在 Supabase 的 SQL Editor 可查询完整国家排行及各国 UV：
 
 ```sql
 select country_code, page_views, visitors
@@ -103,7 +105,7 @@ from public.blog_traffic_country_rankings
 order by page_views desc, visitors desc, country_code;
 ```
 
-`page_views` 为各国 PV，`visitors` 为各国内按匿名访客 ID 去重的 UV；同一浏览器从不同国家访问会分别计入各国 UV，所以各国 UV 之和可能超过全站 UV。`ZZ` 表示未知，排行只使用新增明细，不补猜接入前的国家。排行视图使用 `security_invoker` 且不含 IP 或访客 ID，匿名及普通登录角色没有读取权限；仅在 Supabase 后台或受信任服务端查看。可对明细的 `visited_at` 加时间范围筛选，再按 `country_code` 分组生成日榜或月榜。新建的访客外键索引在尚无查询命中时可能出现 [unused_index INFO](https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index)，保留它用于按访客查询及外键检查。
+`page_views` 为各国 PV，`visitors` 为各国内按匿名访客 ID 去重的 UV；同一浏览器从不同国家访问会分别计入各国 UV，所以各国 UV 之和可能超过全站 UV。`ZZ` 表示未知，排行只使用新增明细，不补猜接入前的国家。排行视图使用 `security_invoker` 且不含 IP 或访客 ID，匿名及普通登录角色没有读取权限；完整视图仅在 Supabase 后台或受信任服务端查看，网页通过本站接口获得精简后的 Top 3 聚合数据。可对明细的 `visited_at` 加时间范围筛选，再按 `country_code` 分组生成日榜或月榜。新建的访客外键索引在尚无查询命中时可能出现 [unused_index INFO](https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index)，保留它用于按访客查询及外键检查。
 
 计数持久保存在数据库，网站重启或重新部署不会重置；更换数据库或删除统计表会影响历史数据。不蒜子的历史数字和未采集访问不会补入新表。加载或存储不可用时显示 `—`，实际零值显示为 `0`。当前每次访问会聚合访客表，适合个人博客；访客量显著增长时可单独评估汇总表。更换正式域名时需同步修改采集器与接口的域名限制。
 
