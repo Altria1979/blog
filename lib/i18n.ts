@@ -38,6 +38,7 @@ const labels: Record<string, [string, string]> = {
   技术: ["Technology", "技術"], 日常: ["Daily life", "日常"],
   随笔: ["Essays", "随筆"], 笔记: ["Notes", "ノート"],
   博客: ["Blog", "ブログ"], 生活: ["Life", "暮らし"],
+  年终总结: ["Year in review", "一年の振り返り"], 工作: ["Work", "仕事"],
   写作: ["Writing", "文章"], 音乐: ["Music", "音楽"],
   摄影: ["Photography", "写真"], 自然: ["Nature", "自然"],
   前端: ["Frontend", "フロントエンド"], 设计: ["Design", "デザイン"],
