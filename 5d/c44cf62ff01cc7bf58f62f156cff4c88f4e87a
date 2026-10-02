@@ -1,0 +1,31 @@
+supabase/tests/traffic.sql
+  s_976e07b4ce21d3::t_cd1a246146c451 9,14-15
+tests/traffic-service.test.ts
+  s_976e07b4ce21d3::t_b734983c8d5324 80-175,177,179-188,370,376,396
+  s_976e07b4ce21d3::t_70a65e204210cb 176,178
+  s_976e07b4ce21d3::t_a2cb45b8c1c4f2 53-55,72
+lib/traffic-service.ts
+  s_976e07b4ce21d3::t_a2cb45b8c1c4f2 2,45-54,135-136
+supabase/tests/traffic-geography.sql
+  s_976e07b4ce21d3::t_cd1a246146c451 1-90
+README.md
+  s_976e07b4ce21d3::t_a7a64150af0236 90,94-106
+supabase/migrations/20261002065835_blog_traffic_geography.sql
+  s_976e07b4ce21d3::t_c64f2542d4ab91 1-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5dc44cf62ff01cc7bf58f62f156cff4c88f4e87a",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
