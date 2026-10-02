@@ -1,0 +1,32 @@
+components/technical-info.tsx
+  s_1442ffe0f985cb::t_043f2f45ea2b40 4-8,13-16,20-29,35,37-41,51,54-57
+README.md
+  s_1442ffe0f985cb::t_043f2f45ea2b40 17,28-29,32
+THIRD_PARTY_NOTICES.md
+  s_1442ffe0f985cb::t_3c6f58a0e7bfa7 320-323
+blog.config.ts
+  s_1442ffe0f985cb::t_043f2f45ea2b40 24-26
+components/technical-brand-icon.tsx
+  s_1442ffe0f985cb::t_a156e3f0ed7615 1-26
+app/globals.css
+  s_1442ffe0f985cb::t_043f2f45ea2b40 530-532,537-546
+  s_1442ffe0f985cb::t_7c1c9730527e6b 637
+lib/messages.ts
+  s_1442ffe0f985cb::t_043f2f45ea2b40 27,56,83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ca34c66956594e38fb56638f8d02990b8f20e819",
+  "prompts": {},
+  "sessions": {
+    "s_1442ffe0f985cb": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fb79-a38f-7841-93e2-59a2985c808b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
