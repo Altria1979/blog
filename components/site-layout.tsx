@@ -9,6 +9,7 @@ import { Sidebar } from "./sidebar";
 import { InfoSidebar, SiteFooter } from "./info-sidebar";
 import { ReadingAside } from "./reading-navigation";
 import { LocaleProvider } from "./locale-provider";
+import { TrafficTracker } from "./traffic-stats";
 import "@/app/globals.css";
 import "@/app/reading.css";
 import "@/app/i18n.css";
@@ -38,6 +39,7 @@ export function SiteLayout({ children, locale }: { children: React.ReactNode; lo
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <LocaleProvider locale={locale}>
+          <TrafficTracker enabled={process.env.NODE_ENV === "production" && process.env.VERCEL_ENV === "production"} />
           <a className="skip-link" href="#main-content">{{ zh: "跳到正文", en: "Skip to content", ja: "本文へスキップ" }[locale]}</a>
           <div className="blog-layout">
             <Sidebar posts={summaries} translations={getTranslationManifest()} />

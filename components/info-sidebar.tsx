@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import { getMessages } from "@/lib/messages";
 import { TechnicalInfo } from "./technical-info";
 import { BlogStats } from "./blog-stats";
+import { TrafficStats } from "./traffic-stats";
 
 export function InfoSidebar({ locale = "zh" }: { locale?: Locale }) {
   const posts = getPosts();
@@ -16,6 +17,7 @@ export function InfoSidebar({ locale = "zh" }: { locale?: Locale }) {
         builtAt={process.env.NEXT_PUBLIC_BLOG_BUILD_TIME ?? ""}
         totalWords={posts.reduce((sum, post) => sum + post.wordCount, 0)}
       />
+      <TrafficStats locale={locale} />
       <TechnicalInfo locale={locale} />
 
     </aside>
