@@ -1,0 +1,36 @@
+content/posts/ja/2024-year-in-review.md
+  s_63b80a4985de32::t_e6b1abb769b896 57,75,103,107,184
+  s_63b80a4985de32::t_6474237f3b6db5 1-56,58-74,76-102,104-106,108-183,185-215
+content/posts/en/2023-year-in-review.md
+  s_63b80a4985de32::t_c1f20705139713 1-101
+content/posts/en/2025-year-in-review.md
+  s_63b80a4985de32::t_863d5176919c2c 1-109,111-139,141-151,153,155-173,175-299,301-349,351-364
+  s_63b80a4985de32::t_e734234759f7f1 110,140,152,154,174,300,350
+lib/i18n.ts
+  s_63b80a4985de32::t_6534de1ce03294 41
+content/posts/ja/2025-year-in-review.md
+  s_63b80a4985de32::t_c580f9dd736a92 276
+  s_63b80a4985de32::t_25df341b3646f0 90
+  s_63b80a4985de32::t_26146d98d46dfb 1-89,91-275,277-364
+content/posts/en/2024-year-in-review.md
+  s_63b80a4985de32::t_f0ea1274b34f6e 67
+  s_63b80a4985de32::t_9ce5996ac07842 1-66,68-215
+content/posts/ja/2023-year-in-review.md
+  s_63b80a4985de32::t_c1f20705139713 1-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8d851a8395e6ec377b6a7b30a6c295da25c71a3b",
+  "prompts": {},
+  "sessions": {
+    "s_63b80a4985de32": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fa70-f85a-7960-948d-0b062a138f8d",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
