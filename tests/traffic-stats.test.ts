@@ -203,10 +203,25 @@ test("network errors, missing callbacks and script insertion failure leave no fa
   assert.deepEqual(Object.keys(browser).filter((key) => key.startsWith("__altriaTraffic_")), []);
 });
 
+test("a response arriving after five seconds still publishes totals without another request", async (t) => {
+  const { traffic, scripts, respond, advance } = await browserFixture(t);
+  traffic.trackPageView("/slow-success", true);
+  advance(5_000);
+  assert.equal(scripts.length, 1);
+  assert.equal(scripts[0].removed, false);
+  assert.equal(traffic.getTrafficStats(), null);
+  respond(scripts[0], { site_pv: 123, site_uv: 45 });
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 123, visitors: 45 });
+  scripts[0].onload?.();
+  advance(15_000);
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 123, visitors: 45 });
+  assert.equal(scripts.length, 1);
+});
+
 test("timeouts absorb late callbacks and clean up without retrying", async (t) => {
   const { traffic, scripts, respond, advance, timers, browser, callbackName } = await browserFixture(t);
   traffic.trackPageView("/slow", true);
-  advance(3_999);
+  advance(14_999);
   assert.equal(scripts[0].removed, false);
   advance(1);
   assert.equal(scripts[0].removed, true);
@@ -233,7 +248,7 @@ test("older responses and failures cannot replace the most recent route's totals
   traffic.trackPageView("/c", true);
   traffic.trackPageView("/d", true);
   respond(scripts[3], { site_pv: 103, site_uv: 53 });
-  advance(4_000);
+  advance(15_000);
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: 103, visitors: 53 });
   respond(scripts[2], { site_pv: 102, site_uv: 52 });
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: 103, visitors: 53 });

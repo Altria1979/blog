@@ -85,7 +85,7 @@ export function trackPageView(pathname: string, enabled: boolean): void {
     finish(null);
     removeCallback();
   };
-  const timeout = window.setTimeout(() => finish(null), 4_000);
+  const timeout = window.setTimeout(() => finish(null), 15_000);
   try {
     document.head.appendChild(script);
   } catch {
