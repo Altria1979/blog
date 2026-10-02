@@ -1,0 +1,21 @@
+lib/traffic-stats.ts
+  s_976e07b4ce21d3::t_ab3c1fbd57137f 88
+tests/traffic-stats.test.ts
+  s_976e07b4ce21d3::t_ab3c1fbd57137f 206-220,224,251
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b0f3946d727e21adc8a89a6e7125c4e9eec96aec",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
