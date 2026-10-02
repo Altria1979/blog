@@ -10,23 +10,25 @@ async function loadModule(): Promise<typeof TrafficModule> {
   return import(url.href);
 }
 
-class FakeScript {
-  async = false;
-  referrerPolicy = "";
-  src = "";
-  onload: (() => void) | null = null;
-  onerror: (() => void) | null = null;
-  removed = false;
-  remove() { this.removed = true; }
-}
+const flush = () => new Promise<void>((resolve) => setImmediate(resolve));
+
+type FakeResponse = { ok: boolean; json: () => Promise<unknown> };
+type FakeRequest = {
+  url: unknown;
+  options: RequestInit;
+  cookieAtStart: string | undefined;
+  resolve: (response: FakeResponse) => void;
+  reject: (error: Error) => void;
+};
 
 async function browserFixture(t: TestContext) {
   let now = 0;
   let timerNumber = 0;
+  let visitorCookie: string | undefined;
   const timers = new Map<number, { at: number; callback: () => void }>();
-  const scripts: FakeScript[] = [];
+  const requests: FakeRequest[] = [];
   const location = { hostname: "altria.ink", protocol: "https:" };
-  const browser: Record<string, unknown> = {
+  const browser = {
     location,
     setTimeout(callback: () => void, delay: number) {
       const id = ++timerNumber;
@@ -35,14 +37,11 @@ async function browserFixture(t: TestContext) {
     },
     clearTimeout(id: number) { timers.delete(id); },
   };
-  const document = {
-    createElement(tag: string) {
-      assert.equal(tag, "script");
-      return new FakeScript();
-    },
-    head: { appendChild(script: FakeScript) { scripts.push(script); } },
-  };
-  for (const [key, value] of Object.entries({ window: browser, document })) {
+  const fetch = (url: unknown, options: RequestInit) => new Promise<FakeResponse>((resolve, reject) => {
+    requests.push({ url, options, cookieAtStart: visitorCookie, resolve, reject });
+    options.signal?.addEventListener("abort", () => reject(new Error("Aborted")), { once: true });
+  });
+  for (const [key, value] of Object.entries({ window: browser, fetch })) {
     const original = Object.getOwnPropertyDescriptor(globalThis, key);
     Object.defineProperty(globalThis, key, { configurable: true, value });
     t.after(() => {
@@ -51,19 +50,14 @@ async function browserFixture(t: TestContext) {
     });
   }
   const traffic = await loadModule();
-  const callbackName = (script: FakeScript) => {
-    const name = new URL(script.src).searchParams.get("jsonpCallback");
-    assert.ok(name);
-    return name;
-  };
   return {
-    traffic, scripts, browser, location, document, timers, callbackName,
-    respond(script: FakeScript, payload: unknown) {
-      const callback = browser[callbackName(script)];
-      assert.equal(typeof callback, "function");
-      (callback as (payload: unknown) => void)(payload);
+    traffic, requests, location, timers,
+    respond(index: number, payload: unknown, cookie?: string) {
+      if (cookie) visitorCookie = cookie;
+      requests[index].resolve({ ok: true, json: async () => payload });
+      return flush();
     },
-    advance(milliseconds: number) {
+    async advance(milliseconds: number) {
       const end = now + milliseconds;
       while (true) {
         const next = [...timers].sort((a, b) => a[1].at - b[1].at)[0];
@@ -73,6 +67,7 @@ async function browserFixture(t: TestContext) {
         next[1].callback();
       }
       now = end;
+      await flush();
     },
   };
 }
@@ -82,13 +77,14 @@ test("SSR imports have a stable empty snapshot and never attempt collection", as
   assert.equal(traffic.getTrafficStats(), null);
   assert.equal(traffic.getServerTrafficStats(), null);
   assert.doesNotThrow(() => traffic.trackPageView("/", true));
+  await flush();
   assert.equal(traffic.getTrafficStats(), null);
 });
 
 test("collection requires enabled production configuration and the exact HTTPS host", async (t) => {
-  const fixture = await browserFixture(t);
-  const { traffic, scripts, location } = fixture;
-  assert.equal(scripts.length, 0, "importing must not issue a request");
+  const { traffic, requests, location } = await browserFixture(t);
+  await flush();
+  assert.equal(requests.length, 0, "importing must not issue a request");
   traffic.trackPageView("/", false);
   for (const hostname of ["localhost", "127.0.0.1", "altria-preview.vercel.app", "www.altria.ink", "altria.ink.example.com"]) {
     location.hostname = hostname;
@@ -97,20 +93,22 @@ test("collection requires enabled production configuration and the exact HTTPS h
   location.hostname = "altria.ink";
   location.protocol = "http:";
   traffic.trackPageView("/", true);
-  assert.equal(scripts.length, 0);
+  await flush();
+  assert.equal(requests.length, 0);
   location.protocol = "https:";
   traffic.trackPageView("/", true);
-  assert.equal(scripts.length, 1, "disabled attempts do not suppress the first real visit");
-  const request = new URL(scripts[0].src);
-  assert.equal(request.origin, "https://busuanzi.ibruce.info");
-  assert.equal(request.pathname, "/busuanzi");
-  assert.deepEqual([...request.searchParams.keys()], ["jsonpCallback"]);
-  assert.equal(scripts[0].async, true);
-  assert.equal(scripts[0].referrerPolicy, "no-referrer-when-downgrade");
+  await flush();
+  assert.equal(requests.length, 1, "disabled attempts do not suppress the first real visit");
+  assert.equal(requests[0].url, "/api/traffic");
+  assert.equal(requests[0].options.method, "POST");
+  assert.deepEqual(requests[0].options.headers, { "Content-Type": "application/json" });
+  assert.equal(requests[0].options.body, JSON.stringify({ pathname: "/" }));
+  assert.equal(requests[0].options.credentials, "same-origin");
+  assert.equal(requests[0].options.signal?.aborted, false);
 });
 
 test("duplicate effects and card remounts do not count, but A to B to A does", async (t) => {
-  const { traffic, scripts } = await browserFixture(t);
+  const { traffic, requests, respond } = await browserFixture(t);
   traffic.trackPageView("/", true);
   traffic.trackPageView("/", true);
   const unsubscribe = traffic.subscribeTrafficStats(() => {});
@@ -118,143 +116,169 @@ test("duplicate effects and card remounts do not count, but A to B to A does", a
   unsubscribe();
   traffic.subscribeTrafficStats(() => {})();
   traffic.trackPageView("/", true);
-  assert.equal(scripts.length, 1);
+  await flush();
+  assert.equal(requests.length, 1);
   traffic.trackPageView("/posts/example", true);
   traffic.trackPageView("/posts/example", true);
   traffic.trackPageView("/", true);
   traffic.trackPageView("/en", true);
   traffic.trackPageView("/ja", true);
-  assert.equal(scripts.length, 5);
-  assert.equal(new Set(scripts.map((script) => script.src)).size, scripts.length);
+  for (let index = 0; index < 5; index += 1) {
+    assert.equal(requests.length, index + 1);
+    await respond(index, { pageViews: 100 + index, visitors: 1 });
+  }
+  assert.deepEqual(requests.map(({ options }) => JSON.parse(String(options.body)).pathname),
+    ["/", "/posts/example", "/", "/en", "/ja"]);
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 104, visitors: 1 });
 });
 
 test("a fresh document counts the same initial pathname again after a reload", async (t) => {
-  const { traffic, scripts, respond } = await browserFixture(t);
+  const { traffic, requests, respond } = await browserFixture(t);
   traffic.trackPageView("/", true);
-  respond(scripts[0], { site_pv: 100, site_uv: 50 });
-  scripts[0].onload?.();
+  await flush();
+  await respond(0, { pageViews: 100, visitors: 50 }, "visitor-1");
   const refreshedTraffic = await loadModule();
   assert.equal(refreshedTraffic.getTrafficStats(), null);
   refreshedTraffic.trackPageView("/", true);
-  assert.equal(scripts.length, 2);
-  respond(scripts[1], { site_pv: 101, site_uv: 50 });
+  await flush();
+  assert.equal(requests.length, 2);
+  assert.equal(requests[1].cookieAtStart, "visitor-1");
+  await respond(1, { pageViews: 101, visitors: 50 });
   assert.deepEqual(refreshedTraffic.getTrafficStats(), { pageViews: 101, visitors: 50 });
 });
 
 test("valid totals notify subscribers, preserve snapshots, and clear while loading", async (t) => {
-  const { traffic, scripts, respond, timers, browser, callbackName } = await browserFixture(t);
+  const { traffic, respond, timers } = await browserFixture(t);
   let updates = 0;
   const unsubscribe = traffic.subscribeTrafficStats(() => { updates += 1; });
   traffic.trackPageView("/", true);
+  await flush();
   assert.equal(traffic.getTrafficStats(), null);
-  respond(scripts[0], { site_pv: 1_234, site_uv: 56, page_pv: 9 });
+  await respond(0, { pageViews: 1_234, visitors: 56 });
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: 1_234, visitors: 56 });
   assert.equal(traffic.getTrafficStats(), traffic.getTrafficStats());
   assert.equal(traffic.getServerTrafficStats(), null);
   assert.equal(updates, 1);
-  assert.equal(scripts[0].removed, true);
-  scripts[0].onload?.();
   assert.equal(timers.size, 0);
-  assert.equal(browser[callbackName(scripts[0])], undefined);
   traffic.trackPageView("/posts/example", true);
   assert.equal(traffic.getTrafficStats(), null);
   assert.equal(updates, 2);
   unsubscribe();
-  respond(scripts[1], { site_pv: 0, site_uv: 0 });
+  await flush();
+  await respond(1, { pageViews: 0, visitors: 0 });
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: 0, visitors: 0 });
   assert.equal(updates, 2);
 });
 
 test("malformed, negative, fractional and unsafe counters are unavailable, never coerced", async (t) => {
-  const { traffic, scripts, respond } = await browserFixture(t);
-  const payloads = [null, undefined, "bad", {}, [], { site_pv: 1 },
+  const { traffic, respond } = await browserFixture(t);
+  const payloads = [null, undefined, "bad", {}, [], { pageViews: 1 },
+    { site_pv: 1, site_uv: 1 },
     ...[-1, 0.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1, "42", true, null].flatMap((value) => [
-      { site_pv: value, site_uv: 1 }, { site_pv: 1, site_uv: value },
+      { pageViews: value, visitors: 1 }, { pageViews: 1, visitors: value },
     ])];
   for (const [index, payload] of payloads.entries()) {
     traffic.trackPageView(`/invalid-${index}`, true);
-    respond(scripts[index], payload);
+    await flush();
+    await respond(index, payload);
     assert.equal(traffic.getTrafficStats(), null);
-    scripts[index].onload?.();
   }
   traffic.trackPageView("/largest", true);
-  respond(scripts.at(-1)!, { site_pv: Number.MAX_SAFE_INTEGER, site_uv: 0 });
+  await flush();
+  await respond(payloads.length, { pageViews: Number.MAX_SAFE_INTEGER, visitors: 0 });
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: Number.MAX_SAFE_INTEGER, visitors: 0 });
 });
 
-test("network errors, missing callbacks and script insertion failure leave no fake totals", async (t) => {
-  const { traffic, scripts, timers, browser, callbackName, document } = await browserFixture(t);
-  traffic.trackPageView("/error", true);
-  scripts[0].onerror?.();
+test("visits wait for previous responses so the next request carries the visitor cookie", async (t) => {
+  const { traffic, requests, respond } = await browserFixture(t);
+  traffic.trackPageView("/a", true);
+  traffic.trackPageView("/b", true);
+  traffic.trackPageView("/a", true);
+  await flush();
+  assert.equal(requests.length, 1);
+  assert.equal(requests[0].cookieAtStart, undefined);
+  assert.equal(requests[0].options.signal?.aborted, false, "route changes must not cancel counted visits");
+  await respond(0, { pageViews: 1, visitors: 1 }, "visitor-1");
+  assert.equal(traffic.getTrafficStats(), null, "the old route cannot replace the newest loading state");
+  assert.equal(requests.length, 2);
+  assert.equal(requests[1].cookieAtStart, "visitor-1");
+  await respond(1, { pageViews: 2, visitors: 1 });
   assert.equal(traffic.getTrafficStats(), null);
-  assert.equal(scripts[0].removed, true);
-  assert.equal(browser[callbackName(scripts[0])], undefined);
-  assert.equal(timers.size, 0);
-  traffic.trackPageView("/no-callback", true);
-  scripts[1].onload?.();
+  assert.equal(requests.length, 3);
+  assert.equal(requests[2].cookieAtStart, "visitor-1");
+  await respond(2, { pageViews: 3, visitors: 1 });
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 3, visitors: 1 });
+});
+
+test("network, HTTP and invalid JSON errors leave no fake totals and the queue continues", async (t) => {
+  const { traffic, requests, respond, timers } = await browserFixture(t);
+  for (const pathname of ["/network", "/http", "/json", "/success"]) traffic.trackPageView(pathname, true);
+  await flush();
+  requests[0].reject(new Error("Network unavailable"));
+  await flush();
+  assert.equal(requests.length, 2);
   assert.equal(traffic.getTrafficStats(), null);
-  assert.equal(scripts[1].removed, true);
-  assert.equal(browser[callbackName(scripts[1])], undefined);
-  assert.equal(timers.size, 0);
-  document.head.appendChild = () => { throw new Error("Blocked script"); };
-  assert.doesNotThrow(() => traffic.trackPageView("/blocked", true));
+  requests[1].resolve({ ok: false, json: async () => { assert.fail("non-2xx body must not be parsed"); } });
+  await flush();
+  assert.equal(requests.length, 3);
   assert.equal(traffic.getTrafficStats(), null);
+  requests[2].resolve({ ok: true, json: async () => { throw new SyntaxError("Invalid JSON"); } });
+  await flush();
+  assert.equal(requests.length, 4);
+  assert.equal(traffic.getTrafficStats(), null);
+  await respond(3, { pageViews: 10, visitors: 2 });
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 10, visitors: 2 });
   assert.equal(timers.size, 0);
-  assert.deepEqual(Object.keys(browser).filter((key) => key.startsWith("__altriaTraffic_")), []);
 });
 
 test("a response arriving after five seconds still publishes totals without another request", async (t) => {
-  const { traffic, scripts, respond, advance } = await browserFixture(t);
+  const { traffic, requests, respond, advance, timers } = await browserFixture(t);
   traffic.trackPageView("/slow-success", true);
-  advance(5_000);
-  assert.equal(scripts.length, 1);
-  assert.equal(scripts[0].removed, false);
+  await flush();
+  await advance(5_000);
+  assert.equal(requests.length, 1);
+  assert.equal(requests[0].options.signal?.aborted, false);
   assert.equal(traffic.getTrafficStats(), null);
-  respond(scripts[0], { site_pv: 123, site_uv: 45 });
+  await respond(0, { pageViews: 123, visitors: 45 });
   assert.deepEqual(traffic.getTrafficStats(), { pageViews: 123, visitors: 45 });
-  scripts[0].onload?.();
-  advance(15_000);
-  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 123, visitors: 45 });
-  assert.equal(scripts.length, 1);
-});
-
-test("timeouts absorb late callbacks and clean up without retrying", async (t) => {
-  const { traffic, scripts, respond, advance, timers, browser, callbackName } = await browserFixture(t);
-  traffic.trackPageView("/slow", true);
-  advance(14_999);
-  assert.equal(scripts[0].removed, false);
-  advance(1);
-  assert.equal(scripts[0].removed, true);
-  assert.equal(traffic.getTrafficStats(), null);
-  assert.doesNotThrow(() => respond(scripts[0], { site_pv: 999, site_uv: 999 }));
-  assert.equal(traffic.getTrafficStats(), null);
-  traffic.trackPageView("/slow", true);
-  assert.equal(scripts.length, 1);
-  advance(60_000);
-  assert.equal(browser[callbackName(scripts[0])], undefined);
   assert.equal(timers.size, 0);
-  assert.equal(scripts.length, 1);
+  await advance(15_000);
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 123, visitors: 45 });
+  assert.equal(requests.length, 1);
 });
 
-test("older responses and failures cannot replace the most recent route's totals", async (t) => {
-  const { traffic, scripts, respond, advance } = await browserFixture(t);
+test("15-second timeouts abort once, ignore late responses and do not retry", async (t) => {
+  const { traffic, requests, respond, advance, timers } = await browserFixture(t);
+  traffic.trackPageView("/timeout", true);
+  await flush();
+  await advance(14_999);
+  assert.equal(requests[0].options.signal?.aborted, false);
+  await advance(1);
+  assert.equal(requests[0].options.signal?.aborted, true);
+  assert.equal(traffic.getTrafficStats(), null);
+  assert.equal(timers.size, 0);
+  await respond(0, { pageViews: 999, visitors: 999 });
+  assert.equal(traffic.getTrafficStats(), null);
+  traffic.trackPageView("/timeout", true);
+  await flush();
+  await advance(60_000);
+  assert.equal(requests.length, 1);
+});
+
+test("queued visits get their own deadline after a timeout and cannot receive old totals", async (t) => {
+  const { traffic, requests, respond, advance } = await browserFixture(t);
   traffic.trackPageView("/a", true);
   traffic.trackPageView("/b", true);
-  respond(scripts[0], { site_pv: 100, site_uv: 50 });
-  assert.equal(traffic.getTrafficStats(), null, "old data cannot replace a loading state");
-  respond(scripts[1], { site_pv: 101, site_uv: 51 });
-  scripts[0].onerror?.();
-  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 101, visitors: 51 });
-  traffic.trackPageView("/c", true);
-  traffic.trackPageView("/d", true);
-  respond(scripts[3], { site_pv: 103, site_uv: 53 });
-  advance(15_000);
-  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 103, visitors: 53 });
-  respond(scripts[2], { site_pv: 102, site_uv: 52 });
-  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 103, visitors: 53 });
-  traffic.trackPageView("/e", true);
-  traffic.trackPageView("/f", true);
-  respond(scripts[5], { site_pv: 105, site_uv: 55 });
-  respond(scripts[4], { site_pv: 104, site_uv: 54 });
-  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 105, visitors: 55 });
+  await flush();
+  assert.equal(requests.length, 1);
+  await advance(15_000);
+  assert.equal(requests[0].options.signal?.aborted, true);
+  assert.equal(requests.length, 2);
+  assert.equal(requests[1].options.signal?.aborted, false);
+  await advance(14_999);
+  assert.equal(requests[1].options.signal?.aborted, false, "waiting in the queue does not spend the deadline");
+  await respond(1, { pageViews: 2, visitors: 1 });
+  await respond(0, { pageViews: 1, visitors: 1 });
+  assert.deepEqual(traffic.getTrafficStats(), { pageViews: 2, visitors: 1 });
+  assert.equal(requests.length, 2);
 });
