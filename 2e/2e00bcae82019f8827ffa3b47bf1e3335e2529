@@ -1,0 +1,32 @@
+tests/traffic-stats.test.ts
+  s_976e07b4ce21d3::t_847430ef2e12cf 13-22,27,29,31,40-44,54-58,60,70,80,85-87,96-97,100-107,111,119-120,126-132,136,138-139,143-146,151,155,157,167-168,174-176,178,182-183,187-188,192-205,207-219,221-223,225-230,235,237-240,242,244-245,247,250-257,260-265,268-269,272-283
+lib/traffic-service.ts
+  s_976e07b4ce21d3::t_8e448409d78611 1-13,15-92
+  s_976e07b4ce21d3::t_f5505087ba2be3 14
+README.md
+  s_976e07b4ce21d3::t_c6585e6802d699 88
+  s_976e07b4ce21d3::t_c01b6ebf12f132 87
+app/api/traffic/route.ts
+  s_976e07b4ce21d3::t_8e448409d78611 1-12
+lib/traffic-stats.ts
+  s_976e07b4ce21d3::t_9c11beacfe1593 9,33,39-59,62,70-71
+tests/traffic-service.test.ts
+  s_976e07b4ce21d3::t_8e448409d78611 1-119,121-176,178,185,195,208
+  s_976e07b4ce21d3::t_f5505087ba2be3 120,177,179-184,186-194,196-207
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2e2e00bcae82019f8827ffa3b47bf1e3335e2529",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
