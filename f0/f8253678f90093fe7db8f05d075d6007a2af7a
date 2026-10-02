@@ -1,0 +1,21 @@
+lib/traffic-service.ts
+  s_976e07b4ce21d3::t_9c51705d16b841 75-90,95-98,104-114
+tests/traffic-service.test.ts
+  s_976e07b4ce21d3::t_9c51705d16b841 209-262
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f0f8253678f90093fe7db8f05d075d6007a2af7a",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
