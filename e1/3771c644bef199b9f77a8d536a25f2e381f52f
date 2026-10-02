@@ -1,0 +1,37 @@
+tests/traffic-stats.test.ts
+  s_976e07b4ce21d3::t_e6d9ab22575e6f 192-243
+lib/messages.ts
+  s_976e07b4ce21d3::t_e202b73e8e6f8a 17-18,46-47,73-74
+tests/traffic-service.test.ts
+  s_976e07b4ce21d3::t_cdd8a6794054e1 415-443
+supabase/tests/traffic-country-top3.sql
+  s_976e07b4ce21d3::t_cdd8a6794054e1 1-38
+lib/traffic-service.ts
+  s_976e07b4ce21d3::t_182824db596c02 67-82,91-92
+app/globals.css
+  s_976e07b4ce21d3::t_e202b73e8e6f8a 450-491
+components/traffic-stats.tsx
+  s_976e07b4ce21d3::t_e202b73e8e6f8a 23-25,34-48,50-68
+lib/traffic-stats.ts
+  s_976e07b4ce21d3::t_e6d9ab22575e6f 4,34,37-54
+README.md
+  s_976e07b4ce21d3::t_ec321cccb3a275 94,98-100,108
+supabase/migrations/20261002071102_blog_traffic_country_top3.sql
+  s_976e07b4ce21d3::t_3d3c5f0784ab1b 1-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e13771c644bef199b9f77a8d536a25f2e381f52f",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
