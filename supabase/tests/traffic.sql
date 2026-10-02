@@ -6,13 +6,13 @@ begin
   if not (select relrowsecurity from pg_class where oid = 'public.blog_traffic_visitors'::regclass) then
     raise exception 'Traffic table must enable RLS';
   end if;
-  if (select prosecdef from pg_proc where oid = 'public.record_blog_page_view(uuid)'::regprocedure) then
+  if (select prosecdef from pg_proc where oid = 'public.record_blog_page_view(uuid, inet, text)'::regprocedure) then
     raise exception 'Traffic RPC must use SECURITY INVOKER';
   end if;
   if has_table_privilege('anon', 'public.blog_traffic_visitors', 'SELECT, INSERT, UPDATE, DELETE')
     or has_table_privilege('authenticated', 'public.blog_traffic_visitors', 'SELECT, INSERT, UPDATE, DELETE')
-    or has_function_privilege('anon', 'public.record_blog_page_view(uuid)', 'EXECUTE')
-    or has_function_privilege('authenticated', 'public.record_blog_page_view(uuid)', 'EXECUTE') then
+    or has_function_privilege('anon', 'public.record_blog_page_view(uuid, inet, text)', 'EXECUTE')
+    or has_function_privilege('authenticated', 'public.record_blog_page_view(uuid, inet, text)', 'EXECUTE') then
     raise exception 'Browser roles must not access traffic storage';
   end if;
 end;

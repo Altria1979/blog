@@ -50,7 +50,9 @@ test("one authorized visit sends one uncached RPC using only server-owned header
       accept: "application/json", apikey: configuration.secretKey, "content-type": "application/json",
     });
     const payload = JSON.parse(String(init?.body));
-    assert.deepEqual(Object.keys(payload), ["p_visitor_id"]);
+    assert.deepEqual(Object.keys(payload), ["p_visitor_id", "p_ip_address", "p_country_code"]);
+    assert.equal(payload.p_ip_address, null);
+    assert.equal(payload.p_country_code, null);
     assert.match(payload.p_visitor_id, uuidPattern);
     recordedId = payload.p_visitor_id;
     const upstream = counterResponse({ pageViews: 123, visitors: 45, privateValue: "ignored" });
@@ -67,12 +69,121 @@ test("one authorized visit sends one uncached RPC using only server-owned header
 
 test("a valid existing UUID is reused and renewed without exposing it in response JSON", async () => {
   const response = await handle(visit("/", { Cookie: `secret=private; altria_visitor_id=${existingId.toUpperCase()}; another=hidden` }), async (_input, init) => {
-    assert.deepEqual(JSON.parse(String(init?.body)), { p_visitor_id: existingId });
+    assert.deepEqual(JSON.parse(String(init?.body)), { p_visitor_id: existingId, p_ip_address: null, p_country_code: null });
     assert.equal(new Headers(init?.headers).get("cookie"), null);
     return counterResponse();
   });
   assert.equal(responseVisitor(response), existingId);
   assert.deepEqual(await response.json(), { pageViews: 123, visitors: 45 });
+});
+
+test("Vercel IPv4 and IPv6 addresses and normalized country codes reach only the server RPC", async () => {
+  for (const [ip, country, expectedCountry] of [
+    ["192.0.2.1", "US", "US"],
+    ["2001:db8::1234", " jp ", "JP"],
+    ["::ffff:192.0.2.1", "cn", "CN"],
+  ]) {
+    const response = await handle(visit("/", {
+      Cookie: `altria_visitor_id=${existingId}`,
+      "X-Vercel-Forwarded-For": ip,
+      "X-Vercel-IP-Country": country,
+    }), async (_input, init) => {
+      assert.deepEqual(JSON.parse(String(init?.body)), {
+        p_visitor_id: existingId, p_ip_address: ip, p_country_code: expectedCountry,
+      });
+      const headers = new Headers(init?.headers);
+      assert.equal(headers.get("x-vercel-forwarded-for"), null);
+      assert.equal(headers.get("x-vercel-ip-country"), null);
+      return counterResponse({ pageViews: 123, visitors: 45, ip, country, visitorId: existingId });
+    });
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { pageViews: 123, visitors: 45 });
+  }
+});
+
+test("visitor identity remains cookie-based when the same browser changes IP and country", async () => {
+  for (const [ip, country] of [["192.0.2.1", "US"], ["2001:db8::2", "JP"]]) {
+    const response = await handle(visit("/posts/example", {
+      Cookie: `altria_visitor_id=${existingId}`,
+      "X-Vercel-Forwarded-For": ip,
+      "X-Vercel-IP-Country": country,
+    }), async (_input, init) => {
+      assert.deepEqual(JSON.parse(String(init?.body)), {
+        p_visitor_id: existingId, p_ip_address: ip, p_country_code: country,
+      });
+      return counterResponse();
+    });
+    assert.equal(responseVisitor(response), existingId);
+  }
+});
+
+test("client body location fields and generic proxy headers cannot replace Vercel metadata", async () => {
+  for (const trusted of [false, true]) {
+    const headers = new Headers({
+      Origin: "https://altria.ink", "Content-Type": "application/json",
+      Cookie: `altria_visitor_id=${existingId}`,
+      "X-Forwarded-For": "203.0.113.99", "X-Real-IP": "203.0.113.99",
+      "CF-Connecting-IP": "203.0.113.99", "CF-IPCountry": "RU",
+      Forwarded: "for=203.0.113.99",
+    });
+    if (trusted) {
+      headers.set("X-Vercel-Forwarded-For", "192.0.2.1");
+      headers.set("X-Vercel-IP-Country", "JP");
+    }
+    const request = new Request("https://altria.ink/api/traffic", {
+      method: "POST", headers,
+      body: JSON.stringify({
+        pathname: "/", ip: "203.0.113.99", country: "RU",
+        ip_address: "203.0.113.99", country_code: "RU",
+        p_ip_address: "203.0.113.99", p_country_code: "RU",
+      }),
+    });
+    const response = await handle(request, async (_input, init) => {
+      assert.deepEqual(JSON.parse(String(init?.body)), {
+        p_visitor_id: existingId,
+        p_ip_address: trusted ? "192.0.2.1" : null,
+        p_country_code: trusted ? "JP" : null,
+      });
+      return counterResponse();
+    });
+    assert.equal(response.status, 200);
+  }
+});
+
+test("missing or invalid location metadata is null without preventing a page view", async () => {
+  const invalidIps = ["", "unknown", "192.0.2.999", "192.168.001.1", "192.0.2.1, 198.51.100.1", "192.0.2.1:443", "192.0.2.1/24", "[2001:db8::1]", "[2001:db8::1]:443", "2001:db8::1/64", "fe80::1%eth0", "fe80::1%25eth0"];
+  const invalidCountries = ["", "US,JP", "USA", "U1", "1", "XX", "xx", "ZZ", "zz", "T1", "US-CA"];
+  for (const headers of [
+    {},
+    ...invalidIps.map((ip) => ({ "X-Vercel-Forwarded-For": ip })),
+    ...invalidCountries.map((country) => ({ "X-Vercel-IP-Country": country })),
+  ]) {
+    const response = await handle(visit("/", { ...headers, Cookie: `altria_visitor_id=${existingId}` }), async (_input, init) => {
+      assert.deepEqual(JSON.parse(String(init?.body)), {
+        p_visitor_id: existingId, p_ip_address: null, p_country_code: null,
+      });
+      return counterResponse();
+    });
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { pageViews: 123, visitors: 45 });
+  }
+});
+
+test("valid country or IP is preserved when the other location field is unavailable", async () => {
+  for (const [ip, country, expectedIp, expectedCountry] of [
+    ["192.0.2.1", "ZZ", "192.0.2.1", null],
+    ["192.0.2.1, 198.51.100.1", "US", null, "US"],
+  ] as const) {
+    const response = await handle(visit("/", {
+      "X-Vercel-Forwarded-For": ip, "X-Vercel-IP-Country": country,
+    }), async (_input, init) => {
+      const body = JSON.parse(String(init?.body));
+      assert.equal(body.p_ip_address, expectedIp);
+      assert.equal(body.p_country_code, expectedCountry);
+      return counterResponse();
+    });
+    assert.equal(response.status, 200);
+  }
 });
 
 test("malformed visitor IDs receive a new UUID, ignoring old cookies and client body IDs", async () => {
@@ -256,12 +367,13 @@ test("the ten-second deadline covers headers and body while preserving visitor i
   }
 });
 
-test("diagnostics identify failures without exposing database keys, URLs, visitor IDs or bodies", async (t) => {
+test("diagnostics identify failures without exposing database keys, URLs, visitor IDs, IPs or bodies", async (t) => {
   const warn = t.mock.method(console, "warn", () => {});
   const sensitive = "PRIVATE_VISITOR_COOKIE_BODY_AND_UA";
   for (const stage of ["fetch", "status", "body", "parse"]) {
     const response = await handle(visit(`/posts/${sensitive}`, {
       Cookie: `altria_visitor_id=${existingId}`, "User-Agent": sensitive,
+      "X-Vercel-Forwarded-For": "192.0.2.123", "X-Vercel-IP-Country": "JP",
     }), async () => {
       if (stage === "fetch") throw new TypeError(`fetch failed for ${configuration.url} ${configuration.secretKey} ${existingId}`, { cause: { code: sensitive } });
       const upstream = stage === "status" ? new Response(sensitive, { status: 503 }) : counterResponse(stage === "parse" ? { privateValue: sensitive } : undefined);
@@ -281,7 +393,7 @@ test("diagnostics identify failures without exposing database keys, URLs, visito
   }
   assert.equal(warn.mock.callCount(), 4);
   const logs = JSON.stringify(warn.mock.calls.map((call) => call.arguments));
-  for (const privateValue of [sensitive, configuration.url, configuration.secretKey, existingId]) assert.ok(!logs.includes(privateValue));
+  for (const privateValue of [sensitive, configuration.url, configuration.secretKey, existingId, "192.0.2.123"]) assert.ok(!logs.includes(privateValue));
 });
 
 test("diagnostics reject arbitrary error names and stay silent for successful or rejected input", async (t) => {

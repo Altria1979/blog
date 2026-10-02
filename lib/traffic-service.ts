@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import { isIP } from "node:net";
 
 const siteOrigin = "https://altria.ink";
 const visitorCookie = "altria_visitor_id";
@@ -39,6 +40,16 @@ function readCookie(header: string, name: string): string | undefined {
   const part = header.split(";").find((entry) => entry.trim().startsWith(`${name}=`));
   const value = part?.trim().slice(name.length + 1);
   return value && validVisitorId.test(value) ? value.toLowerCase() : undefined;
+}
+
+function visitorLocation(headers: Headers) {
+  // Vercel overwrites these headers. Never trust client body values or generic proxy headers.
+  const ip = headers.get("x-vercel-forwarded-for")?.trim() ?? "";
+  const country = headers.get("x-vercel-ip-country")?.trim().toUpperCase() ?? "";
+  return {
+    p_ip_address: !ip.includes("%") && isIP(ip) ? ip : null,
+    p_country_code: /^[A-Z]{2}$/.test(country) && country !== "XX" && country !== "ZZ" ? country : null,
+  };
 }
 
 function validPathname(value: unknown): value is string {
@@ -121,7 +132,8 @@ export async function handleTrafficRequest(
   };
   try {
     const upstream = await fetcher(service.url, {
-      method: "POST", headers: service.headers, body: JSON.stringify({ p_visitor_id: visitorId }),
+      method: "POST", headers: service.headers,
+      body: JSON.stringify({ p_visitor_id: visitorId, ...visitorLocation(request.headers) }),
       cache: "no-store", redirect: "error", signal: controller.signal,
     });
     upstreamStatus = upstream.status;
