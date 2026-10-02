@@ -75,18 +75,25 @@ npm start
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | 站点完整地址；本地默认为 `http://localhost:3000`，生产环境应填写正式域名，用于 canonical、RSS 和 sitemap。 |
 | `NEXT_PUBLIC_IMAGE_BASE_URL` | 可选，默认使用项目现有的阿里云 OSS 地址；更换图床时设置为 HTTPS origin。 |
+| `SUPABASE_URL` | 服务端使用的 Supabase 项目 HTTPS 地址，仅配置在 Vercel Production 环境。 |
+| `SUPABASE_SECRET_KEY` | 服务端专用的 `sb_secret_...` 密钥；绝不能使用 `NEXT_PUBLIC_` 前缀或提交到 Git。 |
+| `SUPABASE_SERVICE_ROLE_KEY` | 可选的旧版 `service_role` JWT，仅在没有新 secret key 时使用；同样只放服务端。 |
 
 环境变量示例见 [`.env.example`](.env.example)，修改后需重新构建。图片由浏览器直接从 OSS 加载；自行部署可以沿用现有图片，也可以配置自己的图床。
 
 ## 访问统计
 
-侧栏的「访问统计」使用[原版不蒜子](https://busuanzi.ibruce.info/)，不需要数据库、账号或 API 密钥。仅 Vercel 生产构建（`VERCEL_ENV=production`）在 `https://altria.ink` 上启用采集；本地、预览部署及其他域名显示 `—`，不发送统计请求。
+侧栏的「访问统计」存储在 Supabase 的 `public.blog_traffic_visitors` 表中，每个匿名访客一行；累计浏览量是 `page_views` 总和，累计访客是行数。仅 Vercel 生产构建（`VERCEL_ENV=production`）在 `https://altria.ink` 上启用采集；本地、预览部署及其他域名显示 `—`，不发送统计请求。
 
-全站首次加载、刷新和页面路径切换各上报一次；筛选参数、目录锚点、主题及侧栏开关不增加计数。统计请求本身会增加 PV，因此不轮询、不自动重试，也不要额外加载不蒜子的自动统计脚本。文章页虽然显示目录，仍会计入全站访问。
+全站首次加载、刷新和页面路径切换各上报一次；筛选参数、目录锚点、主题及侧栏开关不增加计数。统计请求本身会增加 PV，因此不轮询、不自动重试。文章页虽然显示目录，仍会计入全站访问。
 
-浏览器通过本站 `POST /api/traffic` 获取标准 JSON，由服务端解析不蒜子的 JSONP 响应，避免直接加载第三方响应时遇到浏览器 ORB 拦截。该接口和上游响应均不缓存，也不执行上游脚本。访客标识保存在本站安全、HttpOnly 的会话 Cookie 中，仅向不蒜子转交对应标识；不向页面脚本公开，也不转发其他 Cookie。页面跳转的上报按顺序发送，保证首次标识设置后再处理下一次访问。
+浏览器通过本站 `POST /api/traffic` 获取标准 JSON，服务端调用 `record_blog_page_view` 数据库函数，以原子 upsert 增加次数，避免并发覆盖计数。表启用 RLS，表与函数仅授予 `service_role` 必要权限（[RLS 无公开策略的 INFO 提示](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy)在此服务端专用设计中是预期行为）；浏览器不能直接读写表，也不会收到数据库密钥。请求不缓存、不执行远程脚本，不记录 IP、User-Agent 或访问路径。
 
-计数保存在第三方服务端，博客重新部署不会重置；此前未采集的访问不会补回。UV 按服务规则去重，仅供参考。加载或服务失败时显示 `—`，实际返回的零正常显示为 `0`。更换正式域名时需同步修改采集器的域名限制，并另行确认历史数据衔接。
+访客使用服务器生成的随机 UUID，以 `altria_visitor_id` Cookie 保存一年并随访问续期，设置 `Secure`、`HttpOnly`、`SameSite=Lax`。页面跳转按顺序上报，保证首次身份设置后再处理下一次访问；失败响应也保留身份，以覆盖数据库已提交、响应却丢失的情况。清除 Cookie、换浏览器、Cookie 过期或首次多标签并发可能计为新访客，UV 不等于精确自然人数。
+
+首次接入时，在目标 Supabase 项目执行 [`blog_traffic` 迁移](supabase/migrations/20261002063828_blog_traffic.sql)，将服务端环境变量加入 Vercel Production，再部署代码。可在隔离数据库执行 [SQL 回归检查](supabase/tests/traffic.sql) 验证累计值和权限；该检查会回滚全部测试访问，不应在有并发真实访问的生产库运行。不要把密钥放进浏览器代码或公开表策略。
+
+计数持久保存在数据库，网站重启或重新部署不会重置；更换数据库或删除统计表会影响历史数据。不蒜子的历史数字和未采集访问不会补入新表。加载或存储不可用时显示 `—`，实际零值显示为 `0`。当前每次访问会聚合访客表，适合个人博客；访客量显著增长时可单独评估汇总表。更换正式域名时需同步修改采集器与接口的域名限制。
 
 ## 内容维护
 
