@@ -72,20 +72,46 @@ export async function handleTrafficRequest(request: Request, fetcher: typeof fet
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10_000);
+  const startedAt = Date.now();
+  let stage = "fetch";
+  let upstreamStatus: number | null = null;
+  let contentType: string | null = null;
+  const upstreamFailure = (status: number, error?: unknown) => {
+    const cause = error instanceof Error ? error.cause : undefined;
+    const code = cause && typeof cause === "object" ? (cause as Record<string, unknown>).code : undefined;
+    // Keep diagnostics structural: never log request headers, IDs, URLs or bodies.
+    console.warn("[traffic] upstream failure", {
+      stage, upstreamStatus, contentType,
+      errorName: error instanceof Error && /^[A-Za-z][A-Za-z0-9]{0,63}$/.test(error.name) ? error.name : null,
+      causeCode: typeof code === "string" && /^[A-Z][A-Z0-9_]{0,63}$/.test(code) ? code : null,
+      elapsedMs: Math.max(0, Date.now() - startedAt),
+    });
+    return fail(status);
+  };
   try {
     const upstream = await fetcher(upstreamUrl, {
       method: "GET", headers, cache: "no-store", redirect: "error", signal: controller.signal,
     });
+    stage = "headers";
+    upstreamStatus = upstream.status;
+    const mime = upstream.headers.get("content-type")?.split(";", 1)[0].trim().toLowerCase();
+    contentType = mime ? (/^[a-z0-9!#$&^_.+-]+\/[a-z0-9!#$&^_.+-]+$/.test(mime) && mime.length <= 80 ? mime : "invalid") : null;
     const issuedId = upstream.headers.getSetCookie()
       .map((cookie) => readCookie(cookie.split(";", 1)[0], "busuanziId")).find(Boolean);
     if (issuedId) {
       responseHeaders.set("Set-Cookie", `${visitorCookie}=${issuedId}; Path=/; HttpOnly; Secure; SameSite=Lax`);
     }
-    if (!upstream.ok) return fail(502);
-    const stats = parseCounter(await upstream.text(), callback);
-    return stats ? Response.json(stats, { headers: responseHeaders }) : fail(502);
-  } catch {
-    return fail(controller.signal.aborted ? 504 : 502);
+    if (!upstream.ok) {
+      stage = "status";
+      return upstreamFailure(502);
+    }
+    stage = "body";
+    const text = await upstream.text();
+    stage = "parse";
+    const stats = parseCounter(text, callback);
+    return stats ? Response.json(stats, { headers: responseHeaders }) : upstreamFailure(502);
+  } catch (error) {
+    return upstreamFailure(controller.signal.aborted ? 504 : 502, error);
   } finally {
     clearTimeout(timeout);
   }

@@ -206,3 +206,57 @@ test("the ten-second timeout covers headers and body while preserving an already
     assert.equal(calls, 1);
   }
 });
+
+test("upstream diagnostics identify the failure stage without exposing visitor data", async (t) => {
+  const warn = t.mock.method(console, "warn", () => {});
+  const sensitive = "PRIVATE_VISITOR_COOKIE_BODY_AND_UA";
+  for (const stage of ["fetch", "headers", "status", "body", "parse"]) {
+    const response = await handleTrafficRequest(visit(`/posts/${sensitive}`, {
+      Cookie: `altria_busuanzi_id=${sensitive}`, "User-Agent": sensitive,
+    }), async (input) => {
+      if (stage === "fetch") throw new TypeError(`fetch failed for ${sensitive}`, { cause: { code: "ECONNRESET", privateValue: sensitive } });
+      const upstream = stage === "status"
+        ? new Response(sensitive, { status: 503, headers: { "Content-Type": `text/html; private=${sensitive}` } })
+        : counterResponse(input, stage === "parse" ? { privateValue: sensitive } : undefined);
+      upstream.headers.set("Set-Cookie", `busuanziId=${sensitive}; Path=/`);
+      if (stage === "headers") upstream.headers.getSetCookie = () => { throw new TypeError(`headers failed: ${sensitive}`); };
+      if (stage === "body") upstream.text = async () => { throw new Error(`body failed: ${sensitive}`); };
+      return upstream;
+    });
+    assert.equal(response.status, 502);
+    assert.deepEqual(await response.json(), { error: "Traffic statistics unavailable" });
+    const [message, diagnostic] = warn.mock.calls.at(-1)!.arguments as [string, Record<string, unknown>];
+    assert.equal(message, "[traffic] upstream failure");
+    assert.deepEqual(Object.keys(diagnostic).sort(), ["causeCode", "contentType", "elapsedMs", "errorName", "stage", "upstreamStatus"].sort());
+    assert.equal(diagnostic.stage, stage);
+    assert.equal(diagnostic.upstreamStatus, stage === "fetch" ? null : stage === "status" ? 503 : 200);
+    assert.equal(diagnostic.contentType, stage === "fetch" ? null : stage === "status" ? "text/html" : "application/json");
+    assert.equal(diagnostic.causeCode, stage === "fetch" ? "ECONNRESET" : null);
+    assert.equal(typeof diagnostic.elapsedMs, "number");
+    assert.ok(Number(diagnostic.elapsedMs) >= 0);
+    assert.ok(!JSON.stringify(warn.mock.calls.map((call) => call.arguments)).includes(sensitive));
+  }
+  assert.equal(warn.mock.callCount(), 5);
+});
+
+test("diagnostics reject unsafe error labels and stay silent for success or rejected input", async (t) => {
+  const warn = t.mock.method(console, "warn", () => {});
+  const error = new Error("cookie=private", { cause: { code: "ECONNRESET\nCookie=private" } });
+  error.name = "Error https://private.example/visitor";
+  const failed = await handleTrafficRequest(visit(), async () => { throw error; });
+  assert.equal(failed.status, 502);
+  const diagnostic = warn.mock.calls[0].arguments[1] as Record<string, unknown>;
+  assert.equal(diagnostic.errorName, null);
+  assert.equal(diagnostic.causeCode, null);
+  const malformedMime = await handleTrafficRequest(visit(), async () => new Response("private body", {
+    status: 503, headers: { "Content-Type": "cookie=private" },
+  }));
+  assert.equal(malformedMime.status, 502);
+  assert.equal((warn.mock.calls[1].arguments[1] as Record<string, unknown>).contentType, "invalid");
+  const successful = await handleTrafficRequest(visit(), async (input) => counterResponse(input));
+  const rejected = await handleTrafficRequest(visit("//evil.example"), async () => { throw new Error("must not fetch"); });
+  assert.equal(successful.status, 200);
+  assert.equal(rejected.status, 400);
+  assert.equal(warn.mock.callCount(), 2);
+  assert.ok(!JSON.stringify(warn.mock.calls.map((call) => call.arguments)).includes("private"));
+});
