@@ -14,7 +14,7 @@ Altria 的个人博客，用来记录前端开发、技术实践、年度总结�
 - Markdown 富内容文章，支持代码高亮、公式、图表、乐谱和图片灯箱。
 - 中文、英文、日文界面与独立文章译文，浅色、深色和跟随系统主题。
 - 分语言 RSS、站点地图及文章 SEO。
-- 全站累计浏览量（PV）和访客数（UV），由原版不蒜子提供计数。
+- 全站累计浏览量（PV）、访客数（UV）和国家访问排行，由 Supabase 存储与统计。
 
 ## 技术栈
 
@@ -25,9 +25,11 @@ Altria 的个人博客，用来记录前端开发、技术实践、年度总结�
 | 内容管理 | 本地 Markdown 文件 + YAML 元数据，使用 unified / remark / MDC 解析 |
 | 富内容 | Shiki 代码高亮、KaTeX 公式、Mermaid 图表、abcjs 乐谱 |
 | 图片存储 | 阿里云 OSS，仓库保存图片尺寸与校验清单 |
+| 访问统计 | Supabase / PostgreSQL，通过服务端 RPC 记录与聚合 |
+| 部署与域名 | Vercel 构建与 HTTPS，Cloudflare 仅托管 DNS |
 | 工程工具 | npm、ESLint、TypeScript 类型检查、Node.js 测试运行器 |
 
-文章随代码维护，文章页在构建时生成，无需数据库或 CMS。依赖版本由 `package-lock.json` 锁定。
+文章随代码维护，文章页在构建时生成；文章内容无需数据库或 CMS，访问统计使用 Supabase 数据库。依赖版本由 `package-lock.json` 锁定。
 
 ## 本地运行
 

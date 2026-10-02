@@ -317,3 +317,7 @@ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 ```
+
+## Technical information brand icons
+
+The Vercel, Node.js, Alibaba Cloud, Cloudflare, and Supabase SVG paths in `components/technical-brand-icon.tsx` come from [Simple Icons](https://github.com/simple-icons/simple-icons/tree/1089fb7d2bf0e323f834c205ab76265005a6d5e8/icons), revision `1089fb7d2bf0e323f834c205ab76265005a6d5e8`, reviewed on 2026-10-02. Source files: `vercel.svg`, `nodedotjs.svg`, `alibabacloud.svg`, `cloudflare.svg`, and `supabase.svg`. Simple Icons publishes these assets under [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/1089fb7d2bf0e323f834c205ab76265005a6d5e8/LICENSE.md); brand trademarks remain the property of their respective owners.

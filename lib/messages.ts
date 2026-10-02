@@ -24,7 +24,7 @@ const zh = {
   codeLines: (count: number) => `${count} 行代码`, collapseCode: "收起代码", expandCode: "展开代码", codeStats: (lines: number, characters: number, bytes: number) => `${lines} 行 · ${characters} 字符 · ${bytes} 字节`,
   image: "图片", imageUnavailable: "图片暂时无法加载", articleImage: "文章配图", enlargeImage: (alt: string) => `放大图片：${alt}`, viewImage: "查看文章图片", closeImage: "关闭图片",
   backToTop: "回到顶部", tableOfContents: "文章目录", articleSections: "文章章节", noSections: "本文暂无章节目录", openContents: "打开文章目录", closeContents: "关闭文章目录",
-  technicalInfo: "技术信息", buildPlatform: "构建平台", imageStorage: "图片存储", softwareLicense: "软件协议", contentLicense: "文章许可", canonicalDomain: "规范域名", unspecified: "未声明", selfHosted: "本站托管", expandBuild: "展开构建信息", collapseBuild: "收起构建信息",
+  technicalInfo: "技术信息", buildPlatform: "构建平台", imageStorage: "图片存储", dnsProvider: "域名解析", database: "数据库", softwareLicense: "软件协议", contentLicense: "文章许可", canonicalDomain: "规范域名", unspecified: "未声明", selfHosted: "本站托管", expandBuild: "展开构建信息", collapseBuild: "收起构建信息",
 };
 
 type Messages = typeof zh;
@@ -53,7 +53,7 @@ const en: Messages = {
   codeLines: (count) => `${count} ${count === 1 ? "line" : "lines"} of code`, collapseCode: "Collapse code", expandCode: "Expand code", codeStats: (lines, characters, bytes) => `${lines} lines · ${characters} characters · ${bytes} bytes`,
   image: "Image", imageUnavailable: "Image could not be loaded", articleImage: "Article image", enlargeImage: (alt) => `Enlarge image: ${alt}`, viewImage: "View article image", closeImage: "Close image",
   backToTop: "Back to top", tableOfContents: "Contents", articleSections: "Article sections", noSections: "This post has no sections", openContents: "Open table of contents", closeContents: "Close table of contents",
-  technicalInfo: "Technical information", buildPlatform: "Build platform", imageStorage: "Image storage", softwareLicense: "Software license", contentLicense: "Content license", canonicalDomain: "Canonical domain", unspecified: "Not specified", selfHosted: "Self-hosted", expandBuild: "Show build details", collapseBuild: "Hide build details",
+  technicalInfo: "Technical information", buildPlatform: "Build platform", imageStorage: "Image storage", dnsProvider: "DNS", database: "Database", softwareLicense: "Software license", contentLicense: "Content license", canonicalDomain: "Canonical domain", unspecified: "Not specified", selfHosted: "Self-hosted", expandBuild: "Show build details", collapseBuild: "Hide build details",
 };
 
 const ja: Messages = {
@@ -80,7 +80,7 @@ const ja: Messages = {
   codeLines: (count) => `${count} 行のコード`, collapseCode: "コードを折りたたむ", expandCode: "コードを展開", codeStats: (lines, characters, bytes) => `${lines} 行 · ${characters} 文字 · ${bytes} バイト`,
   image: "画像", imageUnavailable: "画像を読み込めませんでした", articleImage: "記事の画像", enlargeImage: (alt) => `画像を拡大：${alt}`, viewImage: "記事の画像を表示", closeImage: "画像を閉じる",
   backToTop: "先頭に戻る", tableOfContents: "目次", articleSections: "記事のセクション", noSections: "この記事には目次がありません", openContents: "目次を開く", closeContents: "目次を閉じる",
-  technicalInfo: "技術情報", buildPlatform: "ビルド環境", imageStorage: "画像ストレージ", softwareLicense: "ソフトウェアライセンス", contentLicense: "記事のライセンス", canonicalDomain: "正規ドメイン", unspecified: "未指定", selfHosted: "セルフホスト", expandBuild: "ビルド情報を表示", collapseBuild: "ビルド情報を隠す",
+  technicalInfo: "技術情報", buildPlatform: "ビルド環境", imageStorage: "画像ストレージ", dnsProvider: "DNS", database: "データベース", softwareLicense: "ソフトウェアライセンス", contentLicense: "記事のライセンス", canonicalDomain: "正規ドメイン", unspecified: "未指定", selfHosted: "セルフホスト", expandBuild: "ビルド情報を表示", collapseBuild: "ビルド情報を隠す",
 };
 
 const messages: Record<Locale, Messages> = { zh, en, ja };

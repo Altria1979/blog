@@ -21,6 +21,9 @@ export const blogConfig = {
     // 留空时按构建环境显示 Vercel 或 Node.js。
     buildPlatform: "",
     imageStorage: imageOrigin === defaultImageBaseUrl ? "阿里云 OSS" : imageOrigin ? "外部图床" : "本站托管",
+    // 本站使用的服务；Cloudflare 仅托管 DNS，访问统计存储在 Supabase。
+    dnsProvider: "Cloudflare",
+    analytics: "Supabase",
     // 填写本站实际采用的许可；留空时显示「未声明」。
     softwareLicense: "MIT",
     contentLicense: "",
