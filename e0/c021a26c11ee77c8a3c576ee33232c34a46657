@@ -1,0 +1,36 @@
+lib/messages.ts
+  s_976e07b4ce21d3::t_ba0653aecf5302 16-17,44-45,70-71
+README.md
+  s_976e07b4ce21d3::t_7229cf0daa1ffb 81,88
+  s_976e07b4ce21d3::t_ba0653aecf5302 17,82-87
+components/site-layout.tsx
+  s_976e07b4ce21d3::t_ba0653aecf5302 12,42
+tests/traffic-stats.test.ts
+  s_976e07b4ce21d3::t_0d2efa15394c13 131-143,240-244
+  s_976e07b4ce21d3::t_f23280b8472f2a 1-52,54-59,61-80,86-89,91,93-94,96-98,100-101,103-112,118,121,127-130,144,146,150,154-158,161-163,165-168,170-174,176,178-179,181,183-185,188,190-192,194,196-199,202-206,209-212,214,217-224,228,230-231,235-236,238,245
+  s_976e07b4ce21d3::t_2ed806cb53ac12 53,60,81-85,90,92,95,99,102,113-117,119-120,122-126,145,147-149,151-153,159-160,164,169,175,177,180,182,186-187,189,193,195,200-201,207-208,213,215-216,225-227,229,232-234,237,239
+lib/traffic-stats.ts
+  s_976e07b4ce21d3::t_f23280b8472f2a 1-95
+components/traffic-stats.tsx
+  s_976e07b4ce21d3::t_ba0653aecf5302 1-43
+components/info-sidebar.tsx
+  s_976e07b4ce21d3::t_ba0653aecf5302 8,20
+app/globals.css
+  s_976e07b4ce21d3::t_ba0653aecf5302 450
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e0c021a26c11ee77c8a3c576ee33232c34a46657",
+  "prompts": {},
+  "sessions": {
+    "s_976e07b4ce21d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fada-2e9c-7f73-87f0-a284c6ba2a93",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
