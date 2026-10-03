@@ -36,6 +36,13 @@ export default function AboutPage({ locale = "zh" }: { locale?: Locale }) {
           <h2>{messages.profileTitle}</h2>
           <p>{messages.profileIntro}</p>
           <p>{messages.gamesIntro}</p>
+          <h2>{messages.interestsTitle}</h2>
+          {messages.interests.map((interest) => (
+            <div key={interest.title}>
+              <h3>{interest.title}</h3>
+              <p>{interest.description}</p>
+            </div>
+          ))}
           <h2>{messages.recordTitle}</h2>
           <p>{messages.recordIntro}</p>
           <p>{messages.recordDetails}</p>

@@ -44,6 +44,10 @@ const labels: Record<string, [string, string]> = {
   前端: ["Frontend", "フロントエンド"], 设计: ["Design", "デザイン"],
   学习: ["Learning", "学習"], 阅读: ["Reading", "読書"],
   前端开发: ["Frontend development", "フロントエンド開発"],
+  "VRM 模型设计": ["VRM model design", "VRM モデルのデザイン"],
+  全栈开发: ["Full-stack development", "フルスタック開発"],
+  "Agent 开发": ["Agent development", "エージェント開発"],
+  日语学习: ["Learning Japanese", "日本語学習"],
   开源: ["Open source", "オープンソース"], 慢慢生活: ["Slow living", "ゆっくり暮らす"],
 };
 export function categoryLabel(value: string, locale: Locale): string {

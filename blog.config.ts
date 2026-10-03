@@ -28,5 +28,5 @@ export const blogConfig = {
     softwareLicense: "MIT",
     contentLicense: "",
   },
-  interests: ["前端开发", "开源", "摄影", "音乐", "慢慢生活"],
+  interests: ["VRM 模型设计", "全栈开发", "Agent 开发", "日语学习", "开源", "摄影", "音乐", "慢慢生活"],
 };
