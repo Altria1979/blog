@@ -1,0 +1,21 @@
+lib/page-messages.ts
+  s_c64a570a1b1065::t_98df263ce6d267 24,57,90,122
+app/_pages/about.tsx
+  s_c64a570a1b1065::t_dd879e8f770385 40-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cefdf78bb78faa0889a090e708375eeb913a9208",
+  "prompts": {},
+  "sessions": {
+    "s_c64a570a1b1065": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ff0d-b208-7200-b858-68e51a071333",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
