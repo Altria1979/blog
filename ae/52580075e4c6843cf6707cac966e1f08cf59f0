@@ -1,0 +1,67 @@
+lib/diary-messages.ts
+  s_0f02b5ea07542a::t_9e6954df587884 1-54
+lib/messages.ts
+  s_0f02b5ea07542a::t_9e6954df587884 4,34,62
+  s_0f02b5ea07542a::t_e780eb0fd46a4e 25-26,55-56,83-84
+lib/markdown-scope.ts
+  s_0f02b5ea07542a::t_45346191b236c7 1-86
+tests/markdown-scope.test.ts
+  s_0f02b5ea07542a::t_d2e498e7285081 41-42
+  s_0f02b5ea07542a::t_4db91c2a0c1356 58-59,61-62
+  s_0f02b5ea07542a::t_70787aa40d4e19 40
+  s_0f02b5ea07542a::t_45346191b236c7 1-39,43-57,60,63-109
+lib/diary.ts
+  s_0f02b5ea07542a::t_f2972c52a42809 1-146
+components/sidebar.tsx
+  s_0f02b5ea07542a::t_9e6954df587884 18,20
+components/language-toggle.tsx
+  s_0f02b5ea07542a::t_9e6954df587884 7,59
+README.md
+  s_0f02b5ea07542a::t_7d1f1c606713ea 116
+tests/diary-i18n.test.ts
+  s_0f02b5ea07542a::t_9e6954df587884 1-33
+lib/metadata.ts
+  s_0f02b5ea07542a::t_7d1f1c606713ea 6-7,44-62
+  s_0f02b5ea07542a::t_527ca30bb1569c 63-65
+app/_pages/diary.tsx
+  s_0f02b5ea07542a::t_d9baaaf3b198cc 58
+  s_0f02b5ea07542a::t_f95e73de044b1a 1-57,59-95
+app/[locale]/diary/page.tsx
+  s_0f02b5ea07542a::t_f95e73de044b1a 1-21
+docs/diary.md
+  s_0f02b5ea07542a::t_7d1f1c606713ea 1-87
+app/sitemap.ts
+  s_0f02b5ea07542a::t_7d1f1c606713ea 6,18-22
+tests/diary.test.ts
+  s_0f02b5ea07542a::t_f2972c52a42809 1-137
+app/(zh)/diary/page.tsx
+  s_0f02b5ea07542a::t_f95e73de044b1a 1-12
+components/article-image.tsx
+  s_0f02b5ea07542a::t_6114a1766eacb3 51-55,58,72
+lib/i18n.ts
+  s_0f02b5ea07542a::t_9e6954df587884 33,37-43
+  s_0f02b5ea07542a::t_4c9bd6bd856125 44-45
+components/markdown.tsx
+  s_0f02b5ea07542a::t_e780eb0fd46a4e 23,147,287
+components/diary.css
+  s_0f02b5ea07542a::t_f95e73de044b1a 1-45
+components/markdown-interactions.tsx
+  s_0f02b5ea07542a::t_e780eb0fd46a4e 5,8-14
+  s_0f02b5ea07542a::t_affe02c3ebc778 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ae52580075e4c6843cf6707cac966e1f08cf59f0",
+  "prompts": {},
+  "sessions": {
+    "s_0f02b5ea07542a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12a28-c04a-7203-8c11-09e523a0b159",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
