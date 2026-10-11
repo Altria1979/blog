@@ -1,0 +1,21 @@
+content/diary/2026-10-11-wish.md
+  s_22631e638307b7::t_db83969a4f2758 1-7
+content/image-assets.json
+  s_22631e638307b7::t_4d6c33e5deb1df 23-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6126d82cfa5e622b30e906ffd7a8f9d6ca755a1f",
+  "prompts": {},
+  "sessions": {
+    "s_22631e638307b7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12ae3-da3f-79f2-b332-028c964d2ab2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Altria1979 <hakusai22@qq.com>"
+    }
+  }
+}
