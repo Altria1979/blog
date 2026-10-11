@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: metadataAlternates(locale, absolute(Object.fromEntries(locales.map((item) => [item, localePath(path, item)])))).languages },
     })),
     {
+      url: new URL(localePath("/anime", locale), blogConfig.url).href,
+      alternates: { languages: metadataAlternates(locale, absolute(Object.fromEntries(locales.map((item) => [item, localePath("/anime", item)])))).languages },
+    },
+    {
       url: new URL(localePath("/diary", locale), blogConfig.url).href,
       lastModified: getDiaryEntries(undefined, locale)[0]?.date || blogConfig.established,
       alternates: { languages: metadataAlternates(locale, absolute(Object.fromEntries(locales.map((item) => [item, localePath("/diary", item)])))).languages },

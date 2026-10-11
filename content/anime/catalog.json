@@ -1,0 +1,4647 @@
+[
+  {
+    "id": "anime-2006-001",
+    "year": 2006,
+    "titles": {
+      "zh": "死亡笔记",
+      "en": "Death Note",
+      "ja": "DEATH NOTE"
+    }
+  },
+  {
+    "id": "anime-2006-002",
+    "year": 2006,
+    "titles": {
+      "zh": "银魂",
+      "en": "Gintama",
+      "ja": "銀魂"
+    }
+  },
+  {
+    "id": "anime-2006-003",
+    "year": 2006,
+    "titles": {
+      "zh": "寒蝉鸣泣之时",
+      "en": "Higurashi When They Cry",
+      "ja": "ひぐらしのなく頃に"
+    }
+  },
+  {
+    "id": "anime-2006-004",
+    "year": 2006,
+    "titles": {
+      "zh": "Code Geass 反叛的鲁路修",
+      "en": "Code Geass: Lelouch of the Rebellion",
+      "ja": "コードギアス 反逆のルルーシュ"
+    }
+  },
+  {
+    "id": "anime-2006-005",
+    "year": 2006,
+    "titles": {
+      "zh": "欢迎加入NHK！",
+      "en": "Welcome to the N.H.K.",
+      "ja": "NHKにようこそ!"
+    }
+  },
+  {
+    "id": "anime-2006-006",
+    "year": 2006,
+    "titles": {
+      "zh": "Fate/stay night",
+      "en": "Fate/stay night",
+      "ja": "Fate/stay night"
+    }
+  },
+  {
+    "id": "anime-2006-007",
+    "year": 2006,
+    "titles": {
+      "zh": "凉宫春日的忧郁",
+      "en": "The Melancholy of Haruhi Suzumiya",
+      "ja": "涼宮ハルヒの憂鬱"
+    }
+  },
+  {
+    "id": "anime-2006-008",
+    "year": 2006,
+    "titles": {
+      "zh": "零之使魔",
+      "en": "The Familiar of Zero",
+      "ja": "ゼロの使い魔"
+    }
+  },
+  {
+    "id": "anime-2006-009",
+    "year": 2006,
+    "titles": {
+      "zh": "黑礁",
+      "en": "Black Lagoon",
+      "ja": "BLACK LAGOON"
+    }
+  },
+  {
+    "id": "anime-2006-010",
+    "year": 2006,
+    "titles": {
+      "zh": "Kanon",
+      "en": "Kanon",
+      "ja": "Kanon"
+    }
+  },
+  {
+    "id": "anime-2006-011",
+    "year": 2006,
+    "titles": {
+      "zh": "娜娜",
+      "en": "NANA",
+      "ja": "NANA"
+    }
+  },
+  {
+    "id": "anime-2006-012",
+    "year": 2006,
+    "titles": {
+      "zh": "×××HOLiC",
+      "en": "×××HOLiC",
+      "ja": "×××HOLiC"
+    }
+  },
+  {
+    "id": "anime-2006-013",
+    "year": 2006,
+    "titles": {
+      "zh": "樱兰高校男公关部",
+      "en": "Ouran High School Host Club",
+      "ja": "桜蘭高校ホスト部"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1487"
+  },
+  {
+    "id": "anime-2006-014",
+    "year": 2006,
+    "titles": {
+      "zh": "监狱兔 第一季",
+      "en": "Usavich",
+      "ja": "Usavich"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1373"
+  },
+  {
+    "id": "anime-2006-015",
+    "year": 2006,
+    "titles": {
+      "zh": "蜂蜜与四叶草II",
+      "en": "Honey and Clover II",
+      "ja": "ハチミツとクローバー II"
+    },
+    "sourceUrl": "https://bgm.tv/subject/848"
+  },
+  {
+    "id": "anime-2006-016",
+    "year": 2006,
+    "titles": {
+      "zh": "黑礁 The Second Barrage",
+      "en": "Black Lagoon: The Second Barrage",
+      "ja": "BLACK LAGOON The Second Barrage"
+    },
+    "sourceUrl": "https://bgm.tv/subject/980"
+  },
+  {
+    "id": "anime-2006-017",
+    "year": 2006,
+    "titles": {
+      "zh": "家庭教师HITMAN REBORN!",
+      "en": "REBORN!",
+      "ja": "家庭教師ヒットマンREBORN!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/4562"
+  },
+  {
+    "id": "anime-2007-001",
+    "year": 2007,
+    "titles": {
+      "zh": "幸运星",
+      "en": "Lucky Star",
+      "ja": "らき☆すた"
+    }
+  },
+  {
+    "id": "anime-2007-002",
+    "year": 2007,
+    "titles": {
+      "zh": "CLANNAD",
+      "en": "CLANNAD",
+      "ja": "CLANNAD"
+    }
+  },
+  {
+    "id": "anime-2007-003",
+    "year": 2007,
+    "titles": {
+      "zh": "天元突破 红莲螺岩",
+      "en": "Tengen Toppa Gurren Lagann",
+      "ja": "天元突破グレンラガン"
+    }
+  },
+  {
+    "id": "anime-2007-004",
+    "year": 2007,
+    "titles": {
+      "zh": "旋风管家",
+      "en": "Hayate the Combat Butler",
+      "ja": "ハヤテのごとく！"
+    }
+  },
+  {
+    "id": "anime-2007-005",
+    "year": 2007,
+    "titles": {
+      "zh": "火影忍者疾风传",
+      "en": "Naruto Shippuden",
+      "ja": "NARUTO -ナルト- 疾風伝"
+    }
+  },
+  {
+    "id": "anime-2007-006",
+    "year": 2007,
+    "titles": {
+      "zh": "悠久之翼",
+      "en": "ef: A Tale of Memories",
+      "ja": "ef - a tale of memories."
+    }
+  },
+  {
+    "id": "anime-2007-007",
+    "year": 2007,
+    "titles": {
+      "zh": "赌博默示录",
+      "en": "Kaiji: Ultimate Survivor",
+      "ja": "賭博黙示録カイジ"
+    }
+  },
+  {
+    "id": "anime-2007-008",
+    "year": 2007,
+    "titles": {
+      "zh": "永生之酒",
+      "en": "Baccano!",
+      "ja": "バッカーノ！"
+    }
+  },
+  {
+    "id": "anime-2007-009",
+    "year": 2007,
+    "titles": {
+      "zh": "机动战士高达00",
+      "en": "Mobile Suit Gundam 00",
+      "ja": "機動戦士ガンダム00"
+    }
+  },
+  {
+    "id": "anime-2007-010",
+    "year": 2007,
+    "titles": {
+      "zh": "再见绝望先生",
+      "en": "Sayonara, Zetsubou-Sensei",
+      "ja": "さよなら絶望先生"
+    }
+  },
+  {
+    "id": "anime-2007-011",
+    "year": 2007,
+    "titles": {
+      "zh": "日在校园",
+      "en": "School Days",
+      "ja": "スクールデイズ"
+    }
+  },
+  {
+    "id": "anime-2007-012",
+    "year": 2007,
+    "titles": {
+      "zh": "南家三姐妹",
+      "en": "Minami-ke",
+      "ja": "みなみけ"
+    }
+  },
+  {
+    "id": "anime-2007-013",
+    "year": 2007,
+    "titles": {
+      "zh": "濑户的花嫁",
+      "en": "My Bride is a Mermaid",
+      "ja": "瀬戸の花嫁"
+    },
+    "sourceUrl": "https://bgm.tv/subject/805"
+  },
+  {
+    "id": "anime-2007-014",
+    "year": 2007,
+    "titles": {
+      "zh": "大剑",
+      "en": "Claymore",
+      "ja": "CLAYMORE"
+    },
+    "sourceUrl": "https://bgm.tv/subject/982"
+  },
+  {
+    "id": "anime-2007-015",
+    "year": 2007,
+    "titles": {
+      "zh": "DARKER THAN BLACK -黑之契约者-",
+      "en": "Darker than Black",
+      "ja": "DARKER THAN BLACK -黒の契約者-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/292"
+  },
+  {
+    "id": "anime-2007-016",
+    "year": 2007,
+    "titles": {
+      "zh": "sola",
+      "en": "sola",
+      "ja": "sola"
+    },
+    "sourceUrl": "https://bgm.tv/subject/798"
+  },
+  {
+    "id": "anime-2007-017",
+    "year": 2007,
+    "titles": {
+      "zh": "电脑线圈",
+      "en": "Den-noh Coil",
+      "ja": "電脳コイル"
+    },
+    "sourceUrl": "https://bgm.tv/subject/794"
+  },
+  {
+    "id": "anime-2007-018",
+    "year": 2007,
+    "titles": {
+      "zh": "寒蝉鸣泣之时 解",
+      "en": "When They Cry Kai",
+      "ja": "ひぐらしのなく頃に解"
+    },
+    "sourceUrl": "https://bgm.tv/subject/288"
+  },
+  {
+    "id": "anime-2007-019",
+    "year": 2007,
+    "titles": {
+      "zh": "零之使魔 双月骑士",
+      "en": "The Familiar of Zero: Knight of the Twin Moons",
+      "ja": "ゼロの使い魔 双月の騎士"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1103"
+  },
+  {
+    "id": "anime-2007-020",
+    "year": 2007,
+    "titles": {
+      "zh": "物怪",
+      "en": "Mononoke",
+      "ja": "モノノ怪"
+    },
+    "sourceUrl": "https://bgm.tv/subject/2496"
+  },
+  {
+    "id": "anime-2007-021",
+    "year": 2007,
+    "titles": {
+      "zh": "灼眼的夏娜II",
+      "en": "Shakugan no Shana: Season II",
+      "ja": "灼眼のシャナII"
+    },
+    "sourceUrl": "https://bgm.tv/subject/491"
+  },
+  {
+    "id": "anime-2008-001",
+    "year": 2008,
+    "titles": {
+      "zh": "出包王女",
+      "en": "To Love-Ru",
+      "ja": "To LOVEる -とらぶる-"
+    }
+  },
+  {
+    "id": "anime-2008-002",
+    "year": 2008,
+    "titles": {
+      "zh": "龙与虎",
+      "en": "Toradora!",
+      "ja": "とらドラ！"
+    }
+  },
+  {
+    "id": "anime-2008-003",
+    "year": 2008,
+    "titles": {
+      "zh": "魔法禁书目录",
+      "en": "A Certain Magical Index",
+      "ja": "とある魔術の禁書目録"
+    }
+  },
+  {
+    "id": "anime-2008-004",
+    "year": 2008,
+    "titles": {
+      "zh": "狼与香辛料",
+      "en": "Spice and Wolf",
+      "ja": "狼と香辛料"
+    }
+  },
+  {
+    "id": "anime-2008-005",
+    "year": 2008,
+    "titles": {
+      "zh": "夏目友人帐",
+      "en": "Natsume's Book of Friends",
+      "ja": "夏目友人帳"
+    }
+  },
+  {
+    "id": "anime-2008-006",
+    "year": 2008,
+    "titles": {
+      "zh": "真实之泪",
+      "en": "True Tears",
+      "ja": "true tears"
+    }
+  },
+  {
+    "id": "anime-2008-007",
+    "year": 2008,
+    "titles": {
+      "zh": "神薙",
+      "en": "Kannagi",
+      "ja": "かんなぎ"
+    }
+  },
+  {
+    "id": "anime-2008-008",
+    "year": 2008,
+    "titles": {
+      "zh": "我的狐仙女友",
+      "en": "Kanokon",
+      "ja": "かのこん"
+    }
+  },
+  {
+    "id": "anime-2008-009",
+    "year": 2008,
+    "titles": {
+      "zh": "噬魂师",
+      "en": "Soul Eater",
+      "ja": "ソウルイーター"
+    }
+  },
+  {
+    "id": "anime-2008-010",
+    "year": 2008,
+    "titles": {
+      "zh": "黑执事",
+      "en": "Black Butler",
+      "ja": "黒執事"
+    }
+  },
+  {
+    "id": "anime-2008-011",
+    "year": 2008,
+    "titles": {
+      "zh": "俗・再见绝望先生",
+      "en": "Zoku Sayonara Zetsubou Sensei",
+      "ja": "俗・さよなら絶望先生"
+    }
+  },
+  {
+    "id": "anime-2008-012",
+    "year": 2008,
+    "titles": {
+      "zh": "鹡鸰女神",
+      "en": "Sekirei",
+      "ja": "セキレイ"
+    }
+  },
+  {
+    "id": "anime-2008-013",
+    "year": 2008,
+    "titles": {
+      "zh": "水星领航员 第三季",
+      "en": "ARIA The ORIGINATION",
+      "ja": "ARIA The ORIGINATION"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1270"
+  },
+  {
+    "id": "anime-2008-014",
+    "year": 2008,
+    "titles": {
+      "zh": "Code Geass 反叛的鲁路修R2",
+      "en": "Code Geass: Lelouch of the Rebellion R2",
+      "ja": "コードギアス 反逆のルルーシュR2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/8"
+  },
+  {
+    "id": "anime-2008-015",
+    "year": 2008,
+    "titles": {
+      "zh": "零之使魔 三美姬的轮舞",
+      "en": "The Familiar of Zero: \"Rondo\" of Princesses",
+      "ja": "ゼロの使い魔 ～三美姫の輪舞～"
+    },
+    "sourceUrl": "https://bgm.tv/subject/763"
+  },
+  {
+    "id": "anime-2008-016",
+    "year": 2008,
+    "titles": {
+      "zh": "CLANNAD 〜AFTER STORY〜",
+      "en": "Clannad: After Story",
+      "ja": "CLANNAD 〜AFTER STORY〜"
+    },
+    "sourceUrl": "https://bgm.tv/subject/876"
+  },
+  {
+    "id": "anime-2008-017",
+    "year": 2008,
+    "titles": {
+      "zh": "食灵-零-",
+      "en": "Ga-Rei-Zero",
+      "ja": "喰霊-零-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/885"
+  },
+  {
+    "id": "anime-2008-018",
+    "year": 2008,
+    "titles": {
+      "zh": "机动战士高达00 第二季",
+      "en": "Mobile Suit Gundam 00 Second Season",
+      "ja": "機動戦士ガンダム00 セカンドシーズン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1010"
+  },
+  {
+    "id": "anime-2008-019",
+    "year": 2008,
+    "titles": {
+      "zh": "悠久之翼2",
+      "en": "ef ~ A Tale of Melodies",
+      "ja": "ef - a tale of melodies."
+    },
+    "sourceUrl": "https://bgm.tv/subject/1029"
+  },
+  {
+    "id": "anime-2009-001",
+    "year": 2009,
+    "titles": {
+      "zh": "轻音少女",
+      "en": "K-ON!",
+      "ja": "けいおん!"
+    }
+  },
+  {
+    "id": "anime-2009-002",
+    "year": 2009,
+    "titles": {
+      "zh": "钢之炼金术师 FULLMETAL ALCHEMIST",
+      "en": "Fullmetal Alchemist: Brotherhood",
+      "ja": "鋼の錬金術師 FULLMETAL ALCHEMIST"
+    }
+  },
+  {
+    "id": "anime-2009-003",
+    "year": 2009,
+    "titles": {
+      "zh": "化物语",
+      "en": "Bakemonogatari",
+      "ja": "化物語"
+    }
+  },
+  {
+    "id": "anime-2009-004",
+    "year": 2009,
+    "titles": {
+      "zh": "凉宫春日的忧郁 2009",
+      "en": "The Melancholy of Haruhi Suzumiya (2009)",
+      "ja": "涼宮ハルヒの憂鬱 (2009)"
+    }
+  },
+  {
+    "id": "anime-2009-005",
+    "year": 2009,
+    "titles": {
+      "zh": "某科学的超电磁炮",
+      "en": "A Certain Scientific Railgun",
+      "ja": "とある科学の超電磁砲"
+    }
+  },
+  {
+    "id": "anime-2009-006",
+    "year": 2009,
+    "titles": {
+      "zh": "学生会的一己之见",
+      "en": "Student Council's Discretion",
+      "ja": "生徒会の一存"
+    }
+  },
+  {
+    "id": "anime-2009-007",
+    "year": 2009,
+    "titles": {
+      "zh": "天降之物",
+      "en": "Heaven's Lost Property",
+      "ja": "そらのおとしもの"
+    }
+  },
+  {
+    "id": "anime-2009-008",
+    "year": 2009,
+    "titles": {
+      "zh": "天才麻将少女",
+      "en": "Saki",
+      "ja": "咲-Saki-"
+    }
+  },
+  {
+    "id": "anime-2009-009",
+    "year": 2009,
+    "titles": {
+      "zh": "白色相簿",
+      "en": "White Album",
+      "ja": "WHITE ALBUM"
+    }
+  },
+  {
+    "id": "anime-2009-010",
+    "year": 2009,
+    "titles": {
+      "zh": "妖精的尾巴",
+      "en": "Fairy Tail",
+      "ja": "FAIRY TAIL"
+    }
+  },
+  {
+    "id": "anime-2009-011",
+    "year": 2009,
+    "titles": {
+      "zh": "好想告诉你",
+      "en": "Kimi ni Todoke",
+      "ja": "君に届け"
+    }
+  },
+  {
+    "id": "anime-2009-012",
+    "year": 2009,
+    "titles": {
+      "zh": "续 夏目友人帐",
+      "en": "Natsume's Book of Friends Season 2",
+      "ja": "続 夏目友人帳"
+    },
+    "sourceUrl": "https://bgm.tv/subject/891"
+  },
+  {
+    "id": "anime-2009-013",
+    "year": 2009,
+    "titles": {
+      "zh": "东之伊甸",
+      "en": "Eden of the East",
+      "ja": "東のエデン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1451"
+  },
+  {
+    "id": "anime-2009-014",
+    "year": 2009,
+    "titles": {
+      "zh": "狼与香辛料 第二季",
+      "en": "Spice and Wolf II",
+      "ja": "狼と香辛料Ⅱ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/1512"
+  },
+  {
+    "id": "anime-2009-015",
+    "year": 2009,
+    "titles": {
+      "zh": "DARKER THAN BLACK -流星的双子-",
+      "en": "Darker than Black: Gemini of the Meteor",
+      "ja": "DARKER THAN BLACK -流星の双子-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/2354"
+  },
+  {
+    "id": "anime-2010-001",
+    "year": 2010,
+    "titles": {
+      "zh": "吊带袜天使",
+      "en": "Panty & Stocking with Garterbelt",
+      "ja": "パンティ&ストッキングwithガーターベルト"
+    }
+  },
+  {
+    "id": "anime-2010-002",
+    "year": 2010,
+    "titles": {
+      "zh": "四叠半神话大系",
+      "en": "The Tatami Galaxy",
+      "ja": "四畳半神話大系"
+    }
+  },
+  {
+    "id": "anime-2010-003",
+    "year": 2010,
+    "titles": {
+      "zh": "妄想学生会",
+      "en": "Seitokai Yakuindomo",
+      "ja": "生徒会役員共"
+    }
+  },
+  {
+    "id": "anime-2010-004",
+    "year": 2010,
+    "titles": {
+      "zh": "缘之空",
+      "en": "Yosuga no Sora",
+      "ja": "ヨスガノソラ"
+    }
+  },
+  {
+    "id": "anime-2010-005",
+    "year": 2010,
+    "titles": {
+      "zh": "笨蛋，测验，召唤兽",
+      "en": "Baka and Test",
+      "ja": "バカとテストと召喚獣"
+    }
+  },
+  {
+    "id": "anime-2010-006",
+    "year": 2010,
+    "titles": {
+      "zh": "天使的心跳！",
+      "en": "Angel Beats!",
+      "ja": "Angel Beats!"
+    }
+  },
+  {
+    "id": "anime-2010-007",
+    "year": 2010,
+    "titles": {
+      "zh": "无头骑士异闻录",
+      "en": "Durarara!!",
+      "ja": "デュラララ!!"
+    }
+  },
+  {
+    "id": "anime-2010-008",
+    "year": 2010,
+    "titles": {
+      "zh": "只有神知道的世界",
+      "en": "The World God Only Knows",
+      "ja": "神のみぞ知るセカイ"
+    }
+  },
+  {
+    "id": "anime-2010-009",
+    "year": 2010,
+    "titles": {
+      "zh": "圣诞之吻SS",
+      "en": "Amagami SS",
+      "ja": "アマガミSS"
+    }
+  },
+  {
+    "id": "anime-2010-010",
+    "year": 2010,
+    "titles": {
+      "zh": "我的妹妹哪有这么可爱！",
+      "en": "Oreimo",
+      "ja": "俺の妹がこんなに可愛いわけがない"
+    }
+  },
+  {
+    "id": "anime-2010-011",
+    "year": 2010,
+    "titles": {
+      "zh": "女仆咖啡厅",
+      "en": "And Yet the Town Moves",
+      "ja": "それでも町は廻っている"
+    }
+  },
+  {
+    "id": "anime-2010-012",
+    "year": 2010,
+    "titles": {
+      "zh": "亲吻姐姐",
+      "en": "Kiss × Sis",
+      "ja": "kiss×sis"
+    }
+  },
+  {
+    "id": "anime-2010-013",
+    "year": 2010,
+    "titles": {
+      "zh": "会长是女仆大人！",
+      "en": "Maid-Sama!",
+      "ja": "会長はメイド様!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/4313"
+  },
+  {
+    "id": "anime-2010-014",
+    "year": 2010,
+    "titles": {
+      "zh": "荒川爆笑团",
+      "en": "Arakawa Under the Bridge",
+      "ja": "荒川アンダー ザ ブリッジ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/2464"
+  },
+  {
+    "id": "anime-2010-015",
+    "year": 2010,
+    "titles": {
+      "zh": "迷糊餐厅",
+      "en": "Wagnaria!!",
+      "ja": "WORKING!!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/4255"
+  },
+  {
+    "id": "anime-2010-016",
+    "year": 2010,
+    "titles": {
+      "zh": "轻音少女 第二季",
+      "en": "K-ON! Season 2",
+      "ja": "けいおん！！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/3774"
+  },
+  {
+    "id": "anime-2010-017",
+    "year": 2010,
+    "titles": {
+      "zh": "学园默示录 HIGHSCHOOL OF THE DEAD",
+      "en": "High School of the Dead",
+      "ja": "学園黙示録 HIGHSCHOOL OF THE DEAD"
+    },
+    "sourceUrl": "https://bgm.tv/subject/5647"
+  },
+  {
+    "id": "anime-2010-018",
+    "year": 2010,
+    "titles": {
+      "zh": "天降之物f",
+      "en": "Heaven's Lost Property: Forte",
+      "ja": "そらのおとしものf"
+    },
+    "sourceUrl": "https://bgm.tv/subject/7150"
+  },
+  {
+    "id": "anime-2010-019",
+    "year": 2010,
+    "titles": {
+      "zh": "爆漫王。",
+      "en": "Bakuman.",
+      "ja": "バクマン。"
+    },
+    "sourceUrl": "https://bgm.tv/subject/3428"
+  },
+  {
+    "id": "anime-2010-020",
+    "year": 2010,
+    "titles": {
+      "zh": "魔法禁书目录 第二季",
+      "en": "A Certain Magical Index II",
+      "ja": "とある魔術の禁書目録Ⅱ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/7843"
+  },
+  {
+    "id": "anime-2011-001",
+    "year": 2011,
+    "titles": {
+      "zh": "命运石之门",
+      "en": "Steins;Gate",
+      "ja": "STEINS;GATE"
+    }
+  },
+  {
+    "id": "anime-2011-002",
+    "year": 2011,
+    "titles": {
+      "zh": "日常",
+      "en": "Nichijou",
+      "ja": "日常"
+    }
+  },
+  {
+    "id": "anime-2011-003",
+    "year": 2011,
+    "titles": {
+      "zh": "Fate/Zero",
+      "en": "Fate/Zero",
+      "ja": "Fate/Zero"
+    }
+  },
+  {
+    "id": "anime-2011-004",
+    "year": 2011,
+    "titles": {
+      "zh": "魔法少女小圆",
+      "en": "Puella Magi Madoka Magica",
+      "ja": "魔法少女まどか☆マギカ"
+    }
+  },
+  {
+    "id": "anime-2011-005",
+    "year": 2011,
+    "titles": {
+      "zh": "回转企鹅罐",
+      "en": "Penguindrum",
+      "ja": "輪るピングドラム"
+    }
+  },
+  {
+    "id": "anime-2011-006",
+    "year": 2011,
+    "titles": {
+      "zh": "摇曳百合",
+      "en": "YuruYuri",
+      "ja": "ゆるゆり"
+    }
+  },
+  {
+    "id": "anime-2011-007",
+    "year": 2011,
+    "titles": {
+      "zh": "我们仍未知道那天所看见的花的名字。",
+      "en": "AnoHana",
+      "ja": "あの日見た花の名前を僕達はまだ知らない。"
+    }
+  },
+  {
+    "id": "anime-2011-008",
+    "year": 2011,
+    "titles": {
+      "zh": "罪恶王冠",
+      "en": "Guilty Crown",
+      "ja": "ギルティクラウン"
+    }
+  },
+  {
+    "id": "anime-2011-009",
+    "year": 2011,
+    "titles": {
+      "zh": "花开伊吕波",
+      "en": "Hanasaku Iroha",
+      "ja": "花咲くいろは"
+    }
+  },
+  {
+    "id": "anime-2011-010",
+    "year": 2011,
+    "titles": {
+      "zh": "偶像大师",
+      "en": "The Idolmaster",
+      "ja": "アイドルマスター"
+    }
+  },
+  {
+    "id": "anime-2011-011",
+    "year": 2011,
+    "titles": {
+      "zh": "GOSICK",
+      "en": "GOSICK",
+      "ja": "GOSICK"
+    }
+  },
+  {
+    "id": "anime-2011-012",
+    "year": 2011,
+    "titles": {
+      "zh": "我的朋友很少",
+      "en": "Haganai",
+      "ja": "僕は友達が少ない"
+    }
+  },
+  {
+    "id": "anime-2011-013",
+    "year": 2011,
+    "titles": {
+      "zh": "这个是僵尸吗？",
+      "en": "Is this a Zombie?",
+      "ja": "これはゾンビですか?"
+    },
+    "sourceUrl": "https://bgm.tv/subject/9774"
+  },
+  {
+    "id": "anime-2011-014",
+    "year": 2011,
+    "titles": {
+      "zh": "银魂'",
+      "en": "Gintama Season 2",
+      "ja": "銀魂'"
+    },
+    "sourceUrl": "https://bgm.tv/subject/11834"
+  },
+  {
+    "id": "anime-2011-015",
+    "year": 2011,
+    "titles": {
+      "zh": "赌博默示录 破戒录篇",
+      "en": "Kaiji - Against All Rules",
+      "ja": "逆境無頼カイジ 破戒録篇"
+    },
+    "sourceUrl": "https://bgm.tv/subject/12317"
+  },
+  {
+    "id": "anime-2011-016",
+    "year": 2011,
+    "titles": {
+      "zh": "绯弹的亚里亚",
+      "en": "Aria the Scarlet Ammo",
+      "ja": "緋弾のアリア"
+    },
+    "sourceUrl": "https://bgm.tv/subject/10226"
+  },
+  {
+    "id": "anime-2011-017",
+    "year": 2011,
+    "titles": {
+      "zh": "电波女与青春男",
+      "en": "Ground Control to Psychoelectric Girl",
+      "ja": "電波女と青春男"
+    },
+    "sourceUrl": "https://bgm.tv/subject/10377"
+  },
+  {
+    "id": "anime-2011-018",
+    "year": 2011,
+    "titles": {
+      "zh": "神的记事本",
+      "en": "Heaven's Memo Pad",
+      "ja": "神様のメモ帳"
+    },
+    "sourceUrl": "https://bgm.tv/subject/15237"
+  },
+  {
+    "id": "anime-2011-019",
+    "year": 2011,
+    "titles": {
+      "zh": "夏目友人帐 叁",
+      "en": "Natsume's Book of Friends Season 3",
+      "ja": "夏目友人帳 参"
+    },
+    "sourceUrl": "https://bgm.tv/subject/12536"
+  },
+  {
+    "id": "anime-2011-020",
+    "year": 2011,
+    "titles": {
+      "zh": "迷茫管家与懦弱的我",
+      "en": "Mayo Chiki!",
+      "ja": "まよチキ！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/10459"
+  },
+  {
+    "id": "anime-2011-021",
+    "year": 2011,
+    "titles": {
+      "zh": "白兔糖",
+      "en": "Bunny Drop",
+      "ja": "うさぎドロップ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/10843"
+  },
+  {
+    "id": "anime-2011-022",
+    "year": 2011,
+    "titles": {
+      "zh": "笨蛋，测验，召唤兽2！",
+      "en": "Baka and Test - Summon the Beasts 2",
+      "ja": "バカとテストと召喚獣にっ!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/11145"
+  },
+  {
+    "id": "anime-2011-023",
+    "year": 2011,
+    "titles": {
+      "zh": "丹特丽安的书架",
+      "en": "The Mystic Archives of Dantalian",
+      "ja": "ダンタリアンの書架"
+    },
+    "sourceUrl": "https://bgm.tv/subject/14667"
+  },
+  {
+    "id": "anime-2011-024",
+    "year": 2011,
+    "titles": {
+      "zh": "猎人",
+      "en": "Hunter x Hunter (2011)",
+      "ja": "HUNTER×HUNTER"
+    },
+    "sourceUrl": "https://bgm.tv/subject/21032"
+  },
+  {
+    "id": "anime-2011-025",
+    "year": 2011,
+    "titles": {
+      "zh": "未来日记",
+      "en": "The Future Diary",
+      "ja": "未来日記"
+    },
+    "sourceUrl": "https://bgm.tv/subject/16235"
+  },
+  {
+    "id": "anime-2012-001",
+    "year": 2012,
+    "titles": {
+      "zh": "冰菓",
+      "en": "Hyouka",
+      "ja": "氷菓"
+    }
+  },
+  {
+    "id": "anime-2012-002",
+    "year": 2012,
+    "titles": {
+      "zh": "JOJO的奇妙冒险",
+      "en": "JoJo's Bizarre Adventure",
+      "ja": "ジョジョの奇妙な冒険"
+    }
+  },
+  {
+    "id": "anime-2012-003",
+    "year": 2012,
+    "titles": {
+      "zh": "男子高中生的日常",
+      "en": "Daily Lives of High School Boys",
+      "ja": "男子高校生の日常"
+    }
+  },
+  {
+    "id": "anime-2012-004",
+    "year": 2012,
+    "titles": {
+      "zh": "中二病也要谈恋爱！",
+      "en": "Love, Chunibyo & Other Delusions!",
+      "ja": "中二病でも恋がしたい！"
+    }
+  },
+  {
+    "id": "anime-2012-005",
+    "year": 2012,
+    "titles": {
+      "zh": "来自新世界",
+      "en": "From the New World",
+      "ja": "新世界より"
+    }
+  },
+  {
+    "id": "anime-2012-006",
+    "year": 2012,
+    "titles": {
+      "zh": "伪物语",
+      "en": "Nisemonogatari",
+      "ja": "偽物語"
+    }
+  },
+  {
+    "id": "anime-2012-007",
+    "year": 2012,
+    "titles": {
+      "zh": "Another",
+      "en": "Another",
+      "ja": "Another"
+    }
+  },
+  {
+    "id": "anime-2012-008",
+    "year": 2012,
+    "titles": {
+      "zh": "樱花庄的宠物女孩",
+      "en": "The Pet Girl of Sakurasou",
+      "ja": "さくら荘のペットな彼女"
+    }
+  },
+  {
+    "id": "anime-2012-009",
+    "year": 2012,
+    "titles": {
+      "zh": "心理测量者",
+      "en": "Psycho-Pass",
+      "ja": "PSYCHO-PASS サイコパス"
+    }
+  },
+  {
+    "id": "anime-2012-010",
+    "year": 2012,
+    "titles": {
+      "zh": "恶魔高校 D×D",
+      "en": "High School DxD",
+      "ja": "ハイスクールD×D"
+    }
+  },
+  {
+    "id": "anime-2012-011",
+    "year": 2012,
+    "titles": {
+      "zh": "刀剑神域",
+      "en": "Sword Art Online",
+      "ja": "ソードアート・オンライン"
+    }
+  },
+  {
+    "id": "anime-2012-012",
+    "year": 2012,
+    "titles": {
+      "zh": "人类衰退之后",
+      "en": "Humanity Has Declined",
+      "ja": "人類は衰退しました"
+    }
+  },
+  {
+    "id": "anime-2012-013",
+    "year": 2012,
+    "titles": {
+      "zh": "散华礼弥",
+      "en": "Sankarea: Undying Love",
+      "ja": "さんかれあ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/28230"
+  },
+  {
+    "id": "anime-2012-014",
+    "year": 2012,
+    "titles": {
+      "zh": "加速世界",
+      "en": "Accel World",
+      "ja": "アクセル・ワールド"
+    },
+    "sourceUrl": "https://bgm.tv/subject/23685"
+  },
+  {
+    "id": "anime-2012-015",
+    "year": 2012,
+    "titles": {
+      "zh": "潜行吧！奈亚子",
+      "en": "Nyaruko: Crawling with Love!",
+      "ja": "這いよれ! ニャル子さん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/24508"
+  },
+  {
+    "id": "anime-2012-016",
+    "year": 2012,
+    "titles": {
+      "zh": "TARI TARI",
+      "en": "Tari Tari",
+      "ja": "TARI TARI"
+    },
+    "sourceUrl": "https://bgm.tv/subject/37137"
+  },
+  {
+    "id": "anime-2012-017",
+    "year": 2012,
+    "titles": {
+      "zh": "摇曳百合♪♪",
+      "en": "YuruYuri Season 2",
+      "ja": "ゆるゆり♪♪"
+    },
+    "sourceUrl": "https://bgm.tv/subject/28900"
+  },
+  {
+    "id": "anime-2012-018",
+    "year": 2012,
+    "titles": {
+      "zh": "恋爱随意链接",
+      "en": "Kokoro Connect",
+      "ja": "ココロコネクト"
+    },
+    "sourceUrl": "https://bgm.tv/subject/37154"
+  },
+  {
+    "id": "anime-2012-019",
+    "year": 2012,
+    "titles": {
+      "zh": "邻座的怪同学",
+      "en": "My Little Monster",
+      "ja": "となりの怪物くん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/40533"
+  },
+  {
+    "id": "anime-2012-020",
+    "year": 2012,
+    "titles": {
+      "zh": "就算是哥哥只要有爱就没问题对吧",
+      "en": "OniAi",
+      "ja": "お兄ちゃんだけど愛さえあれば関係ないよねっ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/40339"
+  },
+  {
+    "id": "anime-2012-021",
+    "year": 2012,
+    "titles": {
+      "zh": "Little Busters!",
+      "en": "Little Busters!",
+      "ja": "リトルバスターズ！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/38040"
+  },
+  {
+    "id": "anime-2012-022",
+    "year": 2012,
+    "titles": {
+      "zh": "少女与战车",
+      "en": "Girls und Panzer",
+      "ja": "ガールズ＆パンツァー"
+    },
+    "sourceUrl": "https://bgm.tv/subject/40310"
+  },
+  {
+    "id": "anime-2012-023",
+    "year": 2012,
+    "titles": {
+      "zh": "猫物语（黑）",
+      "en": "Nekomonogatari Black",
+      "ja": "猫物語（黒）"
+    },
+    "sourceUrl": "https://bgm.tv/subject/56117"
+  },
+  {
+    "id": "anime-2013-001",
+    "year": 2013,
+    "titles": {
+      "zh": "进击的巨人",
+      "en": "Attack on Titan",
+      "ja": "進撃の巨人"
+    }
+  },
+  {
+    "id": "anime-2013-002",
+    "year": 2013,
+    "titles": {
+      "zh": "斩服少女",
+      "en": "Kill la Kill",
+      "ja": "キルラキル"
+    }
+  },
+  {
+    "id": "anime-2013-003",
+    "year": 2013,
+    "titles": {
+      "zh": "我的青春恋爱物语果然有问题",
+      "en": "My Teen Romantic Comedy SNAFU",
+      "ja": "やはり俺の青春ラブコメはまちがっている。"
+    }
+  },
+  {
+    "id": "anime-2013-004",
+    "year": 2013,
+    "titles": {
+      "zh": "悠哉日常大王",
+      "en": "Non Non Biyori",
+      "ja": "のんのんびより"
+    }
+  },
+  {
+    "id": "anime-2013-005",
+    "year": 2013,
+    "titles": {
+      "zh": "玉子市场",
+      "en": "Tamako Market",
+      "ja": "たまこまーけっと"
+    }
+  },
+  {
+    "id": "anime-2013-006",
+    "year": 2013,
+    "titles": {
+      "zh": "向山进发",
+      "en": "Yama no Susume",
+      "ja": "ヤマノススメ"
+    }
+  },
+  {
+    "id": "anime-2013-007",
+    "year": 2013,
+    "titles": {
+      "zh": "约会大作战",
+      "en": "Date A Live",
+      "ja": "デート・ア・ライブ"
+    }
+  },
+  {
+    "id": "anime-2013-008",
+    "year": 2013,
+    "titles": {
+      "zh": "噬血狂袭",
+      "en": "Strike the Blood",
+      "ja": "ストライク・ザ・ブラッド"
+    }
+  },
+  {
+    "id": "anime-2013-009",
+    "year": 2013,
+    "titles": {
+      "zh": "来自风平浪静的明天",
+      "en": "Nagi-Asu: A Lull in the Sea",
+      "ja": "凪のあすから"
+    }
+  },
+  {
+    "id": "anime-2013-010",
+    "year": 2013,
+    "titles": {
+      "zh": "我的妹妹哪有这么可爱。2",
+      "en": "Oreimo 2",
+      "ja": "俺の妹がこんなに可愛いわけがない。"
+    }
+  },
+  {
+    "id": "anime-2013-011",
+    "year": 2013,
+    "titles": {
+      "zh": "我不受欢迎，怎么想都是你们的错！",
+      "en": "WataMote",
+      "ja": "私がモテないのはどう考えてもお前らが悪い！"
+    }
+  },
+  {
+    "id": "anime-2013-012",
+    "year": 2013,
+    "titles": {
+      "zh": "境界的彼方",
+      "en": "Beyond the Boundary",
+      "ja": "境界の彼方"
+    }
+  },
+  {
+    "id": "anime-2013-013",
+    "year": 2013,
+    "titles": {
+      "zh": "我女友与青梅竹马的惨烈修罗场",
+      "en": "Oreshura",
+      "ja": "俺の彼女と幼なじみが修羅場すぎる"
+    },
+    "sourceUrl": "https://bgm.tv/subject/43557"
+  },
+  {
+    "id": "anime-2013-014",
+    "year": 2013,
+    "titles": {
+      "zh": "Love Live!",
+      "en": "Love Live! School Idol Project",
+      "ja": "ラブライブ!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/49294"
+  },
+  {
+    "id": "anime-2013-015",
+    "year": 2013,
+    "titles": {
+      "zh": "GJ部",
+      "en": "GJ Club",
+      "ja": "GJ部"
+    },
+    "sourceUrl": "https://bgm.tv/subject/48031"
+  },
+  {
+    "id": "anime-2013-016",
+    "year": 2013,
+    "titles": {
+      "zh": "我的朋友很少NEXT",
+      "en": "Haganai NEXT",
+      "ja": "僕は友達が少ないNEXT"
+    },
+    "sourceUrl": "https://bgm.tv/subject/46011"
+  },
+  {
+    "id": "anime-2013-017",
+    "year": 2013,
+    "titles": {
+      "zh": "打工吧！魔王大人",
+      "en": "The Devil is a Part-Timer!",
+      "ja": "はたらく魔王さま!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/50814"
+  },
+  {
+    "id": "anime-2013-018",
+    "year": 2013,
+    "titles": {
+      "zh": "某科学的超电磁炮S",
+      "en": "A Certain Scientific Railgun S",
+      "ja": "とある科学の超電磁砲S"
+    },
+    "sourceUrl": "https://bgm.tv/subject/51928"
+  },
+  {
+    "id": "anime-2013-019",
+    "year": 2013,
+    "titles": {
+      "zh": "变态王子与不笑猫。",
+      "en": "Hentai Prince & the Stony Cat",
+      "ja": "変態王子と笑わない猫。"
+    },
+    "sourceUrl": "https://bgm.tv/subject/45842"
+  },
+  {
+    "id": "anime-2013-020",
+    "year": 2013,
+    "titles": {
+      "zh": "弹丸论破 希望学园与绝望高中生",
+      "en": "Danganronpa: The Animation",
+      "ja": "ダンガンロンパ 希望の学園と絶望の高校生 THE ANIMATION"
+    },
+    "sourceUrl": "https://bgm.tv/subject/56093"
+  },
+  {
+    "id": "anime-2013-021",
+    "year": 2013,
+    "titles": {
+      "zh": "黄金拼图",
+      "en": "KINMOZA!",
+      "ja": "きんいろモザイク"
+    },
+    "sourceUrl": "https://bgm.tv/subject/57978"
+  },
+  {
+    "id": "anime-2013-022",
+    "year": 2013,
+    "titles": {
+      "zh": "物语系列 第二季",
+      "en": "Monogatari Series Second Season",
+      "ja": "〈物語〉シリーズ セカンドシーズン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/68812"
+  },
+  {
+    "id": "anime-2013-023",
+    "year": 2013,
+    "titles": {
+      "zh": "Fate/kaleid liner 魔法少女☆伊莉雅",
+      "en": "Fate/kaleid liner Prisma☆Illya",
+      "ja": "Fate/kaleid liner プリズマ☆イリヤ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/43951"
+  },
+  {
+    "id": "anime-2013-024",
+    "year": 2013,
+    "titles": {
+      "zh": "记录的地平线",
+      "en": "Log Horizon",
+      "ja": "ログ・ホライズン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/64140"
+  },
+  {
+    "id": "anime-2013-025",
+    "year": 2013,
+    "titles": {
+      "zh": "白色相簿2",
+      "en": "White Album 2",
+      "ja": "WHITE ALBUM2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/69496"
+  },
+  {
+    "id": "anime-2013-026",
+    "year": 2013,
+    "titles": {
+      "zh": "机巧少女不会受伤",
+      "en": "Unbreakable Machine-Doll",
+      "ja": "機巧少女は傷つかない"
+    },
+    "sourceUrl": "https://bgm.tv/subject/61962"
+  },
+  {
+    "id": "anime-2013-027",
+    "year": 2013,
+    "titles": {
+      "zh": "我的脑内选项正在全力妨碍学园恋爱喜剧",
+      "en": "My Mental Choices Are Completely Interfering With My School Romantic Comedy",
+      "ja": "俺の脳内選択肢が、学園ラブコメを全力で邪魔している"
+    },
+    "sourceUrl": "https://bgm.tv/subject/77570"
+  },
+  {
+    "id": "anime-2014-001",
+    "year": 2014,
+    "titles": {
+      "zh": "白箱",
+      "en": "Shirobako",
+      "ja": "SHIROBAKO"
+    }
+  },
+  {
+    "id": "anime-2014-002",
+    "year": 2014,
+    "titles": {
+      "zh": "四月是你的谎言",
+      "en": "Your Lie in April",
+      "ja": "四月は君の嘘"
+    }
+  },
+  {
+    "id": "anime-2014-003",
+    "year": 2014,
+    "titles": {
+      "zh": "Fate/stay night [Unlimited Blade Works]",
+      "en": "Fate/stay night [Unlimited Blade Works]",
+      "ja": "Fate/stay night [Unlimited Blade Works]"
+    }
+  },
+  {
+    "id": "anime-2014-004",
+    "year": 2014,
+    "titles": {
+      "zh": "游戏人生",
+      "en": "No Game No Life",
+      "ja": "ノーゲーム・ノーライフ"
+    }
+  },
+  {
+    "id": "anime-2014-005",
+    "year": 2014,
+    "titles": {
+      "zh": "乒乓",
+      "en": "Ping Pong",
+      "ja": "ピンポン THE ANIMATION"
+    }
+  },
+  {
+    "id": "anime-2014-006",
+    "year": 2014,
+    "titles": {
+      "zh": "甘城光辉游乐园",
+      "en": "Amagi Brilliant Park",
+      "ja": "甘城ブリリアントパーク"
+    }
+  },
+  {
+    "id": "anime-2014-007",
+    "year": 2014,
+    "titles": {
+      "zh": "寄生兽 生命的准则",
+      "en": "Parasyte -the maxim-",
+      "ja": "寄生獣 セイの格率"
+    }
+  },
+  {
+    "id": "anime-2014-008",
+    "year": 2014,
+    "titles": {
+      "zh": "伪恋",
+      "en": "Nisekoi",
+      "ja": "ニセコイ"
+    }
+  },
+  {
+    "id": "anime-2014-009",
+    "year": 2014,
+    "titles": {
+      "zh": "月刊少女野崎君",
+      "en": "Monthly Girls' Nozaki-kun",
+      "ja": "月刊少女野崎くん"
+    }
+  },
+  {
+    "id": "anime-2014-010",
+    "year": 2014,
+    "titles": {
+      "zh": "请问您今天要来点兔子吗？",
+      "en": "Is the Order a Rabbit?",
+      "ja": "ご注文はうさぎですか？"
+    }
+  },
+  {
+    "id": "anime-2014-011",
+    "year": 2014,
+    "titles": {
+      "zh": "斩·赤红之瞳！",
+      "en": "Akame ga Kill!",
+      "ja": "アカメが斬る！"
+    }
+  },
+  {
+    "id": "anime-2014-012",
+    "year": 2014,
+    "titles": {
+      "zh": "太空丹迪",
+      "en": "Space Dandy",
+      "ja": "スペース☆ダンディ"
+    }
+  },
+  {
+    "id": "anime-2014-013",
+    "year": 2014,
+    "titles": {
+      "zh": "妄想学生会＊",
+      "en": "Seitokai Yakuindomo Season 2",
+      "ja": "生徒会役員共*"
+    },
+    "sourceUrl": "https://bgm.tv/subject/85204"
+  },
+  {
+    "id": "anime-2014-014",
+    "year": 2014,
+    "titles": {
+      "zh": "野良神",
+      "en": "Noragami",
+      "ja": "ノラガミ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/82572"
+  },
+  {
+    "id": "anime-2014-015",
+    "year": 2014,
+    "titles": {
+      "zh": "中二病也要谈恋爱！恋",
+      "en": "Love, Chunibyo & Other Delusions - Heart Throb -",
+      "ja": "中二病でも恋がしたい！戀"
+    },
+    "sourceUrl": "https://bgm.tv/subject/72942"
+  },
+  {
+    "id": "anime-2014-016",
+    "year": 2014,
+    "titles": {
+      "zh": "农林",
+      "en": "No-Rin",
+      "ja": "のうりん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/68756"
+  },
+  {
+    "id": "anime-2014-017",
+    "year": 2014,
+    "titles": {
+      "zh": "JOJO的奇妙冒险 星尘斗士",
+      "en": "JoJo's Bizarre Adventure: Stardust Crusaders",
+      "ja": "ジョジョの奇妙な冒険 スターダストクルセイダース"
+    },
+    "sourceUrl": "https://bgm.tv/subject/85631"
+  },
+  {
+    "id": "anime-2014-018",
+    "year": 2014,
+    "titles": {
+      "zh": "魔法科高校的劣等生",
+      "en": "The Irregular at Magic High School",
+      "ja": "魔法科高校の劣等生"
+    },
+    "sourceUrl": "https://bgm.tv/subject/84872"
+  },
+  {
+    "id": "anime-2014-019",
+    "year": 2014,
+    "titles": {
+      "zh": "排球少年",
+      "en": "HAIKYU!!",
+      "ja": "ハイキュー!!"
+    },
+    "sourceUrl": "https://bgm.tv/subject/84171"
+  },
+  {
+    "id": "anime-2014-020",
+    "year": 2014,
+    "titles": {
+      "zh": "漆黑的子弹",
+      "en": "Black Bullet",
+      "ja": "ブラック・ブレット"
+    },
+    "sourceUrl": "https://bgm.tv/subject/84873"
+  },
+  {
+    "id": "anime-2014-021",
+    "year": 2014,
+    "titles": {
+      "zh": "约会大作战 第二季",
+      "en": "Date A Live II",
+      "ja": "デート・ア・ライブII"
+    },
+    "sourceUrl": "https://bgm.tv/subject/76325"
+  },
+  {
+    "id": "anime-2014-022",
+    "year": 2014,
+    "titles": {
+      "zh": "东京喰种",
+      "en": "Tokyo Ghoul",
+      "ja": "東京喰種トーキョーグール"
+    },
+    "sourceUrl": "https://bgm.tv/subject/93714"
+  },
+  {
+    "id": "anime-2014-023",
+    "year": 2014,
+    "titles": {
+      "zh": "刀剑神域 第二季",
+      "en": "Sword Art Online II",
+      "ja": "ソードアート・オンラインII"
+    },
+    "sourceUrl": "https://bgm.tv/subject/92382"
+  },
+  {
+    "id": "anime-2014-024",
+    "year": 2014,
+    "titles": {
+      "zh": "花物语",
+      "en": "Hanamonogatari",
+      "ja": "花物語"
+    },
+    "sourceUrl": "https://bgm.tv/subject/82322"
+  },
+  {
+    "id": "anime-2014-025",
+    "year": 2014,
+    "titles": {
+      "zh": "灰色的果实",
+      "en": "The Fruit of Grisaia",
+      "ja": "グリザイアの果実"
+    },
+    "sourceUrl": "https://bgm.tv/subject/67376"
+  },
+  {
+    "id": "anime-2014-026",
+    "year": 2014,
+    "titles": {
+      "zh": "凭物语",
+      "en": "Tsukimonogatari",
+      "ja": "憑物語"
+    },
+    "sourceUrl": "https://bgm.tv/subject/115932"
+  },
+  {
+    "id": "anime-2015-001",
+    "year": 2015,
+    "titles": {
+      "zh": "路人女主的养成方法",
+      "en": "Saekano: How to Raise a Boring Girlfriend",
+      "ja": "冴えない彼女の育てかた"
+    }
+  },
+  {
+    "id": "anime-2015-002",
+    "year": 2015,
+    "titles": {
+      "zh": "暗杀教室",
+      "en": "Assassination Classroom",
+      "ja": "暗殺教室"
+    }
+  },
+  {
+    "id": "anime-2015-003",
+    "year": 2015,
+    "titles": {
+      "zh": "一拳超人",
+      "en": "One Punch Man",
+      "ja": "ワンパンマン"
+    }
+  },
+  {
+    "id": "anime-2015-004",
+    "year": 2015,
+    "titles": {
+      "zh": "新妹魔王的契约者",
+      "en": "The Testament of Sister New Devil",
+      "ja": "新妹魔王の契約者"
+    }
+  },
+  {
+    "id": "anime-2015-005",
+    "year": 2015,
+    "titles": {
+      "zh": "夏洛特",
+      "en": "Charlotte",
+      "ja": "シャーロット"
+    }
+  },
+  {
+    "id": "anime-2015-006",
+    "year": 2015,
+    "titles": {
+      "zh": "OVERLORD",
+      "en": "Overlord",
+      "ja": "オーバーロード"
+    }
+  },
+  {
+    "id": "anime-2015-007",
+    "year": 2015,
+    "titles": {
+      "zh": "监狱学园",
+      "en": "Prison School",
+      "ja": "監獄学園"
+    }
+  },
+  {
+    "id": "anime-2015-008",
+    "year": 2015,
+    "titles": {
+      "zh": "可塑性记忆",
+      "en": "Plastic Memories",
+      "ja": "プラスティック・メモリーズ"
+    }
+  },
+  {
+    "id": "anime-2015-009",
+    "year": 2015,
+    "titles": {
+      "zh": "在地下城寻求邂逅是否搞错了什么",
+      "en": "Is it wrong to Try to Pick Up Girls in a Dungeon?",
+      "ja": "ダンジョンに出会いを求めるのは間違っているだろうか"
+    }
+  },
+  {
+    "id": "anime-2015-010",
+    "year": 2015,
+    "titles": {
+      "zh": "干物妹！小埋",
+      "en": "Himouto! Umaru-chan",
+      "ja": "干物妹！うまるちゃん"
+    }
+  },
+  {
+    "id": "anime-2015-011",
+    "year": 2015,
+    "titles": {
+      "zh": "吹响！悠风号",
+      "en": "Sound! Euphonium",
+      "ja": "響け！ユーフォニアム"
+    }
+  },
+  {
+    "id": "anime-2015-012",
+    "year": 2015,
+    "titles": {
+      "zh": "终物语",
+      "en": "Owarimonogatari",
+      "ja": "終物語"
+    }
+  },
+  {
+    "id": "anime-2015-013",
+    "year": 2015,
+    "titles": {
+      "zh": "我的青春恋爱物语果然有问题 续",
+      "en": "My Teen Romantic Comedy SNAFU TOO!",
+      "ja": "やはり俺の青春ラブコメはまちがっている。続"
+    },
+    "sourceUrl": "https://bgm.tv/subject/102134"
+  },
+  {
+    "id": "anime-2015-014",
+    "year": 2015,
+    "titles": {
+      "zh": "食戟之灵",
+      "en": "Food Wars!",
+      "ja": "食戟のソーマ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/116461"
+  },
+  {
+    "id": "anime-2015-015",
+    "year": 2015,
+    "titles": {
+      "zh": "血界战线",
+      "en": "Blood Blockade Battlefront",
+      "ja": "血界戦線"
+    },
+    "sourceUrl": "https://bgm.tv/subject/105075"
+  },
+  {
+    "id": "anime-2015-016",
+    "year": 2015,
+    "titles": {
+      "zh": "伪恋：",
+      "en": "Nisekoi:",
+      "ja": "ニセコイ:"
+    },
+    "sourceUrl": "https://bgm.tv/subject/114758"
+  },
+  {
+    "id": "anime-2015-017",
+    "year": 2015,
+    "titles": {
+      "zh": "没有黄段子存在的无聊世界",
+      "en": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn’t Exist",
+      "ja": "下ネタという概念が存在しない退屈な世界"
+    },
+    "sourceUrl": "https://bgm.tv/subject/115780"
+  },
+  {
+    "id": "anime-2015-018",
+    "year": 2015,
+    "titles": {
+      "zh": "学园孤岛",
+      "en": "SCHOOL-LIVE!",
+      "ja": "がっこうぐらし！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/106693"
+  },
+  {
+    "id": "anime-2015-019",
+    "year": 2015,
+    "titles": {
+      "zh": "落第骑士英雄谭",
+      "en": "Chivalry of a Failed Knight",
+      "ja": "落第騎士の英雄譚"
+    },
+    "sourceUrl": "https://bgm.tv/subject/127724"
+  },
+  {
+    "id": "anime-2015-020",
+    "year": 2015,
+    "titles": {
+      "zh": "请问您今天要来点兔子吗？？",
+      "en": "Is the Order a Rabbit?? Season 2",
+      "ja": "ご注文はうさぎですか？？"
+    },
+    "sourceUrl": "https://bgm.tv/subject/123568"
+  },
+  {
+    "id": "anime-2016-001",
+    "year": 2016,
+    "titles": {
+      "zh": "为美好的世界献上祝福！",
+      "en": "Kono Suba",
+      "ja": "この素晴らしい世界に祝福を！"
+    }
+  },
+  {
+    "id": "anime-2016-002",
+    "year": 2016,
+    "titles": {
+      "zh": "3月的狮子",
+      "en": "March Comes in Like a Lion",
+      "ja": "3月のライオン"
+    }
+  },
+  {
+    "id": "anime-2016-003",
+    "year": 2016,
+    "titles": {
+      "zh": "ReLIFE",
+      "en": "ReLIFE",
+      "ja": "ReLIFE"
+    }
+  },
+  {
+    "id": "anime-2016-004",
+    "year": 2016,
+    "titles": {
+      "zh": "齐木楠雄的灾难",
+      "en": "The Disastrous Life of Saiki K.",
+      "ja": "斉木楠雄のΨ難"
+    }
+  },
+  {
+    "id": "anime-2016-005",
+    "year": 2016,
+    "titles": {
+      "zh": "Re：从零开始的异世界生活",
+      "en": "Re:Zero",
+      "ja": "Re:ゼロから始める異世界生活"
+    }
+  },
+  {
+    "id": "anime-2016-006",
+    "year": 2016,
+    "titles": {
+      "zh": "只有我不存在的城市",
+      "en": "Erased",
+      "ja": "僕だけがいない街"
+    }
+  },
+  {
+    "id": "anime-2016-007",
+    "year": 2016,
+    "titles": {
+      "zh": "灵能百分百",
+      "en": "Mob Psycho 100",
+      "ja": "モブサイコ100"
+    }
+  },
+  {
+    "id": "anime-2016-008",
+    "year": 2016,
+    "titles": {
+      "zh": "灰与幻想的格林姆迦尔",
+      "en": "Grimgar of Fantasy and Ash",
+      "ja": "灰と幻想のグリムガル"
+    }
+  },
+  {
+    "id": "anime-2016-009",
+    "year": 2016,
+    "titles": {
+      "zh": "这个美术社大有问题！",
+      "en": "This Art Club Has a Problem!",
+      "ja": "この美術部には問題がある！"
+    }
+  },
+  {
+    "id": "anime-2016-010",
+    "year": 2016,
+    "titles": {
+      "zh": "轻拍翻转小魔女",
+      "en": "Flip Flappers",
+      "ja": "フリップフラッパーズ"
+    }
+  },
+  {
+    "id": "anime-2016-011",
+    "year": 2016,
+    "titles": {
+      "zh": "飞翔的魔女",
+      "en": "Flying Witch",
+      "ja": "ふらいんぐうぃっち"
+    }
+  },
+  {
+    "id": "anime-2016-012",
+    "year": 2016,
+    "titles": {
+      "zh": "NEW GAME!",
+      "en": "NEW GAME!",
+      "ja": "NEW GAME!"
+    }
+  },
+  {
+    "id": "anime-2016-013",
+    "year": 2016,
+    "titles": {
+      "zh": "无彩限的怪灵世界",
+      "en": "Myriad Colors Phantom World",
+      "ja": "無彩限のファントム・ワールド"
+    },
+    "sourceUrl": "https://bgm.tv/subject/94040"
+  },
+  {
+    "id": "anime-2016-014",
+    "year": 2016,
+    "titles": {
+      "zh": "暗杀教室 第二季",
+      "en": "Assassination Classroom Second Season",
+      "ja": "暗殺教室 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/131891"
+  },
+  {
+    "id": "anime-2016-015",
+    "year": 2016,
+    "titles": {
+      "zh": "昭和元禄落语心中",
+      "en": "Showa Genroku Rakugo Shinju",
+      "ja": "昭和元禄落語心中"
+    },
+    "sourceUrl": "https://bgm.tv/subject/119394"
+  },
+  {
+    "id": "anime-2016-016",
+    "year": 2016,
+    "titles": {
+      "zh": "亚人",
+      "en": "AJIN: Demi-Human",
+      "ja": "亜人"
+    },
+    "sourceUrl": "https://bgm.tv/subject/146093"
+  },
+  {
+    "id": "anime-2016-017",
+    "year": 2016,
+    "titles": {
+      "zh": "JOJO的奇妙冒险 不灭钻石",
+      "en": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+      "ja": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない"
+    },
+    "sourceUrl": "https://bgm.tv/subject/150490"
+  },
+  {
+    "id": "anime-2016-018",
+    "year": 2016,
+    "titles": {
+      "zh": "我的英雄学院",
+      "en": "My Hero Academia",
+      "ja": "僕のヒーローアカデミア"
+    },
+    "sourceUrl": "https://bgm.tv/subject/150955"
+  },
+  {
+    "id": "anime-2016-019",
+    "year": 2016,
+    "titles": {
+      "zh": "文豪野犬",
+      "en": "Bungo Stray Dogs",
+      "ja": "文豪ストレイドッグス"
+    },
+    "sourceUrl": "https://bgm.tv/subject/144357"
+  },
+  {
+    "id": "anime-2016-020",
+    "year": 2016,
+    "titles": {
+      "zh": "甲铁城的卡巴内利",
+      "en": "Kabaneri of the Iron Fortress",
+      "ja": "甲鉄城のカバネリ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/118781"
+  },
+  {
+    "id": "anime-2016-021",
+    "year": 2016,
+    "titles": {
+      "zh": "线上游戏的老婆不可能是女生？",
+      "en": "And you thought there is never a girl online?",
+      "ja": "ネトゲの嫁は女の子じゃないと思った?"
+    },
+    "sourceUrl": "https://bgm.tv/subject/142758"
+  },
+  {
+    "id": "anime-2016-022",
+    "year": 2016,
+    "titles": {
+      "zh": "在下坂本，有何贵干？",
+      "en": "Haven't You Heard? I'm Sakamoto",
+      "ja": "坂本ですが？"
+    },
+    "sourceUrl": "https://bgm.tv/subject/165829"
+  },
+  {
+    "id": "anime-2016-023",
+    "year": 2016,
+    "titles": {
+      "zh": "星之梦",
+      "en": "Planetarian",
+      "ja": "planetarian～ちいさなほしのゆめ～"
+    },
+    "sourceUrl": "https://bgm.tv/subject/176518"
+  },
+  {
+    "id": "anime-2016-024",
+    "year": 2016,
+    "titles": {
+      "zh": "吹响吧！上低音号 第二季",
+      "en": "Sound! Euphonium 2",
+      "ja": "響け！ユーフォニアム2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/152091"
+  },
+  {
+    "id": "anime-2017-001",
+    "year": 2017,
+    "titles": {
+      "zh": "少女终末旅行",
+      "en": "Girls' Last Tour",
+      "ja": "少女終末旅行"
+    }
+  },
+  {
+    "id": "anime-2017-002",
+    "year": 2017,
+    "titles": {
+      "zh": "来自深渊",
+      "en": "Made in Abyss",
+      "ja": "メイドインアビス"
+    }
+  },
+  {
+    "id": "anime-2017-003",
+    "year": 2017,
+    "titles": {
+      "zh": "小林家的龙女仆",
+      "en": "Miss Kobayashi's Dragon Maid",
+      "ja": "小林さんちのメイドラゴン"
+    }
+  },
+  {
+    "id": "anime-2017-004",
+    "year": 2017,
+    "titles": {
+      "zh": "狂赌之渊",
+      "en": "Kakegurui",
+      "ja": "賭ケグルイ"
+    }
+  },
+  {
+    "id": "anime-2017-005",
+    "year": 2017,
+    "titles": {
+      "zh": "末日时在做什么？有没有空？可以来拯救吗？",
+      "en": "WorldEnd",
+      "ja": "終末なにしてますか？忙しいですか？救ってもらっていいですか？"
+    }
+  },
+  {
+    "id": "anime-2017-006",
+    "year": 2017,
+    "titles": {
+      "zh": "月色真美",
+      "en": "Tsuki ga Kirei",
+      "ja": "月がきれい"
+    }
+  },
+  {
+    "id": "anime-2017-007",
+    "year": 2017,
+    "titles": {
+      "zh": "重启咲良田",
+      "en": "Sagrada Reset",
+      "ja": "サクラダリセット"
+    }
+  },
+  {
+    "id": "anime-2017-008",
+    "year": 2017,
+    "titles": {
+      "zh": "BanG Dream!",
+      "en": "BanG Dream!",
+      "ja": "BanG Dream!"
+    }
+  },
+  {
+    "id": "anime-2017-009",
+    "year": 2017,
+    "titles": {
+      "zh": "幼女战记",
+      "en": "Saga of Tanya the Evil",
+      "ja": "幼女戦記"
+    }
+  },
+  {
+    "id": "anime-2017-010",
+    "year": 2017,
+    "titles": {
+      "zh": "小魔女学园",
+      "en": "Little Witch Academia",
+      "ja": "リトルウィッチアカデミア"
+    }
+  },
+  {
+    "id": "anime-2017-011",
+    "year": 2017,
+    "titles": {
+      "zh": "Just Because!",
+      "en": "Just Because!",
+      "ja": "Just Because!"
+    }
+  },
+  {
+    "id": "anime-2017-012",
+    "year": 2017,
+    "titles": {
+      "zh": "埃罗芒阿老师",
+      "en": "Eromanga Sensei",
+      "ja": "エロマンガ先生"
+    }
+  },
+  {
+    "id": "anime-2017-013",
+    "year": 2017,
+    "titles": {
+      "zh": "珈百璃的堕落",
+      "en": "Gabriel DropOut",
+      "ja": "ガヴリールドロップアウト"
+    },
+    "sourceUrl": "https://bgm.tv/subject/188091"
+  },
+  {
+    "id": "anime-2017-014",
+    "year": 2017,
+    "titles": {
+      "zh": "为美好的世界献上祝福！ 第二季",
+      "en": "KONOSUBA -God's blessing on this wonderful world! 2",
+      "ja": "この素晴らしい世界に祝福を！2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/174043"
+  },
+  {
+    "id": "anime-2017-015",
+    "year": 2017,
+    "titles": {
+      "zh": "人渣的本愿",
+      "en": "Scum's Wish",
+      "ja": "クズの本懐"
+    },
+    "sourceUrl": "https://bgm.tv/subject/174143"
+  },
+  {
+    "id": "anime-2017-016",
+    "year": 2017,
+    "titles": {
+      "zh": "进击的巨人 第二季",
+      "en": "Attack on Titan Season 2",
+      "ja": "進撃の巨人 Season 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/118335"
+  },
+  {
+    "id": "anime-2017-017",
+    "year": 2017,
+    "titles": {
+      "zh": "不正经的魔术讲师与禁忌教典",
+      "en": "Akashic Records of Bastard Magic Instructor",
+      "ja": "ロクでなし魔術講師と禁忌教典"
+    },
+    "sourceUrl": "https://bgm.tv/subject/174138"
+  },
+  {
+    "id": "anime-2017-018",
+    "year": 2017,
+    "titles": {
+      "zh": "路人女主的养成方法 ♭",
+      "en": "Saekano: How to Raise a Boring Girlfriend ♭",
+      "ja": "冴えない彼女の育てかた ♭"
+    },
+    "sourceUrl": "https://bgm.tv/subject/132734"
+  },
+  {
+    "id": "anime-2017-019",
+    "year": 2017,
+    "titles": {
+      "zh": "笨女孩",
+      "en": "AHO-GIRL",
+      "ja": "アホガール"
+    },
+    "sourceUrl": "https://bgm.tv/subject/208450"
+  },
+  {
+    "id": "anime-2017-020",
+    "year": 2017,
+    "titles": {
+      "zh": "徒然喜欢你",
+      "en": "Tsuredure Children",
+      "ja": "徒然チルドレン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/208754"
+  },
+  {
+    "id": "anime-2017-021",
+    "year": 2017,
+    "titles": {
+      "zh": "欢迎来到实力至上主义的教室",
+      "en": "Classroom of the Elite",
+      "ja": "ようこそ実力至上主義の教室へ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/214272"
+  },
+  {
+    "id": "anime-2017-022",
+    "year": 2017,
+    "titles": {
+      "zh": "黑色五叶草",
+      "en": "Black Clover",
+      "ja": "ブラッククローバー"
+    },
+    "sourceUrl": "https://bgm.tv/subject/202880"
+  },
+  {
+    "id": "anime-2017-023",
+    "year": 2017,
+    "titles": {
+      "zh": "宝石之国",
+      "en": "Land of the Lustrous",
+      "ja": "宝石の国"
+    },
+    "sourceUrl": "https://bgm.tv/subject/214799"
+  },
+  {
+    "id": "anime-2017-024",
+    "year": 2017,
+    "titles": {
+      "zh": "干物妹！小埋R",
+      "en": "Himouto! Umaru-chan R",
+      "ja": "干物妹! うまるちゃんR"
+    },
+    "sourceUrl": "https://bgm.tv/subject/212775"
+  },
+  {
+    "id": "anime-2017-025",
+    "year": 2017,
+    "titles": {
+      "zh": "如果有妹妹就好了。",
+      "en": "A Sister's All You Need.",
+      "ja": "妹さえいればいい。"
+    },
+    "sourceUrl": "https://bgm.tv/subject/213076"
+  },
+  {
+    "id": "anime-2017-026",
+    "year": 2017,
+    "titles": {
+      "zh": "3月的狮子 第二季",
+      "en": "March comes in like a lion Season 2",
+      "ja": "3月のライオン 第2シリーズ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/211567"
+  },
+  {
+    "id": "anime-2018-001",
+    "year": 2018,
+    "titles": {
+      "zh": "摇曳露营△",
+      "en": "Yuru Camp△",
+      "ja": "ゆるキャン△"
+    }
+  },
+  {
+    "id": "anime-2018-002",
+    "year": 2018,
+    "titles": {
+      "zh": "碧蓝之海",
+      "en": "Grand Blue",
+      "ja": "ぐらんぶる"
+    }
+  },
+  {
+    "id": "anime-2018-003",
+    "year": 2018,
+    "titles": {
+      "zh": "赛马娘 Pretty Derby",
+      "en": "Umamusume Pretty Derby",
+      "ja": "ウマ娘 プリティーダービー"
+    }
+  },
+  {
+    "id": "anime-2018-004",
+    "year": 2018,
+    "titles": {
+      "zh": "紫罗兰永恒花园",
+      "en": "Violet Evergarden",
+      "ja": "ヴァイオレット・エヴァーガーデン"
+    }
+  },
+  {
+    "id": "anime-2018-005",
+    "year": 2018,
+    "titles": {
+      "zh": "强风吹拂",
+      "en": "Run with the Wind",
+      "ja": "風が強く吹いている"
+    }
+  },
+  {
+    "id": "anime-2018-006",
+    "year": 2018,
+    "titles": {
+      "zh": "少女☆歌剧 Revue Starlight",
+      "en": "Shoujo☆Kageki Revue Starlight",
+      "ja": "少女☆歌劇 レヴュースタァライト"
+    }
+  },
+  {
+    "id": "anime-2018-007",
+    "year": 2018,
+    "titles": {
+      "zh": "擅长捉弄的高木同学",
+      "en": "Teasing Master Takagi-san",
+      "ja": "からかい上手の高木さん"
+    }
+  },
+  {
+    "id": "anime-2018-008",
+    "year": 2018,
+    "titles": {
+      "zh": "佐贺偶像是传奇",
+      "en": "Zombie Land Saga",
+      "ja": "ゾンビランドサガ"
+    }
+  },
+  {
+    "id": "anime-2018-009",
+    "year": 2018,
+    "titles": {
+      "zh": "比宇宙更远的地方",
+      "en": "A Place Further Than the Universe",
+      "ja": "宇宙よりも遠い場所"
+    }
+  },
+  {
+    "id": "anime-2018-010",
+    "year": 2018,
+    "titles": {
+      "zh": "青春笨蛋少年不做兔女郎学姐的梦",
+      "en": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "ja": "青春ブタ野郎はバニーガール先輩の夢を見ない"
+    }
+  },
+  {
+    "id": "anime-2018-011",
+    "year": 2018,
+    "titles": {
+      "zh": "哥布林杀手",
+      "en": "Goblin Slayer",
+      "ja": "ゴブリンスレイヤー"
+    }
+  },
+  {
+    "id": "anime-2018-012",
+    "year": 2018,
+    "titles": {
+      "zh": "终将成为你",
+      "en": "Bloom into You",
+      "ja": "やがて君になる"
+    }
+  },
+  {
+    "id": "anime-2018-013",
+    "year": 2018,
+    "titles": {
+      "zh": "恶魔人 crybaby",
+      "en": "Devilman Crybaby",
+      "ja": "DEVILMAN crybaby"
+    },
+    "sourceUrl": "https://bgm.tv/subject/211311"
+  },
+  {
+    "id": "anime-2018-014",
+    "year": 2018,
+    "titles": {
+      "zh": "龙王的工作！",
+      "en": "The Ryuo's Work is Never Done!",
+      "ja": "りゅうおうのおしごと！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/219658"
+  },
+  {
+    "id": "anime-2018-015",
+    "year": 2018,
+    "titles": {
+      "zh": "恋如雨止",
+      "en": "After the Rain",
+      "ja": "恋は雨上がりのように"
+    },
+    "sourceUrl": "https://bgm.tv/subject/210458"
+  },
+  {
+    "id": "anime-2018-016",
+    "year": 2018,
+    "titles": {
+      "zh": "DARLING in the FRANXX",
+      "en": "DARLING in the FRANXX",
+      "ja": "ダーリン・イン・ザ・フランキス"
+    },
+    "sourceUrl": "https://bgm.tv/subject/218711"
+  },
+  {
+    "id": "anime-2018-017",
+    "year": 2018,
+    "titles": {
+      "zh": "齐木楠雄的灾难 第二季",
+      "en": "The Disastrous Life of Saiki K. Season 2",
+      "ja": "斉木楠雄のΨ難 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/204027"
+  },
+  {
+    "id": "anime-2018-018",
+    "year": 2018,
+    "titles": {
+      "zh": "卫宫家今天的饭",
+      "en": "Today's Menu for the Emiya Family",
+      "ja": "衛宮さんちの今日のごはん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/234349"
+  },
+  {
+    "id": "anime-2018-019",
+    "year": 2018,
+    "titles": {
+      "zh": "黄金神威",
+      "en": "Golden Kamuy",
+      "ja": "ゴールデンカムイ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/221127"
+  },
+  {
+    "id": "anime-2018-020",
+    "year": 2018,
+    "titles": {
+      "zh": "命运石之门 0",
+      "en": "Steins;Gate 0",
+      "ja": "シュタインズ・ゲート ゼロ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/129807"
+  },
+  {
+    "id": "anime-2018-021",
+    "year": 2018,
+    "titles": {
+      "zh": "工作细胞",
+      "en": "Cells at Work!",
+      "ja": "はたらく細胞"
+    },
+    "sourceUrl": "https://bgm.tv/subject/235612"
+  },
+  {
+    "id": "anime-2018-022",
+    "year": 2018,
+    "titles": {
+      "zh": "来玩游戏吧",
+      "en": "Asobi Asobase - workshop of fun -",
+      "ja": "あそびあそばせ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/236020"
+  },
+  {
+    "id": "anime-2018-023",
+    "year": 2018,
+    "titles": {
+      "zh": "邪神与厨二病少女",
+      "en": "Dropkick on My Devil!",
+      "ja": "邪神ちゃんドロップキック"
+    },
+    "sourceUrl": "https://bgm.tv/subject/231722"
+  },
+  {
+    "id": "anime-2018-024",
+    "year": 2018,
+    "titles": {
+      "zh": "进击的巨人 第三季",
+      "en": "Attack on Titan Season 3",
+      "ja": "進撃の巨人 Season 3"
+    },
+    "sourceUrl": "https://bgm.tv/subject/217300"
+  },
+  {
+    "id": "anime-2018-025",
+    "year": 2018,
+    "titles": {
+      "zh": "关于我转生变成史莱姆这档事",
+      "en": "That Time I Got Reincarnated as a Slime",
+      "ja": "転生したらスライムだった件"
+    },
+    "sourceUrl": "https://bgm.tv/subject/239816"
+  },
+  {
+    "id": "anime-2018-026",
+    "year": 2018,
+    "titles": {
+      "zh": "JOJO的奇妙冒险 黄金之风",
+      "en": "JoJo's Bizarre Adventure: Golden Wind",
+      "ja": "ジョジョの奇妙な冒険 黄金の風"
+    },
+    "sourceUrl": "https://bgm.tv/subject/235128"
+  },
+  {
+    "id": "anime-2018-027",
+    "year": 2018,
+    "titles": {
+      "zh": "SSSS.古立特",
+      "en": "SSSS.GRIDMAN",
+      "ja": "SSSS.GRIDMAN"
+    },
+    "sourceUrl": "https://bgm.tv/subject/218712"
+  },
+  {
+    "id": "anime-2019-001",
+    "year": 2019,
+    "titles": {
+      "zh": "冰海战记",
+      "en": "Vinland Saga",
+      "ja": "ヴィンランド・サガ"
+    }
+  },
+  {
+    "id": "anime-2019-002",
+    "year": 2019,
+    "titles": {
+      "zh": "辉夜大小姐想让我告白～天才们的恋爱头脑战～",
+      "en": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunōsen",
+      "ja": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～"
+    }
+  },
+  {
+    "id": "anime-2019-003",
+    "year": 2019,
+    "titles": {
+      "zh": "街角魔族",
+      "en": "The Demon Girl Next Door",
+      "ja": "まちカドまぞく"
+    }
+  },
+  {
+    "id": "anime-2019-004",
+    "year": 2019,
+    "titles": {
+      "zh": "鬼灭之刃",
+      "en": "Demon Slayer",
+      "ja": "鬼滅の刃"
+    }
+  },
+  {
+    "id": "anime-2019-005",
+    "year": 2019,
+    "titles": {
+      "zh": "炎炎消防队",
+      "en": "Fire Force",
+      "ja": "炎炎ノ消防隊"
+    }
+  },
+  {
+    "id": "anime-2019-006",
+    "year": 2019,
+    "titles": {
+      "zh": "女高中生的无所事事",
+      "en": "Wasteful Days of High School Girls",
+      "ja": "女子高生の無駄づかい"
+    }
+  },
+  {
+    "id": "anime-2019-007",
+    "year": 2019,
+    "titles": {
+      "zh": "慎重勇者 ～这个勇者明明超强却过分慎重～",
+      "en": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
+      "ja": "慎重勇者～この勇者が俺TUEEEくせに慎重すぎる～"
+    },
+    "sourceUrl": "https://bgm.tv/subject/266157"
+  },
+  {
+    "id": "anime-2019-008",
+    "year": 2019,
+    "titles": {
+      "zh": "天使降临到了我身边！",
+      "en": "Wataten! An Angel Flew Down to Me",
+      "ja": "私に天使が舞い降りた！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/249637"
+  },
+  {
+    "id": "anime-2019-009",
+    "year": 2019,
+    "titles": {
+      "zh": "不吉波普不笑",
+      "en": "Boogiepop and Others",
+      "ja": "ブギーポップは笑わない"
+    }
+  },
+  {
+    "id": "anime-2019-010",
+    "year": 2019,
+    "titles": {
+      "zh": "笨拙之极的上野",
+      "en": "How Clumsy You Are, Miss Ueno",
+      "ja": "上野さんは不器用"
+    }
+  },
+  {
+    "id": "anime-2019-011",
+    "year": 2019,
+    "titles": {
+      "zh": "五等分的新娘",
+      "en": "The Quintessential Quintuplets",
+      "ja": "五等分の花嫁"
+    }
+  },
+  {
+    "id": "anime-2019-012",
+    "year": 2019,
+    "titles": {
+      "zh": "约定的梦幻岛",
+      "en": "Yakusoku no Neverland",
+      "ja": "約束のネバーランド"
+    }
+  },
+  {
+    "id": "anime-2019-013",
+    "year": 2019,
+    "titles": {
+      "zh": "灵能百分百 第二季",
+      "en": "Mob Psycho 100 II",
+      "ja": "モブサイコ100 Ⅱ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/240760"
+  },
+  {
+    "id": "anime-2019-014",
+    "year": 2019,
+    "titles": {
+      "zh": "多罗罗",
+      "en": "Dororo",
+      "ja": "どろろ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/240838"
+  },
+  {
+    "id": "anime-2019-015",
+    "year": 2019,
+    "titles": {
+      "zh": "盾之勇者成名录",
+      "en": "The Rising of the Shield Hero",
+      "ja": "盾の勇者の成り上がり"
+    },
+    "sourceUrl": "https://bgm.tv/subject/217660"
+  },
+  {
+    "id": "anime-2019-016",
+    "year": 2019,
+    "titles": {
+      "zh": "约会大作战 第三季",
+      "en": "Date A Live III",
+      "ja": "デート・ア・ライブⅢ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/228254"
+  },
+  {
+    "id": "anime-2019-017",
+    "year": 2019,
+    "titles": {
+      "zh": "家有女友",
+      "en": "Domestic Girlfriend",
+      "ja": "ドメスティックな彼女"
+    },
+    "sourceUrl": "https://bgm.tv/subject/253628"
+  },
+  {
+    "id": "anime-2019-018",
+    "year": 2019,
+    "titles": {
+      "zh": "一拳超人 第二季",
+      "en": "One-Punch Man Season 2",
+      "ja": "ワンパンマン 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/193619"
+  },
+  {
+    "id": "anime-2019-019",
+    "year": 2019,
+    "titles": {
+      "zh": "石纪元",
+      "en": "Dr. STONE",
+      "ja": "Dr.STONE"
+    },
+    "sourceUrl": "https://bgm.tv/subject/266794"
+  },
+  {
+    "id": "anime-2019-020",
+    "year": 2019,
+    "titles": {
+      "zh": "君主·埃尔梅罗二世事件簿 魔眼收集列车 Grace note",
+      "en": "Lord El-Melloi II's Case Files {Rail Zeppelin} Grace note",
+      "ja": "ロード・エルメロイⅡ世の事件簿 -魔眼蒐集列車 Grace note-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/267732"
+  },
+  {
+    "id": "anime-2019-021",
+    "year": 2019,
+    "titles": {
+      "zh": "擅长捉弄的高木同学 第二季",
+      "en": "Teasing Master Takagi-san Season 2",
+      "ja": "からかい上手の高木さん②"
+    },
+    "sourceUrl": "https://bgm.tv/subject/271151"
+  },
+  {
+    "id": "anime-2019-022",
+    "year": 2019,
+    "titles": {
+      "zh": "只要可爱即使是变态你也会喜欢我吧？",
+      "en": "Hensuki: Are you willing to fall in love with a pervert, as long as she’s a cutie?",
+      "ja": "可愛ければ変態でも好きになってくれますか？"
+    },
+    "sourceUrl": "https://bgm.tv/subject/275371"
+  },
+  {
+    "id": "anime-2019-023",
+    "year": 2019,
+    "titles": {
+      "zh": "Fate/Grand Order -绝对魔兽战线巴比伦尼亚-",
+      "en": "Fate/Grand Order Absolute Demonic Front: Babylonia",
+      "ja": "Fate/Grand Order -絶対魔獣戦線バビロニア-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/255526"
+  },
+  {
+    "id": "anime-2019-024",
+    "year": 2019,
+    "titles": {
+      "zh": "动物狂想曲",
+      "en": "BEASTARS",
+      "ja": "BEASTARS"
+    },
+    "sourceUrl": "https://bgm.tv/subject/273843"
+  },
+  {
+    "id": "anime-2019-025",
+    "year": 2019,
+    "titles": {
+      "zh": "刀剑神域 爱丽丝篇 异界战争",
+      "en": "Sword Art Online: Alicization - War of Underworld",
+      "ja": "ソードアート・オンライン アリシゼーション War of Underworld"
+    },
+    "sourceUrl": "https://bgm.tv/subject/279457"
+  },
+  {
+    "id": "anime-2019-026",
+    "year": 2019,
+    "titles": {
+      "zh": "齐木楠雄的灾难 再始动篇",
+      "en": "The Disastrous Life of Saiki K.: Reawakened",
+      "ja": "斉木楠雄のΨ難 Ψ始動編"
+    },
+    "sourceUrl": "https://bgm.tv/subject/278899"
+  },
+  {
+    "id": "anime-2020-001",
+    "year": 2020,
+    "titles": {
+      "zh": "异种族风俗娘评鉴指南",
+      "en": "Ishuzoku Reviewers",
+      "ja": "異種族レビュアーズ"
+    }
+  },
+  {
+    "id": "anime-2020-002",
+    "year": 2020,
+    "titles": {
+      "zh": "魔女之旅",
+      "en": "Wandering Witch: The Journey of Elaina",
+      "ja": "魔女の旅々"
+    }
+  },
+  {
+    "id": "anime-2020-003",
+    "year": 2020,
+    "titles": {
+      "zh": "安达与岛村",
+      "en": "Adachi and Shimamura",
+      "ja": "安達としまむら"
+    }
+  },
+  {
+    "id": "anime-2020-004",
+    "year": 2020,
+    "titles": {
+      "zh": "异度侵入",
+      "en": "ID:INVADED",
+      "ja": "ID:INVADED イド：インヴェイデッド"
+    }
+  },
+  {
+    "id": "anime-2020-005",
+    "year": 2020,
+    "titles": {
+      "zh": "别对映像研出手！",
+      "en": "Keep Your Hands Off Eizouken!",
+      "ja": "映像研には手を出すな！"
+    }
+  },
+  {
+    "id": "anime-2020-006",
+    "year": 2020,
+    "titles": {
+      "zh": "咒术回战",
+      "en": "Jujutsu Kaisen",
+      "ja": "呪術廻戦"
+    }
+  },
+  {
+    "id": "anime-2020-007",
+    "year": 2020,
+    "titles": {
+      "zh": "总之就是非常可爱",
+      "en": "Tonikawa: Over the Moon For You",
+      "ja": "トニカクカワイイ"
+    }
+  },
+  {
+    "id": "anime-2020-008",
+    "year": 2020,
+    "titles": {
+      "zh": "隐瞒之事",
+      "en": "Kakushigoto",
+      "ja": "かくしごと"
+    }
+  },
+  {
+    "id": "anime-2020-009",
+    "year": 2020,
+    "titles": {
+      "zh": "虚构推理",
+      "en": "In/Spectre",
+      "ja": "虚構推理"
+    }
+  },
+  {
+    "id": "anime-2020-010",
+    "year": 2020,
+    "titles": {
+      "zh": "恋爱小行星",
+      "en": "Koisuru Asteroid",
+      "ja": "恋する小惑星"
+    }
+  },
+  {
+    "id": "anime-2020-011",
+    "year": 2020,
+    "titles": {
+      "zh": "你与我最后的战场，亦或是世界起始的圣战",
+      "en": "Our Last Crusade or the Rise of a New World",
+      "ja": "キミと僕の最後の戦場、あるいは世界が始まる聖戦"
+    }
+  },
+  {
+    "id": "anime-2020-012",
+    "year": 2020,
+    "titles": {
+      "zh": "邪神与厨二病少女'",
+      "en": "Dropkick on My Devil!",
+      "ja": "邪神ちゃんドロップキック’"
+    }
+  },
+  {
+    "id": "anime-2020-013",
+    "year": 2020,
+    "titles": {
+      "zh": "因为太怕痛就全点防御力了。",
+      "en": "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
+      "ja": "痛いのは嫌なので防御力に極振りしたいと思います。"
+    },
+    "sourceUrl": "https://bgm.tv/subject/268545"
+  },
+  {
+    "id": "anime-2020-014",
+    "year": 2020,
+    "titles": {
+      "zh": "某科学的超电磁炮T",
+      "en": "A Certain Scientific Railgun T",
+      "ja": "とある科学の超電磁砲T"
+    },
+    "sourceUrl": "https://bgm.tv/subject/262940"
+  },
+  {
+    "id": "anime-2020-015",
+    "year": 2020,
+    "titles": {
+      "zh": "转生成为了只有乙女游戏破灭Flag的邪恶大小姐",
+      "en": "My Next Life as a Villainess: All Routes Lead to Doom!",
+      "ja": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…"
+    },
+    "sourceUrl": "https://bgm.tv/subject/264089"
+  },
+  {
+    "id": "anime-2020-016",
+    "year": 2020,
+    "titles": {
+      "zh": "辉夜大小姐想让我告白?～天才们的恋爱头脑战～",
+      "en": "Kaguya-sama: Love is War?",
+      "ja": "かぐや様は告らせたい?～天才たちの恋愛頭脳戦～"
+    },
+    "sourceUrl": "https://bgm.tv/subject/293049"
+  },
+  {
+    "id": "anime-2020-017",
+    "year": 2020,
+    "titles": {
+      "zh": "Re：从零开始的异世界生活 第二季",
+      "en": "Re:ZERO -Starting Life in Another World- Season 2",
+      "ja": "Re:ゼロから始める異世界生活 2nd season"
+    },
+    "sourceUrl": "https://bgm.tv/subject/278826"
+  },
+  {
+    "id": "anime-2020-018",
+    "year": 2020,
+    "titles": {
+      "zh": "我的青春恋爱物语果然有问题 完",
+      "en": "My Teen Romantic Comedy SNAFU Climax!",
+      "ja": "やはり俺の青春ラブコメはまちがっている。完"
+    },
+    "sourceUrl": "https://bgm.tv/subject/277954"
+  },
+  {
+    "id": "anime-2020-019",
+    "year": 2020,
+    "titles": {
+      "zh": "租借女友",
+      "en": "Rent-a-Girlfriend",
+      "ja": "彼女、お借りします"
+    },
+    "sourceUrl": "https://bgm.tv/subject/296076"
+  },
+  {
+    "id": "anime-2020-020",
+    "year": 2020,
+    "titles": {
+      "zh": "在魔王城说晚安",
+      "en": "Sleepy Princess in the Demon Castle",
+      "ja": "魔王城でおやすみ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/290426"
+  },
+  {
+    "id": "anime-2020-021",
+    "year": 2020,
+    "titles": {
+      "zh": "进击的巨人 最终季",
+      "en": "Attack on Titan Final Season",
+      "ja": "進撃の巨人 The Final Season"
+    },
+    "sourceUrl": "https://bgm.tv/subject/285666"
+  },
+  {
+    "id": "anime-2021-001",
+    "year": 2021,
+    "titles": {
+      "zh": "86 -不存在的战区-",
+      "en": "86 -Eighty-Six-",
+      "ja": "86―エイティシックス―"
+    }
+  },
+  {
+    "id": "anime-2021-002",
+    "year": 2021,
+    "titles": {
+      "zh": "无职转生～",
+      "en": "Mushoku Tensei: Jobless Reincarnation",
+      "ja": "無職転生 ～異世界行ったら本気だす～"
+    }
+  },
+  {
+    "id": "anime-2021-003",
+    "year": 2021,
+    "titles": {
+      "zh": "回复术士的重来人生",
+      "en": "Redo of Healer",
+      "ja": "回復術士のやり直し"
+    }
+  },
+  {
+    "id": "anime-2021-004",
+    "year": 2021,
+    "titles": {
+      "zh": "奇巧计程车",
+      "en": "Odd Taxi",
+      "ja": "オッドタクシー"
+    }
+  },
+  {
+    "id": "anime-2021-005",
+    "year": 2021,
+    "titles": {
+      "zh": "打了300年的史莱姆，不知不觉就练到了满级",
+      "en": "I’ve Been Killing Slimes for 300 Years and Maxed Out My Level",
+      "ja": "スライム倒して300年、知らないうちにレベルMAXになってました"
+    }
+  },
+  {
+    "id": "anime-2021-006",
+    "year": 2021,
+    "titles": {
+      "zh": "漂流少年",
+      "en": "Sonny Boy",
+      "ja": "Sonny Boy"
+    }
+  },
+  {
+    "id": "anime-2021-007",
+    "year": 2021,
+    "titles": {
+      "zh": "堀与宫村",
+      "en": "Horimiya",
+      "ja": "ホリミヤ"
+    }
+  },
+  {
+    "id": "anime-2021-008",
+    "year": 2021,
+    "titles": {
+      "zh": "派遣战斗员！",
+      "en": "Combatants Will Be Dispatched!",
+      "ja": "戦闘員、派遣します！"
+    }
+  },
+  {
+    "id": "anime-2021-009",
+    "year": 2021,
+    "titles": {
+      "zh": "古见同学有交流障碍症",
+      "en": "Komi Can't Communicate",
+      "ja": "古見さんは、コミュ症です。"
+    }
+  },
+  {
+    "id": "anime-2021-010",
+    "year": 2021,
+    "titles": {
+      "zh": "奇蛋物语",
+      "en": "Wonder Egg Priority",
+      "ja": "ワンダーエッグ・プライオリティ"
+    }
+  },
+  {
+    "id": "anime-2021-011",
+    "year": 2021,
+    "titles": {
+      "zh": "我们的重制人生",
+      "en": "Remake Our Life!",
+      "ja": "ぼくたちのリメイク"
+    }
+  },
+  {
+    "id": "anime-2021-012",
+    "year": 2021,
+    "titles": {
+      "zh": "看得见的女孩",
+      "en": "Mieruko-chan",
+      "ja": "見える子ちゃん"
+    }
+  },
+  {
+    "id": "anime-2021-013",
+    "year": 2021,
+    "titles": {
+      "zh": "赛马娘 Pretty Derby 第二季",
+      "en": "Umamusume: Pretty Derby Season 2",
+      "ja": "ウマ娘 プリティーダービー Season 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/315574"
+  },
+  {
+    "id": "anime-2021-014",
+    "year": 2021,
+    "titles": {
+      "zh": "摇曳露营△ 第二季",
+      "en": "LAID-BACK CAMP SEASON2",
+      "ja": "ゆるキャン△ SEASON 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/262897"
+  },
+  {
+    "id": "anime-2021-015",
+    "year": 2021,
+    "titles": {
+      "zh": "关于我转生变成史莱姆这档事 第二季",
+      "en": "That Time I Got Reincarnated as a Slime Season 2",
+      "ja": "転生したらスライムだった件 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/278031"
+  },
+  {
+    "id": "anime-2021-016",
+    "year": 2021,
+    "titles": {
+      "zh": "SSSS.电光机王",
+      "en": "SSSS.DYNAZENON",
+      "ja": "SSSS.DYNAZENON"
+    },
+    "sourceUrl": "https://bgm.tv/subject/296367"
+  },
+  {
+    "id": "anime-2021-017",
+    "year": 2021,
+    "titles": {
+      "zh": "薇薇 -萤石眼之歌-",
+      "en": "Vivy -Fluorite Eye's Song-",
+      "ja": "Vivy -Fluorite Eye's Song-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/325286"
+  },
+  {
+    "id": "anime-2021-018",
+    "year": 2021,
+    "titles": {
+      "zh": "佐贺偶像是传奇 复仇",
+      "en": "ZOMBIE LAND SAGA REVENGE",
+      "ja": "ゾンビランドサガ リベンジ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/287488"
+  },
+  {
+    "id": "anime-2021-019",
+    "year": 2021,
+    "titles": {
+      "zh": "小林家的龙女仆S",
+      "en": "Miss Kobayashi's Dragon Maid S",
+      "ja": "小林さんちのメイドラゴンS"
+    },
+    "sourceUrl": "https://bgm.tv/subject/274234"
+  },
+  {
+    "id": "anime-2021-020",
+    "year": 2021,
+    "titles": {
+      "zh": "异世界迷宫黑心企业",
+      "en": "The Dungeon of Black Company",
+      "ja": "迷宮ブラックカンパニー"
+    },
+    "sourceUrl": "https://bgm.tv/subject/309668"
+  },
+  {
+    "id": "anime-2021-021",
+    "year": 2021,
+    "titles": {
+      "zh": "世界顶尖的暗杀者转生为异世界贵族",
+      "en": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      "ja": "世界最高の暗殺者、異世界貴族に転生する"
+    },
+    "sourceUrl": "https://bgm.tv/subject/328313"
+  },
+  {
+    "id": "anime-2021-022",
+    "year": 2021,
+    "titles": {
+      "zh": "JOJO的奇妙冒险 石之海",
+      "en": "JoJo's Bizarre Adventure: STONE OCEAN",
+      "ja": "ジョジョの奇妙な冒険 ストーンオーシャン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/332261"
+  },
+  {
+    "id": "anime-2021-023",
+    "year": 2021,
+    "titles": {
+      "zh": "鬼灭之刃 游郭篇",
+      "en": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+      "ja": "鬼滅の刃 遊郭編"
+    },
+    "sourceUrl": "https://bgm.tv/subject/328195"
+  },
+  {
+    "id": "anime-2022-001",
+    "year": 2022,
+    "titles": {
+      "zh": "孤独摇滚！",
+      "en": "Bocchi the Rock!",
+      "ja": "ぼっち・ざ・ろっく！"
+    }
+  },
+  {
+    "id": "anime-2022-002",
+    "year": 2022,
+    "titles": {
+      "zh": "莉可丽丝",
+      "en": "Lycoris Recoil",
+      "ja": "リコリス・リコイル"
+    }
+  },
+  {
+    "id": "anime-2022-003",
+    "year": 2022,
+    "titles": {
+      "zh": "想要成为影之实力者！",
+      "en": "The Eminence in Shadow",
+      "ja": "陰の実力者になりたくて！"
+    }
+  },
+  {
+    "id": "anime-2022-004",
+    "year": 2022,
+    "titles": {
+      "zh": "夏日重现",
+      "en": "Summer Time Rendering",
+      "ja": "サマータイムレンダ"
+    }
+  },
+  {
+    "id": "anime-2022-005",
+    "year": 2022,
+    "titles": {
+      "zh": "异世界舅舅",
+      "en": "Uncle from Another World",
+      "ja": "異世界おじさん"
+    }
+  },
+  {
+    "id": "anime-2022-006",
+    "year": 2022,
+    "titles": {
+      "zh": "更衣人偶坠入爱河",
+      "en": "My Dress-Up Darling",
+      "ja": "その着せ替え人形は恋をする"
+    }
+  },
+  {
+    "id": "anime-2022-007",
+    "year": 2022,
+    "titles": {
+      "zh": "彻夜之歌",
+      "en": "Call of the Night",
+      "ja": "よふかしのうた"
+    }
+  },
+  {
+    "id": "anime-2022-008",
+    "year": 2022,
+    "titles": {
+      "zh": "测不准的阿波连同学",
+      "en": "Aharen Is Indecipherable",
+      "ja": "阿波連さんははかれない"
+    }
+  },
+  {
+    "id": "anime-2022-009",
+    "year": 2022,
+    "titles": {
+      "zh": "间谍过家家",
+      "en": "SPY×FAMILY",
+      "ja": "SPY×FAMILY"
+    }
+  },
+  {
+    "id": "anime-2022-010",
+    "year": 2022,
+    "titles": {
+      "zh": "不道德公会",
+      "en": "Immoral Guild",
+      "ja": "不徳のギルド"
+    }
+  },
+  {
+    "id": "anime-2022-011",
+    "year": 2022,
+    "titles": {
+      "zh": "链锯人",
+      "en": "Chainsaw Man",
+      "ja": "チェンソーマン"
+    }
+  },
+  {
+    "id": "anime-2022-012",
+    "year": 2022,
+    "titles": {
+      "zh": "明日同学的水手服",
+      "en": "Akebi's Sailor Uniform",
+      "ja": "明日ちゃんのセーラー服"
+    }
+  },
+  {
+    "id": "anime-2022-013",
+    "year": 2022,
+    "titles": {
+      "zh": "擅长捉弄的高木同学 第三季",
+      "en": "Teasing Master Takagi-san Season 3",
+      "ja": "からかい上手の高木さん③"
+    },
+    "sourceUrl": "https://bgm.tv/subject/347887"
+  },
+  {
+    "id": "anime-2022-014",
+    "year": 2022,
+    "titles": {
+      "zh": "派对浪客诸葛孔明",
+      "en": "Ya Boy Kongming!",
+      "ja": "パリピ孔明"
+    },
+    "sourceUrl": "https://bgm.tv/subject/356756"
+  },
+  {
+    "id": "anime-2022-015",
+    "year": 2022,
+    "titles": {
+      "zh": "相合之物",
+      "en": "Deaimon: Recipe for Happiness",
+      "ja": "であいもん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/333664"
+  },
+  {
+    "id": "anime-2022-016",
+    "year": 2022,
+    "titles": {
+      "zh": "辉夜大小姐想让我告白-超级浪漫-",
+      "en": "Kaguya-sama: Love is War -Ultra Romantic-",
+      "ja": "かぐや様は告らせたい-ウルトラロマンティック-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/317613"
+  },
+  {
+    "id": "anime-2022-017",
+    "year": 2022,
+    "titles": {
+      "zh": "契约之吻",
+      "en": "Engage Kiss",
+      "ja": "Engage Kiss"
+    },
+    "sourceUrl": "https://bgm.tv/subject/375817"
+  },
+  {
+    "id": "anime-2022-018",
+    "year": 2022,
+    "titles": {
+      "zh": "来自深渊 烈日的黄金乡",
+      "en": "Made in Abyss: The Golden City of the Scorching Sun",
+      "ja": "メイドインアビス 烈日の黄金郷"
+    },
+    "sourceUrl": "https://bgm.tv/subject/298477"
+  },
+  {
+    "id": "anime-2022-019",
+    "year": 2022,
+    "titles": {
+      "zh": "赛博朋克：边缘行者",
+      "en": "Cyberpunk: Edgerunners",
+      "ja": "サイバーパンク エッジランナーズ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/309311"
+  },
+  {
+    "id": "anime-2022-020",
+    "year": 2022,
+    "titles": {
+      "zh": "四叠半时光机布鲁斯",
+      "en": "The Tatami Time Machine Blues",
+      "ja": "四畳半タイムマシンブルース"
+    },
+    "sourceUrl": "https://bgm.tv/subject/345980"
+  },
+  {
+    "id": "anime-2022-021",
+    "year": 2022,
+    "titles": {
+      "zh": "灵能百分百 第三季",
+      "en": "Mob Psycho 100 III",
+      "ja": "モブサイコ100 Ⅲ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/353605"
+  },
+  {
+    "id": "anime-2023-001",
+    "year": 2023,
+    "titles": {
+      "zh": "葬送的芙莉莲",
+      "en": "Frieren: Beyond Journey's End",
+      "ja": "葬送のフリーレン"
+    }
+  },
+  {
+    "id": "anime-2023-002",
+    "year": 2023,
+    "titles": {
+      "zh": "药屋少女的呢喃",
+      "en": "The Apothecary Diaries",
+      "ja": "薬屋のひとりごと"
+    }
+  },
+  {
+    "id": "anime-2023-003",
+    "year": 2023,
+    "titles": {
+      "zh": "BanG Dream! It's MyGO!!!!!",
+      "en": "BanG Dream! It's MyGO!!!!!",
+      "ja": "BanG Dream! It's MyGO!!!!!"
+    }
+  },
+  {
+    "id": "anime-2023-004",
+    "year": 2023,
+    "titles": {
+      "zh": "我心里危险的东西",
+      "en": "The Dangers in My Heart",
+      "ja": "僕の心のヤバイやつ"
+    }
+  },
+  {
+    "id": "anime-2023-005",
+    "year": 2023,
+    "titles": {
+      "zh": "超超超超超喜欢你的100个女朋友",
+      "en": "The 100 Girlfriends Who Really Love You",
+      "ja": "君のことが大大大大大好きな100人の彼女"
+    }
+  },
+  {
+    "id": "anime-2023-006",
+    "year": 2023,
+    "titles": {
+      "zh": "别当欧尼酱了！",
+      "en": "Onimai: I'm Now Your Sister!",
+      "ja": "お兄ちゃんはおしまい！"
+    }
+  },
+  {
+    "id": "anime-2023-007",
+    "year": 2023,
+    "titles": {
+      "zh": "跃动青春",
+      "en": "Skip and Loafer",
+      "ja": "スキップとローファー"
+    }
+  },
+  {
+    "id": "anime-2023-008",
+    "year": 2023,
+    "titles": {
+      "zh": "宝可梦 地平线",
+      "en": "Pokémon Horizons",
+      "ja": "ポケットモンスター"
+    },
+    "sourceUrl": "https://bgm.tv/subject/411247"
+  },
+  {
+    "id": "anime-2023-009",
+    "year": 2023,
+    "titles": {
+      "zh": "香格里拉·弗陇提亚～屎作猎人向神作发起挑战～",
+      "en": "Shangri-La Frontier",
+      "ja": "シャングリラ・フロンティア ～クソゲーハンター、神ゲーに挑む～"
+    }
+  },
+  {
+    "id": "anime-2023-010",
+    "year": 2023,
+    "titles": {
+      "zh": "无神世界的神明活动",
+      "en": "KamiKatsu: Working for God in a Godless World",
+      "ja": "神無き世界のカミサマ活動"
+    }
+  },
+  {
+    "id": "anime-2023-011",
+    "year": 2023,
+    "titles": {
+      "zh": "我推的孩子",
+      "en": "Oshi no Ko",
+      "ja": "【推しの子】"
+    }
+  },
+  {
+    "id": "anime-2023-012",
+    "year": 2023,
+    "titles": {
+      "zh": "天国大魔境",
+      "en": "Heavenly Delusion",
+      "ja": "天国大魔境"
+    }
+  },
+  {
+    "id": "anime-2023-013",
+    "year": 2023,
+    "titles": {
+      "zh": "转生公主与天才千金的魔法革命",
+      "en": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+      "ja": "転生王女と天才令嬢の魔法革命"
+    },
+    "sourceUrl": "https://bgm.tv/subject/395714"
+  },
+  {
+    "id": "anime-2023-014",
+    "year": 2023,
+    "titles": {
+      "zh": "异世界悠闲农家",
+      "en": "Farming Life in Another World",
+      "ja": "異世界のんびり農家"
+    },
+    "sourceUrl": "https://bgm.tv/subject/376137"
+  },
+  {
+    "id": "anime-2023-015",
+    "year": 2023,
+    "titles": {
+      "zh": "冰海战记 第二季",
+      "en": "Vinland Saga Season 2",
+      "ja": "ヴィンランド・サガ SEASON 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/296739"
+  },
+  {
+    "id": "anime-2023-016",
+    "year": 2023,
+    "titles": {
+      "zh": "为美好的世界献上爆焰！",
+      "en": "KONOSUBA -An Explosion on This Wonderful World!",
+      "ja": "この素晴らしい世界に爆焔を！"
+    },
+    "sourceUrl": "https://bgm.tv/subject/385209"
+  },
+  {
+    "id": "anime-2023-017",
+    "year": 2023,
+    "titles": {
+      "zh": "鬼灭之刃 刀匠村篇",
+      "en": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
+      "ja": "鬼滅の刃 刀鍛冶の里編"
+    },
+    "sourceUrl": "https://bgm.tv/subject/369768"
+  },
+  {
+    "id": "anime-2023-018",
+    "year": 2023,
+    "titles": {
+      "zh": "赛马娘 Pretty Derby 巅峰之路",
+      "en": "Umamusume: Pretty Derby - Road to the Top",
+      "ja": "ウマ娘 プリティーダービー ROAD TO THE TOP"
+    },
+    "sourceUrl": "https://bgm.tv/subject/380448"
+  },
+  {
+    "id": "anime-2023-019",
+    "year": 2023,
+    "titles": {
+      "zh": "无职转生 第二季 ～到了异世界就拿出真本事～",
+      "en": "Mushoku Tensei: Jobless Reincarnation Season 2",
+      "ja": "無職転生Ⅱ ～異世界行ったら本気だす～"
+    },
+    "sourceUrl": "https://bgm.tv/subject/373247"
+  },
+  {
+    "id": "anime-2023-020",
+    "year": 2023,
+    "titles": {
+      "zh": "咒术回战 怀玉･玉折 / 涩谷事变",
+      "en": "JUJUTSU KAISEN Season 2",
+      "ja": "呪術廻戦 懐玉・玉折／渋谷事変"
+    },
+    "sourceUrl": "https://bgm.tv/subject/369304"
+  },
+  {
+    "id": "anime-2023-021",
+    "year": 2023,
+    "titles": {
+      "zh": "想要成为影之实力者！ 第二季",
+      "en": "The Eminence in Shadow Season 2",
+      "ja": "陰の実力者になりたくて！ 2nd season"
+    },
+    "sourceUrl": "https://bgm.tv/subject/419846"
+  },
+  {
+    "id": "anime-2023-022",
+    "year": 2023,
+    "titles": {
+      "zh": "间谍过家家 第二季",
+      "en": "SPY x FAMILY Season 2",
+      "ja": "SPY×FAMILY Season 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/411427"
+  },
+  {
+    "id": "anime-2024-001",
+    "year": 2024,
+    "titles": {
+      "zh": "败犬女主太多了！",
+      "en": "Too Many Losing Heroines!",
+      "ja": "負けヒロインが多すぎる！"
+    }
+  },
+  {
+    "id": "anime-2024-002",
+    "year": 2024,
+    "titles": {
+      "zh": "GIRLS BAND CRY",
+      "en": "GIRLS BAND CRY",
+      "ja": "ガールズバンドクライ"
+    }
+  },
+  {
+    "id": "anime-2024-003",
+    "year": 2024,
+    "titles": {
+      "zh": "胆大党",
+      "en": "Dandadan",
+      "ja": "ダンダダン"
+    }
+  },
+  {
+    "id": "anime-2024-004",
+    "year": 2024,
+    "titles": {
+      "zh": "义妹生活",
+      "en": "Gimai Seikatsu",
+      "ja": "義妹生活"
+    }
+  },
+  {
+    "id": "anime-2024-005",
+    "year": 2024,
+    "titles": {
+      "zh": "迷宫饭",
+      "en": "Delicious in Dungeon",
+      "ja": "ダンジョン飯"
+    }
+  },
+  {
+    "id": "anime-2024-006",
+    "year": 2024,
+    "titles": {
+      "zh": "我独自升级",
+      "en": "Solo Leveling",
+      "ja": "俺だけレベルアップな件"
+    }
+  },
+  {
+    "id": "anime-2024-007",
+    "year": 2024,
+    "titles": {
+      "zh": "小市民系列",
+      "en": "Shoshimin",
+      "ja": "小市民シリーズ"
+    }
+  },
+  {
+    "id": "anime-2024-008",
+    "year": 2024,
+    "titles": {
+      "zh": "梦想成为魔法少女",
+      "en": "Gushing over Magical Girls",
+      "ja": "魔法少女にあこがれて"
+    }
+  },
+  {
+    "id": "anime-2024-009",
+    "year": 2024,
+    "titles": {
+      "zh": "青之箱",
+      "en": "Blue Box",
+      "ja": "青の箱"
+    }
+  },
+  {
+    "id": "anime-2024-010",
+    "year": 2024,
+    "titles": {
+      "zh": "2.5次元的诱惑",
+      "en": "2.5 Dimensional Seduction",
+      "ja": "2.5次元の誘惑"
+    }
+  },
+  {
+    "id": "anime-2024-011",
+    "year": 2024,
+    "titles": {
+      "zh": "地。 ―关于地球的运动―",
+      "en": "Orb: On the Movements of the Earth",
+      "ja": "チ。 ―地球の運動について―"
+    },
+    "sourceUrl": "https://bgm.tv/subject/389156"
+  },
+  {
+    "id": "anime-2024-012",
+    "year": 2024,
+    "titles": {
+      "zh": "失忆投捕",
+      "en": "Oblivion Battery",
+      "ja": "忘却バッテリー"
+    }
+  },
+  {
+    "id": "anime-2024-013",
+    "year": 2024,
+    "titles": {
+      "zh": "魔都精兵的奴隶",
+      "en": "Chained Soldier",
+      "ja": "魔都精兵のスレイブ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/357962"
+  },
+  {
+    "id": "anime-2024-014",
+    "year": 2024,
+    "titles": {
+      "zh": "我心里危险的东西 第二季",
+      "en": "The Dangers in My Heart Season 2",
+      "ja": "僕の心のヤバイやつ 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/441795"
+  },
+  {
+    "id": "anime-2024-015",
+    "year": 2024,
+    "titles": {
+      "zh": "夜晚的水母不会游泳",
+      "en": "Jellyfish Can’t Swim in the Night",
+      "ja": "夜のクラゲは泳げない"
+    },
+    "sourceUrl": "https://bgm.tv/subject/425909"
+  },
+  {
+    "id": "anime-2024-016",
+    "year": 2024,
+    "titles": {
+      "zh": "吹响吧！上低音号 第三季",
+      "en": "Sound! Euphonium 3",
+      "ja": "響け！ユーフォニアム3"
+    },
+    "sourceUrl": "https://bgm.tv/subject/283643"
+  },
+  {
+    "id": "anime-2024-017",
+    "year": 2024,
+    "titles": {
+      "zh": "为美好的世界献上祝福！第三季",
+      "en": "KONOSUBA -God's blessing on this wonderful world! 3",
+      "ja": "この素晴らしい世界に祝福を！3"
+    },
+    "sourceUrl": "https://bgm.tv/subject/342667"
+  },
+  {
+    "id": "anime-2024-018",
+    "year": 2024,
+    "titles": {
+      "zh": "鬼灭之刃 柱训练篇",
+      "en": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+      "ja": "鬼滅の刃 柱稽古編"
+    },
+    "sourceUrl": "https://bgm.tv/subject/441939"
+  },
+  {
+    "id": "anime-2024-019",
+    "year": 2024,
+    "titles": {
+      "zh": "不时轻声地以俄语遮羞的邻座艾莉同学",
+      "en": "Alya Sometimes Hides Her Feelings in Russian",
+      "ja": "時々ボソッとロシア語でデレる隣のアーリャさん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/424883"
+  },
+  {
+    "id": "anime-2024-020",
+    "year": 2024,
+    "titles": {
+      "zh": "【我推的孩子】 第二季",
+      "en": "OSHI NO KO Season 2",
+      "ja": "【推しの子】 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/443428"
+  },
+  {
+    "id": "anime-2024-021",
+    "year": 2024,
+    "titles": {
+      "zh": "物语系列 外传季&怪物季",
+      "en": "MONOGATARI Series: OFF & MONSTER Season",
+      "ja": "〈物語〉シリーズ オフ&モンスターシーズン"
+    },
+    "sourceUrl": "https://bgm.tv/subject/475354"
+  },
+  {
+    "id": "anime-2024-022",
+    "year": 2024,
+    "titles": {
+      "zh": "鹿乃子乃子乃子虎视眈眈",
+      "en": "My Deer Friend Nokotan",
+      "ja": "しかのこのこのここしたんたん"
+    },
+    "sourceUrl": "https://bgm.tv/subject/484761"
+  },
+  {
+    "id": "anime-2024-023",
+    "year": 2024,
+    "titles": {
+      "zh": "亚托莉 -我挚爱的时光-",
+      "en": "ATRI -My Dear Moments-",
+      "ja": "ATRI -My Dear Moments-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/397604"
+  },
+  {
+    "id": "anime-2024-024",
+    "year": 2024,
+    "titles": {
+      "zh": "Re：从零开始的异世界生活 第三季",
+      "en": "Re:ZERO -Starting Life in Another World- Season 3",
+      "ja": "Re:ゼロから始める異世界生活 3rd season"
+    },
+    "sourceUrl": "https://bgm.tv/subject/425998"
+  },
+  {
+    "id": "anime-2024-025",
+    "year": 2024,
+    "titles": {
+      "zh": "悲喜渔生",
+      "en": "Negative Positive Angler",
+      "ja": "ネガポジアングラー"
+    },
+    "sourceUrl": "https://bgm.tv/subject/505895"
+  },
+  {
+    "id": "anime-2025-001",
+    "year": 2025,
+    "titles": {
+      "zh": "古诺希亚",
+      "en": "GNOSIA",
+      "ja": "グノーシア"
+    }
+  },
+  {
+    "id": "anime-2025-002",
+    "year": 2025,
+    "titles": {
+      "zh": "弹珠汽水瓶里的千岁同学",
+      "en": "Chitose Is in the Ramune Bottle",
+      "ja": "千歳くんはラムネ瓶のなか"
+    }
+  },
+  {
+    "id": "anime-2025-003",
+    "year": 2025,
+    "titles": {
+      "zh": "我们不可能成为恋人！绝对不行。 (※似乎可行？)",
+      "en": "There's No Freaking Way I'll be Your Lover! Unless...",
+      "ja": "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）"
+    }
+  },
+  {
+    "id": "anime-2025-004",
+    "year": 2025,
+    "titles": {
+      "zh": "金牌得主",
+      "en": "Medalist",
+      "ja": "メダリスト"
+    }
+  },
+  {
+    "id": "anime-2025-005",
+    "year": 2025,
+    "titles": {
+      "zh": "琉璃的宝石",
+      "en": "Ruri Rocks",
+      "ja": "瑠璃の宝石"
+    }
+  },
+  {
+    "id": "anime-2025-006",
+    "year": 2025,
+    "titles": {
+      "zh": "末日后酒店",
+      "en": "Apocalypse Hotel",
+      "ja": "アポカリプスホテル"
+    }
+  },
+  {
+    "id": "anime-2025-007",
+    "year": 2025,
+    "titles": {
+      "zh": "拔作岛",
+      "en": "Nukitashi THE ANIMATION",
+      "ja": "ぬきたし THE ANIMATION"
+    }
+  },
+  {
+    "id": "anime-2025-008",
+    "year": 2025,
+    "titles": {
+      "zh": "时光流逝，饭菜依旧美味",
+      "en": "Food for the Soul",
+      "ja": "日々は過ぎれど飯うまし"
+    }
+  },
+  {
+    "id": "anime-2025-009",
+    "year": 2025,
+    "titles": {
+      "zh": "东岛丹三郎想成为假面骑士",
+      "en": "Tojima Tanzaburo Wants to Be a Masked Rider",
+      "ja": "東島丹三郎は仮面ライダーになりたい"
+    }
+  },
+  {
+    "id": "anime-2025-010",
+    "year": 2025,
+    "titles": {
+      "zh": "薰香花朵凛然绽放",
+      "en": "The Fragrant Flower Blooms with Dignity",
+      "ja": "薫る花は凛と咲く"
+    }
+  },
+  {
+    "id": "anime-2025-011",
+    "year": 2025,
+    "titles": {
+      "zh": "赛马娘 芦毛灰姑娘",
+      "en": "Uma Musume Cinderella Gray",
+      "ja": "ウマ娘 シンデレラグレイ"
+    }
+  },
+  {
+    "id": "anime-2025-012",
+    "year": 2025,
+    "titles": {
+      "zh": "废渊战鬼",
+      "en": "Gachiakuta",
+      "ja": "ガチアクタ"
+    }
+  },
+  {
+    "id": "anime-2025-013",
+    "year": 2025,
+    "titles": {
+      "zh": "BanG Dream! Ave Mujica",
+      "en": "Ave Mujica - The Die is Cast -",
+      "ja": "BanG Dream! Ave Mujica"
+    },
+    "sourceUrl": "https://bgm.tv/subject/454684"
+  },
+  {
+    "id": "anime-2025-014",
+    "year": 2025,
+    "titles": {
+      "zh": "我独自升级 第二季 -起于暗影-",
+      "en": "Solo Leveling Season 2 -Arise from the Shadow-",
+      "ja": "俺だけレベルアップな件 Season 2 -Arise from the Shadow-"
+    },
+    "sourceUrl": "https://bgm.tv/subject/487630"
+  },
+  {
+    "id": "anime-2025-015",
+    "year": 2025,
+    "titles": {
+      "zh": "魔女与使魔",
+      "en": "WITCH WATCH",
+      "ja": "ウィッチウォッチ"
+    },
+    "sourceUrl": "https://bgm.tv/subject/506672"
+  },
+  {
+    "id": "anime-2025-016",
+    "year": 2025,
+    "titles": {
+      "zh": "夏日口袋",
+      "en": "Summer Pockets",
+      "ja": "Summer Pockets"
+    },
+    "sourceUrl": "https://bgm.tv/subject/363957"
+  },
+  {
+    "id": "anime-2025-017",
+    "year": 2025,
+    "titles": {
+      "zh": "mono女孩",
+      "en": "mono",
+      "ja": "mono"
+    },
+    "sourceUrl": "https://bgm.tv/subject/485936"
+  },
+  {
+    "id": "anime-2025-018",
+    "year": 2025,
+    "titles": {
+      "zh": "莉可丽丝：友谊是时间的窃贼",
+      "en": "Lycoris Recoil -Friends are thieves of time.-",
+      "ja": "リコリス・リコイル Friends are thieves of time."
+    },
+    "sourceUrl": "https://bgm.tv/subject/504950"
+  },
+  {
+    "id": "anime-2025-019",
+    "year": 2025,
+    "titles": {
+      "zh": "章鱼哔的原罪",
+      "en": "Takopi's Original Sin",
+      "ja": "タコピーの原罪"
+    },
+    "sourceUrl": "https://bgm.tv/subject/527620"
+  },
+  {
+    "id": "anime-2025-020",
+    "year": 2025,
+    "titles": {
+      "zh": "胆大党 第二季",
+      "en": "DAN DA DAN Season 2",
+      "ja": "ダンダダン 第2期"
+    },
+    "sourceUrl": "https://bgm.tv/subject/529431"
+  },
+  {
+    "id": "anime-2025-021",
+    "year": 2025,
+    "titles": {
+      "zh": "Silent Witch 沉默魔女的秘密",
+      "en": "Secrets of the Silent Witch",
+      "ja": "サイレント・ウィッチ 沈黙の魔女の隠しごと"
+    },
+    "sourceUrl": "https://bgm.tv/subject/506677"
+  },
+  {
+    "id": "anime-2025-022",
+    "year": 2025,
+    "titles": {
+      "zh": "更衣人偶坠入爱河 第二季",
+      "en": "My Dress-Up Darling Season 2",
+      "ja": "その着せ替え人形は恋をする Season 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/398951"
+  },
+  {
+    "id": "anime-2025-023",
+    "year": 2025,
+    "titles": {
+      "zh": "小城日常",
+      "en": "CITY THE ANIMATION",
+      "ja": "CITY THE ANIMATION"
+    },
+    "sourceUrl": "https://bgm.tv/subject/514358"
+  },
+  {
+    "id": "anime-2025-024",
+    "year": 2025,
+    "titles": {
+      "zh": "碧蓝之海 第二季",
+      "en": "Grand Blue Dreaming Season 2",
+      "ja": "ぐらんぶる Season 2"
+    },
+    "sourceUrl": "https://bgm.tv/subject/515880"
+  },
+  {
+    "id": "anime-2025-025",
+    "year": 2025,
+    "titles": {
+      "zh": "新 吊带袜天使",
+      "en": "New PANTY & STOCKING with GARTERBELT",
+      "ja": "New PANTY & STOCKING with GARTERBELT"
+    },
+    "sourceUrl": "https://bgm.tv/subject/390555"
+  },
+  {
+    "id": "anime-2026-001",
+    "year": 2026,
+    "titles": {
+      "zh": "葬送的芙莉莲 第二季",
+      "en": "Frieren: Beyond Journey’s End Season 2",
+      "ja": "葬送のフリーレン 第2期"
+    },
+    "sourceUrl": "https://frieren-anime.jp/news/4335/"
+  },
+  {
+    "id": "anime-2026-002",
+    "year": 2026,
+    "titles": {
+      "zh": "咒术回战 死灭回游 前篇",
+      "en": "JUJUTSU KAISEN: The Culling Game Part 1",
+      "ja": "呪術廻戦 死滅回游 前編"
+    },
+    "sourceUrl": "https://tohoentertainmentonline.com/shop/g/gTASD07855/"
+  },
+  {
+    "id": "anime-2026-003",
+    "year": 2026,
+    "titles": {
+      "zh": "【我推的孩子】第三季",
+      "en": "【OSHI NO KO】Season 3",
+      "ja": "【推しの子】第3期"
+    },
+    "sourceUrl": "https://ichigoproduction.com/Season3/onair/"
+  },
+  {
+    "id": "anime-2026-004",
+    "year": 2026,
+    "titles": {
+      "zh": "地狱乐 第二季",
+      "en": "Hell’s Paradise Season 2",
+      "ja": "地獄楽 第二期"
+    },
+    "sourceUrl": "https://www.crunchyroll.com/news/announcements/2026/1/9/hells-paradise-season-2-release-date-time"
+  },
+  {
+    "id": "anime-2026-005",
+    "year": 2026,
+    "titles": {
+      "zh": "金牌得主 第二季",
+      "en": "Medalist Season 2",
+      "ja": "メダリスト 第2期"
+    },
+    "sourceUrl": "https://medalist-pr.com/tv/onair.html"
+  },
+  {
+    "id": "anime-2026-006",
+    "year": 2026,
+    "titles": {
+      "zh": "Fate/strange Fake",
+      "en": "Fate/strange Fake",
+      "ja": "Fate/strange Fake"
+    },
+    "sourceUrl": "https://www.aniplex.co.jp/news/detail/?id=68681"
+  },
+  {
+    "id": "anime-2026-007",
+    "year": 2026,
+    "titles": {
+      "zh": "判处勇者刑 惩罚勇者9004队刑务纪录",
+      "en": "Sentenced to Be a Hero",
+      "ja": "勇者刑に処す 懲罰勇者9004隊刑務記録"
+    },
+    "sourceUrl": "https://yushakei-pj.com/onair/"
+  },
+  {
+    "id": "anime-2026-008",
+    "year": 2026,
+    "titles": {
+      "zh": "相反的你和我",
+      "en": "You and I Are Polar Opposites",
+      "ja": "正反対な君と僕"
+    },
+    "sourceUrl": "https://sh-anime.shochiku.co.jp/seihantai_anime/news/84"
+  },
+  {
+    "id": "anime-2026-009",
+    "year": 2026,
+    "titles": {
+      "zh": "枪神 STARGAZE",
+      "en": "TRIGUN STARGAZE",
+      "ja": "TRIGUN STARGAZE"
+    },
+    "sourceUrl": "https://trigun-anime.com/onair/"
+  },
+  {
+    "id": "anime-2026-010",
+    "year": 2026,
+    "titles": {
+      "zh": "达尔文事变",
+      "en": "The Darwin Incident",
+      "ja": "ダーウィン事変"
+    },
+    "sourceUrl": "https://darwinsincident.net/news/20251212_03.html"
+  },
+  {
+    "id": "anime-2026-011",
+    "year": 2026,
+    "titles": {
+      "zh": "JOJO的奇妙冒险 飙马野郎",
+      "en": "STEEL BALL RUN JoJo’s Bizarre Adventure",
+      "ja": "スティール・ボール・ラン ジョジョの奇妙な冒険"
+    },
+    "sourceUrl": "https://about.netflix.com/en/news/global-anime-hits-and-new-releases-take-center-stage-at-jump-festa-2026"
+  },
+  {
+    "id": "anime-2026-012",
+    "year": 2026,
+    "titles": {
+      "zh": "魔法帽的工作室",
+      "en": "Witch Hat Atelier",
+      "ja": "とんがり帽子のアトリエ"
+    },
+    "sourceUrl": "https://tongari-anime.com/onair/"
+  },
+  {
+    "id": "anime-2026-013",
+    "year": 2026,
+    "titles": {
+      "zh": "黄泉使者",
+      "en": "Daemons of the Shadow Realm",
+      "ja": "黄泉のツガイ"
+    },
+    "sourceUrl": "https://yominotsugai.com/onair/"
+  },
+  {
+    "id": "anime-2026-014",
+    "year": 2026,
+    "titles": {
+      "zh": "Re：从零开始的异世界生活 第四季",
+      "en": "Re:ZERO -Starting Life in Another World- Season 4",
+      "ja": "Re:ゼロから始める異世界生活 4th season"
+    },
+    "sourceUrl": "https://re-zero-anime.jp/tv/special/index.html"
+  },
+  {
+    "id": "anime-2026-015",
+    "year": 2026,
+    "titles": {
+      "zh": "关于我转生变成史莱姆这档事 第四季",
+      "en": "That Time I Got Reincarnated as a Slime Season 4",
+      "ja": "転生したらスライムだった件 第4期"
+    },
+    "sourceUrl": "https://www.ten-sura.com/anime/tensura/onair"
+  },
+  {
+    "id": "anime-2026-016",
+    "year": 2026,
+    "titles": {
+      "zh": "异兽魔都 第二季",
+      "en": "Dorohedoro Season 2",
+      "ja": "ドロヘドロ Season2"
+    },
+    "sourceUrl": "https://dorohedoro.net/news/news_20260208_01.html"
+  },
+  {
+    "id": "anime-2026-017",
+    "year": 2026,
+    "titles": {
+      "zh": "小书痴的下克上 领主的养女",
+      "en": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
+      "ja": "本好きの下剋上 領主の養女"
+    },
+    "sourceUrl": "https://www.shochiku.co.jp/cinema/lineup/tv%E3%82%A2%E3%83%8B%E3%83%A1%E3%80%8C%E6%9C%AC%E5%A5%BD%E3%81%8D%E3%81%AE%E4%B8%8B%E5%89%8B%E4%B8%8A%E3%80%80%E9%A0%98%E4%B8%BB%E3%81%AE%E9%A4%8A%E5%A5%B3%E3%80%8D/"
+  },
+  {
+    "id": "anime-2026-018",
+    "year": 2026,
+    "titles": {
+      "zh": "欢迎来到实力至上主义的教室 第四季",
+      "en": "Classroom of the Elite Season 4",
+      "ja": "ようこそ実力至上主義の教室へ 4th Season"
+    },
+    "sourceUrl": "https://you-zitsu.com/onair.html"
+  },
+  {
+    "id": "anime-2026-019",
+    "year": 2026,
+    "titles": {
+      "zh": "杖与剑的魔剑谭 第二季",
+      "en": "Wistoria: Wand and Sword Season 2",
+      "ja": "杖と剣のウィストリア Season2"
+    },
+    "sourceUrl": "https://wistoria-anime.com/onair/"
+  },
+  {
+    "id": "anime-2026-020",
+    "year": 2026,
+    "titles": {
+      "zh": "冰之城墙",
+      "en": "The Ramparts of Ice",
+      "ja": "氷の城壁"
+    },
+    "sourceUrl": "https://korinojoheki-pr.com/"
+  },
+  {
+    "id": "anime-2026-021",
+    "year": 2026,
+    "titles": {
+      "zh": "朱音落语",
+      "en": "Akane-banashi",
+      "ja": "あかね噺"
+    },
+    "sourceUrl": "https://akane-banashi.com/onair/"
+  },
+  {
+    "id": "anime-2026-022",
+    "year": 2026,
+    "titles": {
+      "zh": "婚姻毒素",
+      "en": "MARRIAGETOXIN",
+      "ja": "マリッジトキシン"
+    },
+    "sourceUrl": "https://www.ktv.jp/marriagetoxin/"
+  },
+  {
+    "id": "anime-2026-023",
+    "year": 2026,
+    "titles": {
+      "zh": "无职转生～到了异世界就拿出真本事～第三季",
+      "en": "Mushoku Tensei: Jobless Reincarnation Season 3",
+      "ja": "無職転生Ⅲ ～異世界行ったら本気だす～"
+    },
+    "sourceUrl": "https://mushokutensei.jp/news/260327_1/"
+  },
+  {
+    "id": "anime-2026-024",
+    "year": 2026,
+    "titles": {
+      "zh": "死神 千年血战篇-祸进谭-",
+      "en": "BLEACH: Thousand-Year Blood War – The Calamity",
+      "ja": "BLEACH 千年血戦篇-禍進譚-"
+    },
+    "sourceUrl": "https://bleach-anime.com/onair/"
+  },
+  {
+    "id": "anime-2026-025",
+    "year": 2026,
+    "titles": {
+      "zh": "碧蓝之海 第三季",
+      "en": "Grand Blue Dreaming Season 3",
+      "ja": "ぐらんぶる Season 3"
+    },
+    "sourceUrl": "https://grandblue-anime.com/onair/03.html"
+  },
+  {
+    "id": "anime-2026-026",
+    "year": 2026,
+    "titles": {
+      "zh": "攻壳机动队 THE GHOST IN THE SHELL",
+      "en": "THE GHOST IN THE SHELL",
+      "ja": "攻殻機動隊 THE GHOST IN THE SHELL"
+    },
+    "sourceUrl": "https://www.theghostintheshell-anime.jp/on-air/"
+  },
+  {
+    "id": "anime-2026-027",
+    "year": 2026,
+    "titles": {
+      "zh": "BLACK TORCH",
+      "en": "BLACK TORCH",
+      "ja": "BLACK TORCH"
+    },
+    "sourceUrl": "https://blacktorch-anime.com/"
+  },
+  {
+    "id": "anime-2026-028",
+    "year": 2026,
+    "titles": {
+      "zh": "超超超超超喜欢你的100个女朋友 第三季",
+      "en": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You Season 3",
+      "ja": "君のことが大大大大大好きな100人の彼女 第3期"
+    },
+    "sourceUrl": "https://hyakkano.com/news/post-198/"
+  },
+  {
+    "id": "anime-2026-029",
+    "year": 2026,
+    "titles": {
+      "zh": "相反的你和我 第二季",
+      "en": "You and I Are Polar Opposites Season 2",
+      "ja": "正反対な君と僕 第2期"
+    },
+    "sourceUrl": "https://sh-anime.shochiku.co.jp/seihantai_anime/"
+  },
+  {
+    "id": "anime-2026-030",
+    "year": 2026,
+    "titles": {
+      "zh": "药屋少女的呢喃 第三季",
+      "en": "The Apothecary Diaries Season 3",
+      "ja": "薬屋のひとりごと 第3期"
+    },
+    "sourceUrl": "https://kusuriyanohitorigoto.jp/news/2946/"
+  },
+  {
+    "id": "anime-2026-031",
+    "year": 2026,
+    "titles": {
+      "zh": "黑色五叶草 第二季",
+      "en": "Black Clover 2nd Season",
+      "ja": "ブラッククローバー 2nd Season"
+    },
+    "sourceUrl": "https://www.tv-tokyo.co.jp/anime/bclover/"
+  },
+  {
+    "id": "anime-2026-032",
+    "year": 2026,
+    "titles": {
+      "zh": "青之芦苇 第二季",
+      "en": "Aoashi Season 2",
+      "ja": "アオアシ Season2"
+    },
+    "sourceUrl": "https://aoashi-pr.com/onair/"
+  },
+  {
+    "id": "anime-2026-033",
+    "year": 2026,
+    "titles": {
+      "zh": "乱马1/2 第三季（2024版）",
+      "en": "Ranma 1/2 Season 3 (2024 series)",
+      "ja": "らんま1/2 第3期（2024年版）"
+    },
+    "sourceUrl": "https://ranma-pr.com/ja/onair/"
+  },
+  {
+    "id": "anime-2026-034",
+    "year": 2026,
+    "titles": {
+      "zh": "东京复仇者 三天战争篇",
+      "en": "Tokyo Revengers: War of the Three Titans Arc",
+      "ja": "東京リベンジャーズ 三天戦争編"
+    },
+    "sourceUrl": "https://tokyo-revengers-anime.com/news/archives/5045"
+  },
+  {
+    "id": "anime-2026-035",
+    "year": 2026,
+    "titles": {
+      "zh": "冰之城墙 第二季",
+      "en": "The Ramparts of Ice Season 2",
+      "ja": "氷の城壁 第2期"
+    },
+    "sourceUrl": "https://korinojoheki-pr.com/"
+  }
+]

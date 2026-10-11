@@ -5,6 +5,7 @@ import { getPageMessages } from "./page-messages";
 import { imageUrl } from "./image-assets";
 import { getDiaryEntries, getDiaryPage } from "./diary";
 import { getDiaryMessages } from "./diary-messages";
+import { getAnimeMessages } from "./anime-messages";
 
 export const siteDescriptions: Record<Locale, string> = {
   zh: blogConfig.description,
@@ -59,6 +60,20 @@ export function diaryMetadata(locale: Locale, pageValue?: string | string[]): Me
     openGraph: {
       type: "website", title, description: t.description,
       siteName: blogConfig.title, url: pagePath(locale),
+      locale: { zh: "zh_CN", en: "en_US", ja: "ja_JP" }[locale],
+    },
+  };
+}
+
+export function animeMetadata(locale: Locale): Metadata {
+  const t = getAnimeMessages(locale);
+  const paths = Object.fromEntries(locales.map((language) => [language, localePath("/anime", language)]));
+  return {
+    title: t.title, description: t.description,
+    alternates: metadataAlternates(locale, paths),
+    openGraph: {
+      type: "website", title: t.title, description: t.description,
+      siteName: blogConfig.title, url: localePath("/anime", locale),
       locale: { zh: "zh_CN", en: "en_US", ja: "ja_JP" }[locale],
     },
   };

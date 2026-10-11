@@ -30,7 +30,7 @@ export function getLocaleAlternates(pathname: string, manifest: TranslationManif
   try { path = decodeURI(pathname).replace(/\/$/, "") || "/"; } catch { return {}; }
   if (manifest[path]) return manifest[path];
   const base = splitLocalePath(path).path;
-  if (!["/", "/diary", "/archives", "/about"].includes(base)) return {};
+  if (!["/", "/diary", "/anime", "/archives", "/about"].includes(base)) return {};
   return Object.fromEntries(locales.map((locale) => [locale, localePath(base, locale)]));
 }
 

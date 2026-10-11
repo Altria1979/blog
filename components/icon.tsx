@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 
 const paths = {
+  film: "M3 3h18v18H3zM7 3v18M17 3v18M3 8h4M3 16h4M17 8h4M17 16h4M7 12h10",
   panelLeft: "M4 4h16v16H4zM9 4v16",
   panelRight: "M4 4h16v16H4zM15 4v16",
   pencil: "m16 3 5 5M4 15 16 3a2 2 0 0 1 3 0l2 2a2 2 0 0 1 0 3L9 20l-6 1 1-6ZM13 21h8",

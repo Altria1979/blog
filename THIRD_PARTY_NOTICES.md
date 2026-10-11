@@ -1,5 +1,38 @@
 # Third-party notices
 
+## anime-sedai catalog and concept
+
+The public anime watchlist is inspired by [anime-sedai](https://github.com/egoist/anime-sedai) by EGOIST ([original site](https://anime-sedai.egoist.dev/)), pinned at [`b31f0641b59ea5840d358e9d465e842e3d124ff6`](https://github.com/egoist/anime-sedai/tree/b31f0641b59ea5840d358e9d465e842e3d124ff6). The original 239 displayed entries (the first twelve per year, or fewer where unavailable) and their three-language titles were adapted from `anime-data.ts`. The upstream English UI credits [h1t](https://mhh0318.github.io/) for translation. Upstream `init-data.ts` references Bangumi as its original title/score source.
+
+The UI, year filtering, read-only author records, stable IDs, locale routing, and theme styles are implemented for this blog in Next.js / React. The yearly display cap is removed. Additional titles are independently checked against Bangumi metadata and official anime/broadcaster announcements; evidence and limitations are recorded in [the historical catalog audit](docs/anime-catalog-audit.md) and [2026 research](docs/anime-2026-research.md). No upstream visitor records, screenshot library, AI integrations, analytics, artwork or synopses are redistributed. The following license covers the upstream software/data file adaptation, not independently owned anime artwork or other media.
+
+### anime-sedai MIT license
+
+```text
+MIT License
+
+Copyright (c) 2025 EGOIST <hi@egoist.dev>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+
 ## Clarity language and reading preferences
 
 The language routing and language/theme capsule are adapted for Next.js and React from [senshinya/blog](https://github.com/senshinya/blog), pinned at `6dac6683dbd0e9c9a921a7790086a44696d43910` (Clarity 3.8.0). Reference files: `app/components/blog/LangToggle.vue`, `app/components/blog/ReadingPreferences.vue`, `app/assets/css/reading-preferences.css`, `app/composables/useLocaleAlternates.ts`, and `modules/i18n-manifest`.

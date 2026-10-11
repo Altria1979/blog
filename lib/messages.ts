@@ -1,7 +1,7 @@
 import type { Locale } from "./i18n";
 
 const zh = {
-  posts: "文章", diary: "日记", archives: "归档", about: "关于", home: "首页",
+  posts: "文章", diary: "日记", anime: "动画", archives: "归档", about: "关于", home: "首页",
   mainNavigation: "主导航", navigationMenu: "导航菜单", openNavigation: "打开导航菜单", closeNavigation: "关闭导航菜单",
   avatar: (name: string) => `${name} 的头像`, siteHome: (name: string) => `${name}首页`,
   sidebarNote: ["在自己的节奏里，", "把日子写成故事。"], email: "邮箱", rss: "RSS 订阅", aboutSite: "关于这个小站",
@@ -31,7 +31,7 @@ const zh = {
 type Messages = typeof zh;
 
 const en: Messages = {
-  posts: "Posts", diary: "Diary", archives: "Archives", about: "About", home: "Home",
+  posts: "Posts", diary: "Diary", anime: "Anime", archives: "Archives", about: "About", home: "Home",
   mainNavigation: "Main navigation", navigationMenu: "Navigation menu", openNavigation: "Open navigation menu", closeNavigation: "Close navigation menu",
   avatar: (name) => `${name}'s avatar`, siteHome: (name) => `${name} home`,
   sidebarNote: ["At my own pace,", "turning days into stories."], email: "Email", rss: "RSS feed", aboutSite: "About this blog",
@@ -59,7 +59,7 @@ const en: Messages = {
 };
 
 const ja: Messages = {
-  posts: "記事", diary: "日記", archives: "アーカイブ", about: "このブログについて", home: "ホーム",
+  posts: "記事", diary: "日記", anime: "アニメ", archives: "アーカイブ", about: "このブログについて", home: "ホーム",
   mainNavigation: "メインナビゲーション", navigationMenu: "ナビゲーションメニュー", openNavigation: "ナビゲーションメニューを開く", closeNavigation: "ナビゲーションメニューを閉じる",
   avatar: (name) => `${name}のアバター`, siteHome: (name) => `${name}のホーム`,
   sidebarNote: ["自分のペースで、", "日々を物語に。"], email: "メール", rss: "RSS を購読", aboutSite: "このブログについて",

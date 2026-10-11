@@ -15,9 +15,10 @@ import { getMessages } from "@/lib/messages";
 import { useLocale } from "./locale-provider";
 
 
-const navigation: { href: string; label: "posts" | "diary" | "archives" | "about"; icon: IconName }[] = [
+const navigation: { href: string; label: "posts" | "diary" | "anime" | "archives" | "about"; icon: IconName }[] = [
   { href: "/", label: "posts", icon: "posts" },
   { href: "/diary", label: "diary", icon: "pencil" },
+  { href: "/anime", label: "anime", icon: "film" },
   { href: "/archives", label: "archives", icon: "archive" },
   { href: "/about", label: "about", icon: "user" },
 ];
