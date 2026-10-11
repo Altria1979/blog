@@ -13,7 +13,7 @@ Altria 的个人博客，用来记录前端开发、技术实践、年度总结�
 - 文章列表、分类与标签筛选、标题与摘要等元信息搜索、按年归档和关于页。
 - Markdown 富内容文章，支持代码高亮、公式、图表、乐谱和图片灯箱。
 - 中文、英文、日文界面与独立文章译文，浅色、深色和跟随系统主题。
-- 三语动画个人清单，按年份浏览精选日本动画，支持年份范围筛选与已看统计。
+- 三语动画个人清单，按年份浏览精选日本动画，支持年份折叠、三语片名搜索、已看筛选与作品资料查看。
 - 分语言 RSS、站点地图及文章 SEO。
 - 全站累计浏览量（PV）、访客数（UV）和国家访问排行，由 Supabase 存储与统计。
 
@@ -133,9 +133,9 @@ npm run build
 
 感谢声哥开源的 [senshinya/blog](https://github.com/senshinya/blog)，这是本站主要的设计与交互参考；同时参考了 [纸鹿摸鱼处](https://blog.zhilu.site/) 的 Clarity 博客实现。
 
-「动画」页面参考 EGOIST 的 [anime-sedai](https://github.com/egoist/anime-sedai)（[动画世代原站](https://anime-sedai.egoist.dev/)），固定参考提交为 [`b31f0641b59ea5840d358e9d465e842e3d124ff6`](https://github.com/egoist/anime-sedai/tree/b31f0641b59ea5840d358e9d465e842e3d124ff6)。本站保留其 239 部三语精选片单作为基础，另行核查补充历年作品与 2026 年已开播作品；原项目的初始数据参考 [Bangumi](https://bgm.tv/)，英文翻译贡献者为 [h1t](https://mhh0318.github.io/)。
+「动画」页面参考 EGOIST 的 [anime-sedai](https://github.com/egoist/anime-sedai)（[动画世代原站](https://anime-sedai.egoist.dev/)），固定参考提交为 [`b31f0641b59ea5840d358e9d465e842e3d124ff6`](https://github.com/egoist/anime-sedai/tree/b31f0641b59ea5840d358e9d465e842e3d124ff6)。本站保留其 239 部三语精选片单作为基础，另行核查补充历年作品与 2026 年已发行的剧集、动画电影和剧场作品；原项目的初始数据参考 [Bangumi](https://bgm.tv/)，英文翻译贡献者为 [h1t](https://mhh0318.github.io/)。
 
-本站使用 Next.js / React 重新实现页面、年份筛选和统计，适配博客的三语路由、明暗主题与响应式布局，并改为公开展示作者的观影清单。作品不再限制为每年 12 部；没有移植原站的访客本地勾选、图片导出、AI 提示词、ChatWise 链接或分析脚本。软件改编与数据来源分别记录，完整上游 MIT 版权和许可保留在第三方声明中。
+本站使用 Next.js / React 重新实现页面、年份折叠、三语片名搜索、已看筛选、资料弹层和统计，适配博客的三语路由、明暗主题与响应式布局，并改为公开展示作者的观影清单。作品不再限制为每年 12 部，默认每年预览 12 部并可继续展开；没有移植原站的访客本地勾选、图片导出、AI 提示词、ChatWise 链接或分析脚本。软件改编与数据来源分别记录，完整上游 MIT 版权和许可保留在第三方声明中。
 
 维护方法见 [动画清单指南](docs/anime.md)；核查依据见 [历年补充记录](docs/anime-catalog-audit.md) 与 [2026 年来源记录](docs/anime-2026-research.md)。片单是人工维护的精选集，不是实时榜单，也不代表完整动画数据库。
 

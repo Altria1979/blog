@@ -5,7 +5,6 @@ import { animeMetadata } from "@/lib/metadata";
 
 type Props = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ range?: string | string[] }>;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -14,8 +13,8 @@ export async function generateMetadata({ params }: Props) {
   return animeMetadata(locale);
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale) || locale === "zh") notFound();
-  return <Content locale={locale} rangeValue={(await searchParams).range} />;
+  return <Content locale={locale} />;
 }

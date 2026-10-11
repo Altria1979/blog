@@ -1,10 +1,10 @@
 # 2026 年动画片单补充依据
 
-核验日期：**2026-10-11（Asia/Shanghai）**。本轮补充 **35 部／季**，覆盖冬、春、夏和截至核验日已经开播的秋季日本电视／网络动画。
+核验日期：**2026-10-11（Asia/Shanghai）**。2026 年当前收录 **49 个条目**：原有 **35 部／季**电视／网络动画，加上本次补充的 **14 个动画电影／剧场上映单元**。电影核查与年份更正见下方独立章节。
 
 这是一份人工精选补充清单，不是热度排名，也不是全年全部新番。选择重点是延续既有片单的知名系列续作，以及当季受到制作方、发行平台重点介绍的新作；“流行”不被转换成未经验证的分数或名次。只保存作品名称、年份和来源链接，不复制海报、剧情简介或站点全文。
 
-本文件记录的是首播依据，供后续更新目录时追溯。作品官网和发行商的 ON AIR、新闻、商品页、实际节目页优先；Netflix、Crunchyroll 在其自身发行作品上的上线声明也作为一手证据。搜索结果中的第三方媒体只用于发现候选，不作为下面日期的最终依据。
+本文件记录的是首次发行依据，供后续更新目录时追溯。作品官网和发行商的 ON AIR、新闻、商品页、实际节目页优先；Netflix、Crunchyroll 在其自身发行作品上的上线声明也作为一手证据。搜索结果中的第三方媒体只用于发现候选，不作为下面日期的最终依据。
 
 ## 年份和季次口径
 
@@ -17,7 +17,7 @@
 - 三语名称共享同一 ID 和年份。中文采用常见译名；英文优先发行名称，季号用于辨别条目；日文保留官方名称。区域发行的别名差异不代表额外作品。
 - 仅“宣布制作”“计划 2026 年”或“10 月”而没有核实具体已开播日期的候选不进入公开目录；后续发布不能倒填成已经开播。
 
-## 已核实、可以合并的条目
+## 已收录的电视／网络动画
 
 日期均为 2026 年，除特别注明外采用日本首播日；深夜自然日期的说明不影响年份分组。
 
@@ -83,3 +83,41 @@
 本批 35 条已合并到 `content/anime/catalog.json`，使用 `anime-2026-001` 至 `anime-2026-035`；合并时已按日文原名、季次和首播窗口核对去重，保留显式 ID。正文译名可以调整，不得为了排序或改名重新生成 ID。此批次不设置作者观看状态，也不代表作者看过这些作品。
 
 上述资料核验针对 2026 年补充；2006–2025 年的缺漏审查及上游来源许可由对应目录说明另行记录。未来扩充时更新核验日期、添加官方首播证据，再加入已发行目录，避免把未来计划混入可记录的片单。
+
+## 动画电影与剧场上映作品补充
+
+按 2026-10-11 的核验日期新增以下 14 个条目，ID 从 `anime-2026-036` 继续递增；此前的 ID 和个人观看记录不变。除特别说明外，日期为日本首次正式公映，不是中国大陆引进日期、首映礼、重映或影碟发售日期。各幕是独立剧场上映单元，因此这里的 14 个条目不等同于 14 部长篇电影。
+
+| 稳定 ID | 中文展示名 | 首次公映／发行 | 一手来源 |
+| --- | --- | --- | --- |
+| anime-2026-036 | 超辉夜姬！ | 2026-01-22（Netflix 正式上线） | [官方发行依据](https://www.netflix.com/tudum/articles/cosmic-princess-kaguya-release-date-news) |
+| anime-2026-037 | 祈念之树 | 2026-01-30 | [官方发行依据](https://kusunoki-movie.com/) |
+| anime-2026-038 | 机动战士高达 闪光的哈萨维 喀耳刻的魔女 | 2026-01-30 | [官方发行依据](https://gundam-official.com/hathaway/news/rdyhhf7ltwq8s9zysmdder5i/) |
+| anime-2026-039 | 少女与战车 更加相亲相爱作战！第2幕 | 2026-01-30 | [官方发行依据](https://gup-mottolovelove.jp/post-1235/) |
+| anime-2026-040 | 剧场版 关于我转生变成史莱姆这档事 苍海之泪篇 | 2026-02-27 | [官方发行依据](https://movie02.ten-sura.com/) |
+| anime-2026-041 | 哆啦A梦：新·大雄的海底鬼岩城 | 2026-02-27 | [官方发行依据](https://shin-ei-animation.jp/2026/02/news_260227/) |
+| anime-2026-042 | 少女与战车 更加相亲相爱作战！第3幕 | 2026-03-06 | [官方发行依据](https://gup-mottolovelove.jp/post-1235/) |
+| anime-2026-043 | 名侦探柯南：高速公路的堕天使 | 2026-04-10 | [官方发行依据](https://www.conan-movie.jp/2026/kazenotasuki/index.html) |
+| anime-2026-044 | 少女与战车 更加相亲相爱作战！第4幕 | 2026-04-10 | [官方发行依据](https://gup-mottolovelove.jp/post-1235/) |
+| anime-2026-045 | 最终乐章 吹响吧！上低音号 前篇 | 2026-04-24 | [官方发行依据](https://anime-eupho.com/news/?id=691) |
+| anime-2026-046 | 剧场版 魔法科高中的劣等生 四叶继承篇 | 2026-05-08 | [官方发行依据](https://mahouka.jp/yotsuba/news/?id=69477) |
+| anime-2026-047 | 剧场版 魔法少女小圆〈瓦尔普吉斯的回天〉 | 2026-08-28 | [官方发行依据](https://www.madoka-magica.com/wr/news/) |
+| anime-2026-048 | 最终乐章 吹响吧！上低音号 后篇 | 2026-09-11 | [官方发行依据](https://anime-eupho.com/news/?id=691) |
+| anime-2026-049 | 少女与战车 最终章 第5话 | 2026-10-09 | [官方发行依据](https://girls-und-panzer-finale.jp/202610-article-2/) |
+
+### 更正与去重
+
+- 用户提供的「《少女与战车 最终章 第4幕》2026-04-10」混合了两部作品：《最終章》第4話于 **2023-10-06** 首次公映，见[原始官方公告](https://girls-und-panzer-finale.jp/202307-article-a/)；2026-04-10 对应的是《もっとらぶらぶ作戦です！》第4幕，见[四幕上映表](https://gup-mottolovelove.jp/post-1235/)与[上映中公告](https://girls-und-panzer-finale.jp/202605-article-1/)。因此不把《最終章》第4話放进 2026 年。
+- 《更加相亲相爱作战！》第1幕为 **2025-12-26**；本轮 2026 年补充只纳入第2、3、4幕。该作品于[2026-10-08 开始电视播放](https://gup-mottolovelove.jp/onair/)，是已收录内容的另一种播放形式，不再添加电视版总条目。
+- 《最終章》第5話于 **2026-10-09** 首次公映，[当天公告](https://girls-und-panzer-finale.jp/202610-article-2/)明确已开始上映，单独纳入。
+- 《超辉夜姬！》以 **2026-01-22** Netflix 正式上线为首次发行依据。[日本官网](https://www.cho-kaguyahime.com/)与[平台发布记录](https://www.netflix.com/tudum/articles/cosmic-princess-kaguya-release-date-news)确认是动画电影；后续影院上映不重复计数。
+- 《哆啦A梦：新·大雄的海底鬼岩城》是 2026 年新制作的重制电影，区别于 1983 年旧片重映，[制作公司当天公告](https://shin-ei-animation.jp/2026/02/news_260227/)确认已公映。
+- 《最终乐章 吹响吧！上低音号》前篇 04-24、后篇 09-11 为不同电影单元；[前篇上映当天公告](https://anime-eupho.com/news/?id=691)同时公布后篇日期，[10-09 公告](https://anime-eupho.com/news/?id=737)确认后篇已经公映。
+- 《四叶继承篇》采用官方后续调整的 **05-08** 日期，取代旧的「NEXT WINTER」宣传；[第10周特典公告](https://mahouka.jp/news/?id=70737)确认已经发行。《瓦尔普吉斯的回天》的[官方新闻](https://www.madoka-magica.com/wr/news/)已有上映中 PV 和 10-06 第7周特典消息，核查时不再按早期延期计划处理。
+- 本次仍不收录未来档期：《乐园追放 心之共鸣》官方为 **2026-11-13**，晚于核验日，见[制作方公告](https://www.nitroplus.co.jp/news/2025/12183.php)。之后正式公映再补。
+
+### 三语名称与补充证据
+
+- 英文优先使用发行方和制作方名称：[Netflix](https://www.netflix.com/tudum/articles/cosmic-princess-kaguya-release-date-news)、[高达英文官网](https://en.gundam-official.com/hathaway/news/z2xta4jumw1modg8gpn2xl2t/)、[Crunchyroll 发行说明](https://www.crunchyroll.com/news/latest/2026/2/20/that-time-i-got-reincarnated-as-a-slime-the-movie-tears-of-the-azure-sea-anime-film-action-trailer)、[京都动画前篇目录](https://www.kyotoanimation.co.jp/en/works/eupho07/)及[作品目录](https://www.kyotoanimation.co.jp/en/works/)、[Aniplex USA 作品页](https://aniplexusa.com/shows/)、[柯南影院官方条目](https://tjoy.jp/t-joy_soga/cinema_detail/C4758)。
+- 《祈念之树》使用 `Kusunoki no Bannin` 罗马字名；《少女与战车》衍生系列使用官网罗马字名并以 Part 区分各幕；《哆啦A梦》使用常见英文译名，不把译名差异当作独立电影。
+- 中文为常见名称，日文采用官网原名；上述所有新条目均维护完整三语标题。2026 年现在合计 49 条，全目录合计 502 条。片单仍是人工精选，不声称包含全年所有动画电影。

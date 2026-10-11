@@ -3,7 +3,7 @@ import path from "node:path";
 import { locales } from "./i18n";
 import type { Anime, AnimeWatchlist } from "./anime-shared";
 
-export type { Anime, AnimeRange, AnimeWatchlist } from "./anime-shared";
+export type { Anime, AnimeFilters, AnimeRange, AnimeStatus, AnimeWatchlist } from "./anime-shared";
 
 const contentDirectory = path.join(process.cwd(), "content", "anime");
 
@@ -31,6 +31,9 @@ export function validateAnimeCatalog(value: unknown): Anime[] {
     const titleKey = `${entry.year}:${String(names.ja).normalize("NFKC").trim()}`;
     if (titles.has(titleKey)) throw new Error(`Duplicate anime title in ${entry.year}: ${names.ja}`);
     titles.add(titleKey);
+    if (entry.format !== undefined && entry.format !== "movie" && entry.format !== "theatrical") {
+      throw new Error(`Invalid anime format: ${entry.id}`);
+    }
     if (entry.sourceUrl !== undefined) {
       if (typeof entry.sourceUrl !== "string" || !URL.canParse(entry.sourceUrl) || new URL(entry.sourceUrl).protocol !== "https:") {
         throw new Error(`Invalid anime source URL: ${entry.id}`);
@@ -39,6 +42,7 @@ export function validateAnimeCatalog(value: unknown): Anime[] {
     return {
       id: entry.id, year: entry.year,
       titles: { zh: String(names.zh).trim(), en: String(names.en).trim(), ja: String(names.ja).trim() },
+      ...(entry.format === "movie" || entry.format === "theatrical" ? { format: entry.format } : {}),
       ...(typeof entry.sourceUrl === "string" ? { sourceUrl: entry.sourceUrl } : {}),
     };
   }).sort((a, b) => a.year - b.year);
