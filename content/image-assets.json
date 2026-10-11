@@ -20,6 +20,13 @@
     "sha256": "5ff55ca638c04a1d4879cb2b83da4d50055aa492630304335000b29ab05de68c",
     "contentType": "image/jpeg"
   },
+  "/images/diary/2026-10-11-wish/fireworks.png": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 4176190,
+    "sha256": "1258fa785915146d714b70258d2a5a554fa0a290a543b0de61f71400c17d068c",
+    "contentType": "image/png"
+  },
   "/images/mountains.jpg": {
     "width": 1000,
     "height": 667,
