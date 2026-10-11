@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { useLocale } from "./locale-provider";
 import { Icon } from "./icon";
-import { getLocaleAlternates, locales, type TranslationManifest, type Locale } from "@/lib/i18n";
+import { getLocaleAlternates, localeSwitchUrl, locales, type TranslationManifest, type Locale } from "@/lib/i18n";
 
 const labels = { zh: "中", en: "En", ja: "あ" };
 const names = { zh: "简体中文", en: "English", ja: "日本語" };
@@ -56,7 +56,7 @@ export function LanguageToggle({ translations }: { translations: TranslationMani
     rememberLocale(target);
     if (target === locale) return;
     // Select the correct static root layout and HTML language, preserving URL state.
-    router.push(`${path}${window.location.search}${window.location.hash}`);
+    router.push(localeSwitchUrl(path, window.location.search, window.location.hash));
   }
   return (
     <div ref={rootRef} className={`language-toggle${expanded ? " expanded" : ""}`}

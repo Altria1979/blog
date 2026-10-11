@@ -3,6 +3,8 @@ import { blogConfig } from "@/blog.config";
 import { locales, localePath, languageTag, type Locale, type LocaleAlternates } from "./i18n";
 import { getPageMessages } from "./page-messages";
 import { imageUrl } from "./image-assets";
+import { getDiaryEntries, getDiaryPage } from "./diary";
+import { getDiaryMessages } from "./diary-messages";
 
 export const siteDescriptions: Record<Locale, string> = {
   zh: blogConfig.description,
@@ -36,6 +38,28 @@ export function pageMetadata(page: keyof typeof pageTitles.zh, locale: Locale): 
       siteName: blogConfig.title, url: localePath(path, locale),
       locale: { zh: "zh_CN", en: "en_US", ja: "ja_JP" }[locale],
       images: [{ url: imageUrl("/images/mountains.jpg"), width: 1000, height: 667, alt: blogConfig.title }],
+    },
+  };
+}
+
+export function diaryMetadata(locale: Locale, pageValue?: string | string[]): Metadata {
+  const current = getDiaryPage(getDiaryEntries(undefined, locale), pageValue);
+  if (!current) return { robots: { index: false, follow: false } };
+  const t = getDiaryMessages(locale);
+  const pagePath = (language: Locale) => `${localePath("/diary", language)}${current.page > 1 ? `?page=${current.page}` : ""}`;
+  // A paginated alternate is valid only when that language has the requested page.
+  const paths = Object.fromEntries(locales.filter((language) =>
+    getDiaryPage(getDiaryEntries(undefined, language), String(current.page)),
+  ).map((language) => [language, pagePath(language)]));
+  const title = current.page === 1 ? t.title : `${t.title} · ${t.pageLabel(current.page, current.totalPages)}`;
+  return {
+    title,
+    description: t.description,
+    alternates: metadataAlternates(locale, paths),
+    openGraph: {
+      type: "website", title, description: t.description,
+      siteName: blogConfig.title, url: pagePath(locale),
+      locale: { zh: "zh_CN", en: "en_US", ja: "ja_JP" }[locale],
     },
   };
 }

@@ -48,8 +48,14 @@ export function ArticleImage({ src, alt, width, height, linked = false, variant 
     trigger.current?.focus();
   }
 
+  function checkImage(image: HTMLImageElement | null) {
+    // A server-rendered image can fail before React attaches its error handler.
+    if (image?.complete && image.naturalWidth === 0) setFailed(true);
+  }
+
   const thumbnail = isCover ? (
     <Image
+      ref={checkImage}
       className="reading-cover"
       src={src}
       alt=""
@@ -63,6 +69,7 @@ export function ArticleImage({ src, alt, width, height, linked = false, variant 
     // Remote Markdown images are allowed without a predefined optimization host list.
     // eslint-disable-next-line @next/next/no-img-element
     <img
+      ref={checkImage}
       src={src}
       alt={alt}
       title={title}

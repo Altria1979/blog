@@ -3,6 +3,7 @@ import { blogConfig } from "@/blog.config";
 import { getPosts, getTranslationManifest } from "@/lib/posts";
 import { locales, localePath, type LocaleAlternates } from "@/lib/i18n";
 import { metadataAlternates } from "@/lib/metadata";
+import { getDiaryEntries } from "@/lib/diary";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const manifest = getTranslationManifest();
@@ -14,6 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestDate,
       alternates: { languages: metadataAlternates(locale, absolute(Object.fromEntries(locales.map((item) => [item, localePath(path, item)])))).languages },
     })),
+    {
+      url: new URL(localePath("/diary", locale), blogConfig.url).href,
+      lastModified: getDiaryEntries(undefined, locale)[0]?.date || blogConfig.established,
+      alternates: { languages: metadataAlternates(locale, absolute(Object.fromEntries(locales.map((item) => [item, localePath("/diary", item)])))).languages },
+    },
     ...getPosts(undefined, locale).map((post) => {
       const path = localePath(`/posts/${post.slug}`, locale);
       return {

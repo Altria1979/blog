@@ -20,7 +20,7 @@ import { parseCodeMeta, type CodeMeta } from "../lib/code";
 import { imageAssetDimensions, imageUrl, type ImageAssets } from "../lib/image-assets";
 import { contentLinkIcon } from "../lib/content-icons";
 import katex from "katex";
-import { ContentAnchorNavigation, ContentAssetImage, ContentBlur, ContentClock, ContentCopy, ContentFeedGroup, ContentIcon, ContentKey, ContentTable, ContentTabs, ContentTip } from "./markdown-interactions";
+import { ContentAnchorNavigation, ContentAssetImage, ContentBlur, ContentClock, ContentCopy, ContentFeedGroup, ContentFootnoteLink, ContentIcon, ContentKey, ContentTable, ContentTabs, ContentTip } from "./markdown-interactions";
 import { GithubCard, MermaidDiagram, MusicScore, VideoEmbed } from "./markdown-media";
 import { ContentFeedCard } from "./markdown-feed-card";
 import "katex/dist/katex.min.css";
@@ -144,7 +144,7 @@ function renderInline(nodes: InlineNode[], prefix: string, linked = false): Reac
       case "strong": return <strong key={key} {...attrs}>{renderInline(node.children, key, linked)}</strong>;
       case "emphasis": return <em key={key} {...attrs}>{renderInline(node.children, key, linked)}</em>;
       case "delete": return <del key={key} {...attrs}>{renderInline(node.children, key, linked)}</del>;
-      case "footnote-reference": return <sup key={key} id={`fnref-${node.id}-${node.reference}`} className="md-footnote-ref"><a href={`#fn-${node.id}`} aria-label={`Footnote ${node.number}`}>{node.number}</a></sup>;
+      case "footnote-reference": return <sup key={key} id={`fnref-${node.id}-${node.reference}`} className="md-footnote-ref"><ContentFootnoteLink href={`#fn-${node.id}`} number={node.number} /></sup>;
       case "link": {
         if (linked) return <span key={key}>{renderInline(node.children, key, true)}</span>;
         const external = /^https?:\/\//i.test(node.href);
@@ -284,7 +284,7 @@ function renderBlocks(blocks: MarkdownBlock[], prefix: string): ReactNode[] {
         if (["math", "latex", "katex"].includes(block.language)) return <MathExpression key={key} value={block.value} display />;
         return <HighlightedBlock key={key} {...block} />;
       case "hr": return <hr key={key} />;
-      case "footnote-definition": return <div key={key} id={`fn-${block.id}`} className="md-footnote"><span className="md-footnote-number">{block.number}.</span><div>{renderBlocks(block.children, key)}{Array.from({ length: block.references }, (_, i) => <a key={i} className="md-footnote-back" href={`#fnref-${block.id}-${i + 1}`} aria-label={`Back to reference ${block.number}${i ? ` (${i + 1})` : ""}`}>↩{i ? i + 1 : ""}</a>)}</div></div>;
+      case "footnote-definition": return <div key={key} id={`fn-${block.id}`} className="md-footnote"><span className="md-footnote-number">{block.number}.</span><div>{renderBlocks(block.children, key)}{Array.from({ length: block.references }, (_, i) => <ContentFootnoteLink key={i} href={`#fnref-${block.id}-${i + 1}`} number={block.number} reference={i + 1} />)}</div></div>;
       case "table": return <ContentTable key={key}><table><thead><tr>{block.headers.map((cell, column) => <th key={column} scope="col" style={{ textAlign: block.align[column] }}>{renderInline(cell, `${key}-h-${column}`)}</th>)}</tr></thead><tbody>{block.rows.map((row, i) => <tr key={i}>{row.map((cell, column) => <td key={column} style={{ textAlign: block.align[column] }}>{renderInline(cell, `${key}-${i}-${column}`)}</td>)}</tr>)}</tbody></table></ContentTable>;
     }
   });

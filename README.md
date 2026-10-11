@@ -113,6 +113,7 @@ order by page_views desc, visitors desc, country_code;
 
 ## 内容维护
 
+- 公开图文日记支持中文、英文、日文，入口为 `/diary`、`/en/diary`、`/ja/diary`。写作模板、译文关联与图片流程见 [日记写作指南](docs/diary.md)。
 - 中文文章放在 `content/posts/`，英文和日文译文分别放在 `content/posts/en/`、`content/posts/ja/`。
 - 文件名对应文章地址，例如 `hello-world.md` 对应 `/posts/hello-world`；`draft: true` 的文章不会发布。
 - 写作语法与组件用法见 [Markdown 与富内容指南](docs/markdown-examples.md)。

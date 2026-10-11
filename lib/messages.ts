@@ -1,7 +1,7 @@
 import type { Locale } from "./i18n";
 
 const zh = {
-  posts: "文章", archives: "归档", about: "关于", home: "首页",
+  posts: "文章", diary: "日记", archives: "归档", about: "关于", home: "首页",
   mainNavigation: "主导航", navigationMenu: "导航菜单", openNavigation: "打开导航菜单", closeNavigation: "关闭导航菜单",
   avatar: (name: string) => `${name} 的头像`, siteHome: (name: string) => `${name}首页`,
   sidebarNote: ["在自己的节奏里，", "把日子写成故事。"], email: "邮箱", rss: "RSS 订阅", aboutSite: "关于这个小站",
@@ -22,7 +22,8 @@ const zh = {
   shareErrorHelp: "复制失败，请复制地址栏链接", shareDescription: "复制文章标题、摘要与链接", copied: "已复制", copyFailed: "复制失败", shareText: "文字分享",
   code: "代码", codeCopied: "代码已复制", codeCopyFailed: "复制失败，请选中代码复制", disableCodeWrap: "关闭代码自动换行", enableCodeWrap: "开启代码自动换行", disableWrap: "关闭自动换行", wrap: "自动换行", copyCode: "复制代码",
   codeLines: (count: number) => `${count} 行代码`, collapseCode: "收起代码", expandCode: "展开代码", codeStats: (lines: number, characters: number, bytes: number) => `${lines} 行 · ${characters} 字符 · ${bytes} 字节`,
-  image: "图片", imageUnavailable: "图片暂时无法加载", articleImage: "文章配图", enlargeImage: (alt: string) => `放大图片：${alt}`, viewImage: "查看文章图片", closeImage: "关闭图片",
+  image: "图片", imageUnavailable: "图片暂时无法加载", articleImage: "配图", enlargeImage: (alt: string) => `放大图片：${alt}`, viewImage: "查看图片", closeImage: "关闭图片",
+  footnote: (number: number) => `脚注 ${number}`, backToFootnote: (number: number, reference: number) => `返回引用 ${number}${reference > 1 ? `（${reference}）` : ""}`,
   backToTop: "回到顶部", tableOfContents: "文章目录", articleSections: "文章章节", noSections: "本文暂无章节目录", openContents: "打开文章目录", closeContents: "关闭文章目录",
   technicalInfo: "技术信息", buildPlatform: "构建平台", imageStorage: "图片存储", dnsProvider: "域名解析", database: "数据库", softwareLicense: "软件协议", contentLicense: "文章许可", canonicalDomain: "规范域名", unspecified: "未声明", selfHosted: "本站托管", expandBuild: "展开构建信息", collapseBuild: "收起构建信息",
 };
@@ -30,7 +31,7 @@ const zh = {
 type Messages = typeof zh;
 
 const en: Messages = {
-  posts: "Posts", archives: "Archives", about: "About", home: "Home",
+  posts: "Posts", diary: "Diary", archives: "Archives", about: "About", home: "Home",
   mainNavigation: "Main navigation", navigationMenu: "Navigation menu", openNavigation: "Open navigation menu", closeNavigation: "Close navigation menu",
   avatar: (name) => `${name}'s avatar`, siteHome: (name) => `${name} home`,
   sidebarNote: ["At my own pace,", "turning days into stories."], email: "Email", rss: "RSS feed", aboutSite: "About this blog",
@@ -51,13 +52,14 @@ const en: Messages = {
   shareErrorHelp: "Copy failed. Please copy the URL from the address bar.", shareDescription: "Copy the post title, summary, and link", copied: "Copied", copyFailed: "Copy failed", shareText: "Share text",
   code: "Code", codeCopied: "Code copied", codeCopyFailed: "Copy failed. Please select and copy the code.", disableCodeWrap: "Disable code wrapping", enableCodeWrap: "Enable code wrapping", disableWrap: "Disable wrapping", wrap: "Wrap lines", copyCode: "Copy code",
   codeLines: (count) => `${count} ${count === 1 ? "line" : "lines"} of code`, collapseCode: "Collapse code", expandCode: "Expand code", codeStats: (lines, characters, bytes) => `${lines} lines · ${characters} characters · ${bytes} bytes`,
-  image: "Image", imageUnavailable: "Image could not be loaded", articleImage: "Article image", enlargeImage: (alt) => `Enlarge image: ${alt}`, viewImage: "View article image", closeImage: "Close image",
+  image: "Image", imageUnavailable: "Image could not be loaded", articleImage: "Image", enlargeImage: (alt) => `Enlarge image: ${alt}`, viewImage: "View image", closeImage: "Close image",
+  footnote: (number) => `Footnote ${number}`, backToFootnote: (number, reference) => `Back to reference ${number}${reference > 1 ? ` (${reference})` : ""}`,
   backToTop: "Back to top", tableOfContents: "Contents", articleSections: "Article sections", noSections: "This post has no sections", openContents: "Open table of contents", closeContents: "Close table of contents",
   technicalInfo: "Technical information", buildPlatform: "Build platform", imageStorage: "Image storage", dnsProvider: "DNS", database: "Database", softwareLicense: "Software license", contentLicense: "Content license", canonicalDomain: "Canonical domain", unspecified: "Not specified", selfHosted: "Self-hosted", expandBuild: "Show build details", collapseBuild: "Hide build details",
 };
 
 const ja: Messages = {
-  posts: "記事", archives: "アーカイブ", about: "このブログについて", home: "ホーム",
+  posts: "記事", diary: "日記", archives: "アーカイブ", about: "このブログについて", home: "ホーム",
   mainNavigation: "メインナビゲーション", navigationMenu: "ナビゲーションメニュー", openNavigation: "ナビゲーションメニューを開く", closeNavigation: "ナビゲーションメニューを閉じる",
   avatar: (name) => `${name}のアバター`, siteHome: (name) => `${name}のホーム`,
   sidebarNote: ["自分のペースで、", "日々を物語に。"], email: "メール", rss: "RSS を購読", aboutSite: "このブログについて",
@@ -78,7 +80,8 @@ const ja: Messages = {
   shareErrorHelp: "コピーできませんでした。アドレスバーから URL をコピーしてください。", shareDescription: "記事のタイトル・概要・リンクをコピー", copied: "コピーしました", copyFailed: "コピーできませんでした", shareText: "テキストで共有",
   code: "コード", codeCopied: "コードをコピーしました", codeCopyFailed: "コピーできませんでした。コードを選択してコピーしてください。", disableCodeWrap: "コードの折り返しを無効にする", enableCodeWrap: "コードの折り返しを有効にする", disableWrap: "折り返しを無効にする", wrap: "行を折り返す", copyCode: "コードをコピー",
   codeLines: (count) => `${count} 行のコード`, collapseCode: "コードを折りたたむ", expandCode: "コードを展開", codeStats: (lines, characters, bytes) => `${lines} 行 · ${characters} 文字 · ${bytes} バイト`,
-  image: "画像", imageUnavailable: "画像を読み込めませんでした", articleImage: "記事の画像", enlargeImage: (alt) => `画像を拡大：${alt}`, viewImage: "記事の画像を表示", closeImage: "画像を閉じる",
+  image: "画像", imageUnavailable: "画像を読み込めませんでした", articleImage: "画像", enlargeImage: (alt) => `画像を拡大：${alt}`, viewImage: "画像を表示", closeImage: "画像を閉じる",
+  footnote: (number) => `脚注 ${number}`, backToFootnote: (number, reference) => `参照 ${number} に戻る${reference > 1 ? `（${reference}）` : ""}`,
   backToTop: "先頭に戻る", tableOfContents: "目次", articleSections: "記事のセクション", noSections: "この記事には目次がありません", openContents: "目次を開く", closeContents: "目次を閉じる",
   technicalInfo: "技術情報", buildPlatform: "ビルド環境", imageStorage: "画像ストレージ", dnsProvider: "DNS", database: "データベース", softwareLicense: "ソフトウェアライセンス", contentLicense: "記事のライセンス", canonicalDomain: "正規ドメイン", unspecified: "未指定", selfHosted: "セルフホスト", expandBuild: "ビルド情報を表示", collapseBuild: "ビルド情報を隠す",
 };

@@ -2,7 +2,16 @@
 
 import { useEffect, useId, useRef, useState, type CSSProperties, type KeyboardEvent, type ReactNode } from "react";
 import { useLocale } from "./locale-provider";
+import { getMessages } from "../lib/messages";
 import "./markdown-copy.css";
+
+export function ContentFootnoteLink({ href, number, reference }: { href: string; number: number; reference?: number }) {
+  const t = getMessages(useLocale());
+  return <a href={href} className={reference ? "md-footnote-back" : undefined}
+    aria-label={reference ? t.backToFootnote(number, reference) : t.footnote(number)}>
+    {reference ? <>↩{reference > 1 ? reference : ""}</> : number}
+  </a>;
+}
 
 function useLabels() {
   const locale = useLocale();

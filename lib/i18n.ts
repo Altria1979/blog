@@ -30,8 +30,17 @@ export function getLocaleAlternates(pathname: string, manifest: TranslationManif
   try { path = decodeURI(pathname).replace(/\/$/, "") || "/"; } catch { return {}; }
   if (manifest[path]) return manifest[path];
   const base = splitLocalePath(path).path;
-  if (!["/", "/archives", "/about"].includes(base)) return {};
+  if (!["/", "/diary", "/archives", "/about"].includes(base)) return {};
   return Object.fromEntries(locales.map((locale) => [locale, localePath(base, locale)]));
+}
+
+/** Diary translations have independent page counts and content anchors. */
+export function localeSwitchUrl(targetPath: string, search: string, hash: string): string {
+  if (splitLocalePath(targetPath).path.replace(/\/$/, "") !== "/diary") return `${targetPath}${search}${hash}`;
+  const params = new URLSearchParams(search);
+  params.delete("page");
+  const query = params.toString();
+  return `${targetPath}${query ? `?${query}` : ""}`;
 }
 
 const labels: Record<string, [string, string]> = {
